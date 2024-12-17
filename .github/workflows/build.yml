@@ -82,7 +82,7 @@ jobs:
           # Workaround GitHub Actions timeout
           (while true; do date; sleep 60; done) &
 
-          env TMPDIR=/nix/tmpdir nix build -L .#${{ matrix.build_target }}
+          env TMPDIR=/nix/tmpdir nix build -L .#${{ matrix.build_target }} --show-trace --verbose
           mkdir ${{ matrix.build_target }}
           cp -r result/* ${{ matrix.build_target }}/
 
