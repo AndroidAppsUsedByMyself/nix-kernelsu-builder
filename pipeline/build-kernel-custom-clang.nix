@@ -3,6 +3,7 @@
   pkgs,
   lib,
   glibc,
+  libc6,
   bc,
   bison,
   coreutils,
@@ -61,6 +62,7 @@ in
 
     nativeBuildInputs =
       [
+        libc6
         glibc
         bc
         bison
