@@ -50,10 +50,10 @@ in
     anyKernelVariant = "kernelsu";
     clangVersion = "latest";
     kernelDefconfigs = [
-      "arch/arm64/configs/vendor/kona-perf_defconfig"
-      "arch/arm64/configs/vendor/ext_config/moto-kona.config"
-      "arch/arm64/configs/vendor/ext_config/pstar-default.config"
-      "arch/arm64/configs/vendor/debugfs.config"
+      "vendor/kona-perf_defconfig"
+      "vendor/ext_config/moto-kona.config"
+      "vendor/ext_config/pstar-default.config"
+      "vendor/debugfs.config"
     ];
     kernelImageName = "Image";
     kernelMakeFlags = [
