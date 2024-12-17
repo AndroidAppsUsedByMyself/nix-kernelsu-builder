@@ -1,19 +1,31 @@
 {
-  stdenv,
+  stdenvNoCC,
   callPackage,
   autoPatchelfHook,
-  python3,
-}:
-let
-  sources = callPackage ../_sources/generated.nix { };
+  python39,
+  gcc,
+  glibc,
+  sqlite,
+  openssl,
+  libz,
+  ...
+}: let
+  sources = callPackage ../_sources/generated.nix {};
 in
-stdenv.mkDerivation {
-  inherit (sources.android_prebuilts_clang_kernel_linux-x86_clang-r416183b) pname version src;
+  stdenvNoCC.mkDerivation {
+    inherit (sources.android_prebuilts_clang_kernel_linux-x86_clang-r416183b) pname version src;
 
-  nativeBuildInputs = [ autoPatchelfHook ];
+    nativeBuildInputs = [autoPatchelfHook];
+    autoPatchelfIgnoreMissingDeps = ["liblog.so"];
+    buildInputs = [
+      python39
+      libz
+    ];
 
-  installPhase = ''
-    mkdir -p $out
-    cp -r * $out/
-  '';
-}
+
+    installPhase = ''
+      mkdir -p $out
+      cp -r * $out/
+      rm -rf $out/python3
+    '';
+  }
