@@ -53,7 +53,7 @@ in
     customGoogleClang = {
       CLANG_VERSION = "r416183b1";
       CLANG_BRANCH = "android12-release";
-      CLANG_SHA256 = "sha256-10mz9xvzshi93i0bkr84g94n9yan79xhs9pmjjwjc2g012nxw4rw";
+      CLANG_SHA256 = "1zg1cm8zn8prawgz3h1qnapxrgkmj894pl10i1q11nfcv3ycic41";
     };
     kernelDefconfigs = [
       "lineageos_pstar_stock_defconfig"
