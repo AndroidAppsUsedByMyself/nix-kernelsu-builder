@@ -1,4 +1,25 @@
 {
+    "android_prebuilts_clang_kernel_linux-x86_clang-r416183b": {
+        "cargoLocks": null,
+        "date": "2022-11-01",
+        "extract": null,
+        "name": "android_prebuilts_clang_kernel_linux-x86_clang-r416183b",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "LineageOS",
+            "repo": "android_prebuilts_clang_kernel_linux-x86_clang-r416183b",
+            "rev": "54220fd601050b350b2af7adc913089ebf0e7aed",
+            "sha256": "sha256-o9e5VRR6s2T9NDwDY8XuG2GYUKbZQF1s687gPlE0+RY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "54220fd601050b350b2af7adc913089ebf0e7aed"
+    },
     "anykernel-kernelsu": {
         "cargoLocks": null,
         "date": "2023-10-30",
