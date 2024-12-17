@@ -72,7 +72,7 @@ in
       which
       zlib
       zstd
-      (pkgs.callPackage ./. + "/pkgs/${clangPrebuilt}.nix" {})
+      (pkgs.callPackage (./. + "/pkgs/${clangPrebuilt}.nix") {})
     ];
 
     hardeningDisable = ["all"];
