@@ -24,6 +24,7 @@
   zstd,
   # User args
   clangPrebuilt,
+  customGoogleClang,
   src,
   arch,
   defconfigs,
@@ -32,6 +33,7 @@
   additionalKernelConfig ? "",
   ...
 }: let
+  inherit customGoogleClang;
   finalMakeFlags =
     [
       "ARCH=${arch}"
@@ -50,30 +52,42 @@ in
     name = "clang-kernel-${clangPrebuilt}";
     inherit src;
 
-    nativeBuildInputs = [
-      bc
-      bc
-      bison
-      coreutils
-      cpio
-      elfutils
-      flex
-      gmp
-      kmod
-      libmpc
-      mpfr
-      nettools
-      openssl
-      pahole
-      perl
-      python3
-      rsync
-      ubootTools
-      which
-      zlib
-      zstd
-      (pkgs.callPackage (../. + "/pkgs/${clangPrebuilt}.nix") {})
-    ];
+    nativeBuildInputs =
+      [
+        bc
+        bc
+        bison
+        coreutils
+        cpio
+        elfutils
+        flex
+        gmp
+        kmod
+        libmpc
+        mpfr
+        nettools
+        openssl
+        pahole
+        perl
+        python3
+        rsync
+        ubootTools
+        which
+        zlib
+        zstd
+      ]
+      ++ (
+        if customGoogleClang.CLANG_VERSION != null && customGoogleClang.CLANG_BRANCH != null
+        then [
+          (pkgs.callPackage ../pkgs/android_prebuilts_clang_custom.nix {inherit customGoogleClang;})
+        ]
+        else []
+      )
+      ++ (
+        if clangPrebuilt != null
+        then [(pkgs.callPackage (../. + "/pkgs/${clangPrebuilt}.nix") {})]
+        else []
+      );
 
     hardeningDisable = ["all"];
 

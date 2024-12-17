@@ -11,6 +11,7 @@ Currently I build boot images for 3 devices..
 - `.#amazon-fire-hd-karnak`: Amazon Fire HD 8 2018. Kernel compiles, but KernelSU doesn't work for lack of 32-bit userland app.
 - `.#moto-rtwo-lineageos-21`: Motorola Edge+ 2023, unofficial LineageOS 21. Working perfectly.
 - `.#oneplus-8t-blu-spark`: OnePlus 8T, Blu_spark kernel for LineageOS 21. Working perfectly.
+- `.#moto-pstar-lineageos-22.0`: Motorola Edge 20 pro, LineageOS 22. Not Working perfectly.
 
 # How to add my own device
 

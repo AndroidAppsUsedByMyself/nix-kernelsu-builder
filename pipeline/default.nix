@@ -9,6 +9,7 @@
   anyKernelVariant ? "osm0sis",
   clangVersion ? null,
   clangPrebuilt ? null,
+  customGoogleClang ? null,
   enableKernelSU ? true,
   kernelConfig ? "",
   kernelDefconfigs ? [ ],
@@ -27,7 +28,7 @@ let
     };
 
     kernelBuildCustomClang = callPackage ./build-kernel-custom-clang.nix {
-      inherit arch clangPrebuilt enableKernelSU;
+      inherit arch clangPrebuilt customGoogleClang enableKernelSU;
       src = patchedKernelSrc;
       defconfigs = kernelDefconfigs;
       makeFlags = kernelMakeFlags;
