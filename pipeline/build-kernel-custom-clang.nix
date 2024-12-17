@@ -51,7 +51,7 @@ in
   stdenv.mkDerivation {
     name = "clang-kernel-${
       if customGoogleClang.CLANG_VERSION != null && customGoogleClang.CLANG_BRANCH != null
-      then customGoogleClang.CLANG_BRANCH + customGoogleClang.CLANG_VERSION
+      then "${customGoogleClang.CLANG_BRANCH}-${customGoogleClang.CLANG_VERSION}"
       else if clangPrebuilt != null
       then clangPrebuilt
       else ""
@@ -88,7 +88,9 @@ in
           (pkgs.callPackage ../pkgs/android_prebuilts_clang_custom.nix {inherit customGoogleClang;})
         ]
         else if clangPrebuilt != null
-        then [(pkgs.callPackage (../. + "/pkgs/${clangPrebuilt}.nix") {})]
+        then [
+          (pkgs.callPackage (../. + "/pkgs/${clangPrebuilt}.nix") {})
+        ]
         else []
       );
 

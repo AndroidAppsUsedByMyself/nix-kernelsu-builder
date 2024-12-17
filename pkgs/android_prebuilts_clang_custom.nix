@@ -12,10 +12,10 @@
 in
   stdenv.mkDerivation {
     pname = "clang-${CLANG_BRANCH + CLANG_VERSION}";
-    inherit CLANG_VERSION;
+    version = CLANG_VERSION;
     src = fetchTarball {
       url = "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/${CLANG_BRANCH}/clang-${CLANG_VERSION}.tar.gz";
-      sha256 = CLANG_SHA256;
+      sha256 = "";
     };
     nativeBuildInputs = [autoPatchelfHook];
     autoPatchelfIgnoreMissingDeps = ["liblog.so"];
