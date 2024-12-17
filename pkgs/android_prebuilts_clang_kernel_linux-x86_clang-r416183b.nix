@@ -1,18 +1,14 @@
 {
-  stdenvNoCC,
+  stdenv,
   callPackage,
   autoPatchelfHook,
   python39,
-  gcc,
-  glibc,
-  sqlite,
-  openssl,
   libz,
   ...
 }: let
   sources = callPackage ../_sources/generated.nix {};
 in
-  stdenvNoCC.mkDerivation {
+  stdenv.mkDerivation {
     inherit (sources.android_prebuilts_clang_kernel_linux-x86_clang-r416183b) pname version src;
 
     nativeBuildInputs = [autoPatchelfHook];
@@ -22,9 +18,12 @@ in
       libz
     ];
 
+    postPatch = ''
+      rm -r python3
+    '';
+
     installPhase = ''
       mkdir -p $out
       cp -r * $out/
-      rm -rf $out/python3
     '';
   }

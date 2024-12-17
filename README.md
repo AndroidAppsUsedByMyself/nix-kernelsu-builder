@@ -25,7 +25,9 @@ See `kernels.nix` for definitions of pipelines (builds for different devices).
 - `clangVersion`: Version of clang used in kernel build.
   - Can be set to any version present in [nixpkgs](https://github.com/NixOS/nixpkgs). Currently the value can be 8 to 17.
   - If set to `latest`, will use the latest clang in nixpkgs. Recommended.
+  - If set to `custom`, will use the `env.clangPrebuilt` clang in nixpkgs. Recommended.
   - If set to `null`, uses Google's GCC 4.9 toolchain instead.
+- `clangPrebuilt`: The clang used in kernel build if `clangVersion` == `custom`.
 - `enableKernelSU`: Whether to apply KernelSU patch.
 - `kernelDefconfigs`: List of kernel config files applied during build.
   - Older kernels usually have a single `_defconfig` file. Newer devices may have several.
