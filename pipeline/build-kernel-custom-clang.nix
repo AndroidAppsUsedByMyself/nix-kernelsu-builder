@@ -2,6 +2,11 @@
   stdenv,
   pkgs,
   lib,
+  ncurses6,
+  ncurses5,
+  libcxx,
+  ninja,
+  pkgconfig,
   glibc,
   libc6,
   bc,
@@ -62,6 +67,11 @@ in
 
     nativeBuildInputs =
       [
+        ncurses6
+        ncurses5
+        libcxx
+        ninja
+        pkgconfig
         libc6
         glibc
         bc
