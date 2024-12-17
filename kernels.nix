@@ -48,7 +48,7 @@ in
 
   moto-pstar-lineageos-22_0 = pipeline {
     anyKernelVariant = "kernelsu";
-    clangVersion = "null";
+    clangVersion = null;
     kernelDefconfigs = [
       "vendor/kona-perf_defconfig"
       "vendor/ext_config/moto-kona.config"
