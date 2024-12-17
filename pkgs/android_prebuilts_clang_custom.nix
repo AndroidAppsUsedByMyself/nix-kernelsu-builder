@@ -5,6 +5,9 @@
   autoPatchelfHook,
   python39,
   libz,
+  zlib,
+  ncurses5,
+  libedit,
   customGoogleClang,
   ...
 }: let
@@ -20,8 +23,11 @@ in
     nativeBuildInputs = [autoPatchelfHook];
     autoPatchelfIgnoreMissingDeps = ["liblog.so"];
     buildInputs = [
-      python39
-      libz
+      zlib
+      ncurses5
+      libedit
+      stdenv.cc.cc.lib # For libstdc++.so.6
+      python39 # LLDB links against this particular version of python
     ];
 
     postPatch = ''
