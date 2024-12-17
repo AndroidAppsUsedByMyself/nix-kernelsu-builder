@@ -45,4 +45,21 @@ in
       CONFIG_LTO_CLANG=y
     '';
   };
+
+  moto-pstar-lineageos-22_0 = pipeline {
+    anyKernelVariant = "kernelsu";
+    clangVersion = "latest";
+    kernelDefconfigs = [
+      "arch/arm64/configs/vendor/kona-perf_defconfig"
+      "arch/arm64/configs/vendor/ext_config/moto-kona.config"
+      "arch/arm64/configs/vendor/ext_config/pstar-default.config"
+      "arch/arm64/configs/vendor/debugfs.config"
+    ];
+    kernelImageName = "Image";
+    kernelMakeFlags = [
+      "KCFLAGS=\"-w\""
+      "KCPPFLAGS=\"-w\""
+    ];
+    kernelSrc = sources.linux-moto-pstar-lineageos-22_0.src;
+  };
 }

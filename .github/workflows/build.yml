@@ -19,6 +19,7 @@ jobs:
           - amazon-fire-hd-karnak
           - moto-rtwo-lineageos-21
           - oneplus-8t-blu-spark
+          - moto-pstar-lineageos-22_0
     runs-on: ubuntu-latest
     env:
       GIT_SSL_NO_VERIFY: 'true'
