@@ -24,6 +24,6 @@ in
 
     installPhase = ''
       mkdir -p $out
-      cp -r * $out/
+      cp -r . $out/
     '';
   }
