@@ -48,12 +48,12 @@ in
 
   moto-pstar-lineageos-22_0 = pipeline {
     anyKernelVariant = "kernelsu";
-    clangVersion = null;
+    clangVersion = "13";
     kernelDefconfigs = [
       "vendor/kona-perf_defconfig"
       "vendor/ext_config/moto-kona.config"
-      "vendor/ext_config/pstar-default.config"
       "vendor/debugfs.config"
+      "vendor/ext_config/pstar-default.config"
     ];
     kernelImageName = "Image";
     kernelMakeFlags = [
