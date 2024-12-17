@@ -2,6 +2,7 @@
   stdenv,
   pkgs,
   lib,
+  glibc,
   bc,
   bison,
   coreutils,
@@ -60,7 +61,7 @@ in
 
     nativeBuildInputs =
       [
-        bc
+        glibc
         bc
         bison
         coreutils
