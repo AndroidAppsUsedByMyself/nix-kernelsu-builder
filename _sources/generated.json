@@ -153,12 +153,12 @@
             "name": null,
             "owner": "AndroidAppsUsedByMyself",
             "repo": "android_kernel_motorola_sm8250",
-            "rev": "9b3869ed0d464771863f5ac8ac13161968f1df2e",
-            "sha256": "sha256-RUTl72J2QzB34O+NTKJ4MigBkOYIFylMJHne1nem4gg=",
+            "rev": "6dc0e340204d087b8ac1fa8bc06c227650717a9c",
+            "sha256": "sha256-Iib6VU57UXlPppSUQu8LAzPYCwSQk8gWRy+G0OWGINE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "9b3869ed0d464771863f5ac8ac13161968f1df2e"
+        "version": "6dc0e340204d087b8ac1fa8bc06c227650717a9c"
     },
     "linux-moto-rtwo-lineageos-21": {
         "cargoLocks": null,

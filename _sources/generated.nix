@@ -84,13 +84,13 @@
   };
   linux-moto-pstar-lineageos-22_0 = {
     pname = "linux-moto-pstar-lineageos-22_0";
-    version = "9b3869ed0d464771863f5ac8ac13161968f1df2e";
+    version = "6dc0e340204d087b8ac1fa8bc06c227650717a9c";
     src = fetchFromGitHub {
       owner = "AndroidAppsUsedByMyself";
       repo = "android_kernel_motorola_sm8250";
-      rev = "9b3869ed0d464771863f5ac8ac13161968f1df2e";
+      rev = "6dc0e340204d087b8ac1fa8bc06c227650717a9c";
       fetchSubmodules = false;
-      sha256 = "sha256-RUTl72J2QzB34O+NTKJ4MigBkOYIFylMJHne1nem4gg=";
+      sha256 = "sha256-Iib6VU57UXlPppSUQu8LAzPYCwSQk8gWRy+G0OWGINE=";
     };
     date = "2024-12-18";
   };
