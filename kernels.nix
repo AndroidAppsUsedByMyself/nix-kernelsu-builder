@@ -50,10 +50,7 @@ in
     anyKernelVariant = "kernelsu";
     clangVersion = "13";
     kernelDefconfigs = [
-      "vendor/kona-perf_defconfig"
-      "vendor/ext_config/moto-kona.config"
-      "vendor/debugfs.config"
-      "vendor/ext_config/pstar-default.config"
+      "lineageos_pstar_stock_defconfig"
     ];
     kernelImageName = "Image";
     kernelMakeFlags = [
