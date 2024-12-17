@@ -44,3 +44,8 @@ fetch.github = "engstk/op8"
 src.git = "https://github.com/AndroidAppsUsedByMyself/android_kernel_motorola_sm8250.git"
 src.branch = "lineage-22.0"
 fetch.github = "AndroidAppsUsedByMyself/android_kernel_motorola_sm8250"
+
+[android_prebuilts_clang_kernel_linux-x86_clang-r416183b]
+src.git = "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
+src.branch = "lineage-20.0"
+fetch.github = "LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b"

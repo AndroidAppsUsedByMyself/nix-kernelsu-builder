@@ -48,7 +48,8 @@ in
 
   moto-pstar-lineageos-22_0 = pipeline {
     anyKernelVariant = "kernelsu";
-    clangVersion = "13";
+    clangVersion = "custom";
+    clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
     kernelDefconfigs = [
       "lineageos_pstar_stock_defconfig"
     ];
