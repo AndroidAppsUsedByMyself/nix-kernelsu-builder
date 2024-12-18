@@ -70,6 +70,7 @@ in
 
     nativeBuildInputs =
       [
+        glibc
         bc
         bison
         coreutils

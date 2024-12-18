@@ -1,3 +1,4 @@
+# manually packing custom clang example
 {
   stdenv,
   callPackage,
