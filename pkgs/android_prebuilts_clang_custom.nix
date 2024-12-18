@@ -8,6 +8,8 @@
   customGoogleClang,
   ...
 }: let
+  gcc-aarch64-linux-android = callPackage ../pkgs/gcc-aarch64-linux-android.nix {};
+  gcc-arm-linux-androideabi = callPackage ../pkgs/gcc-arm-linux-androideabi.nix {};
   inherit (customGoogleClang) CLANG_BRANCH CLANG_VERSION CLANG_SHA256;
 in
   stdenv.mkDerivation {
@@ -22,6 +24,8 @@ in
     buildInputs = [
       python39
       libz
+      gcc-aarch64-linux-android
+      gcc-arm-linux-androideabi
     ];
 
     postPatch = ''
