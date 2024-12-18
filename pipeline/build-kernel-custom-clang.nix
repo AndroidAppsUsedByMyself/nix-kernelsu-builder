@@ -6,7 +6,7 @@
   ncurses5,
   libcxx,
   ninja,
-  pkgconfig,
+  pkg-config,
   glibc,
   bc,
   bison,
@@ -70,7 +70,7 @@ in
         ncurses5
         libcxx
         ninja
-        pkgconfig
+        pkg-config
         glibc
         bc
         bison
