@@ -25,9 +25,6 @@ in
     buildInputs = [
       python39
       libz
-      gcc
-      gcc-aarch64-linux-android
-      gcc-arm-linux-androideabi
     ];
 
     postPatch = ''

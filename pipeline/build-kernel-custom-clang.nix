@@ -9,6 +9,7 @@
   pkg-config,
   glibc,
   gcc,
+  gcc-unwrapped,
   pkgsCross,
   pkgsLLVM,
   wrapCC,
@@ -134,8 +135,8 @@ in
       '')
       + ''
 
-        export LD_LIBRARY_PATH=${gcc-aarch64-linux-android}/lib:${gcc-arm-linux-androideabi}/lib:${gcc}/lib:$LD_LIBRARY_PATH
-        export LIBRARY_PATH=${gcc-aarch64-linux-android}/lib:${gcc-arm-linux-androideabi}/lib:${gcc}/lib:$LIBRARY_PATH
+        export LD_LIBRARY_PATH=${gcc-aarch64-linux-android}/lib:${gcc-arm-linux-androideabi}/lib:${gcc-unwrapped}/lib:$LD_LIBRARY_PATH
+        export LIBRARY_PATH=${gcc-aarch64-linux-android}/lib:${gcc-arm-linux-androideabi}/lib:${gcc-unwrapped}/lib:$LIBRARY_PATH
 
         mkdir -p $out
         make ${builtins.concatStringsSep " " (finalMakeFlags ++ defconfigs)}
