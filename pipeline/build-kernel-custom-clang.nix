@@ -8,6 +8,8 @@
   ninja,
   pkg-config,
   glibc,
+  pkgsCross,
+  pkgsLLVM,
   bc,
   bison,
   coreutils,
@@ -66,6 +68,9 @@ in
 
     nativeBuildInputs =
       [
+        pkgsCross.aarch64-multiplatform.stdenv.cc
+        pkgsCross.arm-embedded.stdenv.cc
+        pkgsLLVM.crossLibcStdenv
         ncurses6
         ncurses5
         libcxx
