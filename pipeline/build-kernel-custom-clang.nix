@@ -8,6 +8,7 @@
   ninja,
   pkg-config,
   glibc,
+  gcc,
   pkgsCross,
   pkgsLLVM,
   wrapCC,
@@ -94,6 +95,7 @@ in
         zlib
         zstd
 
+        gcc
         gcc-aarch64-linux-android
         gcc-arm-linux-androideabi
       ]
