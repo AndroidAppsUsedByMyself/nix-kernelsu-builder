@@ -62,6 +62,9 @@ in
     kernelMakeFlags = [
       "KCFLAGS=\"-w\""
       "KCPPFLAGS=\"-w\""
+      "LOCALVERSION=-kernelsu"
+      "CROSS_COMPILE_ARM32=arm-linux-androideabi-"
+      "CROSS_COMPILE=aarch64-linux-android-"
     ];
     kernelSrc = sources.linux-moto-pstar-lineageos-22_0.src;
   };

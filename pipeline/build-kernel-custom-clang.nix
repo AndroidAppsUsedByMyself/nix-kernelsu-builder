@@ -41,6 +41,8 @@
   additionalKernelConfig ? "",
   ...
 }: let
+  gcc-aarch64-linux-android = pkgs.callPackage ../pkgs/gcc-aarch64-linux-android.nix { };
+  gcc-arm-linux-androideabi = pkgs.callPackage ../pkgs/gcc-arm-linux-androideabi.nix { };
   inherit customGoogleClang;
   finalMakeFlags =
     [
@@ -68,15 +70,6 @@ in
 
     nativeBuildInputs =
       [
-        pkgsCross.aarch64-multiplatform.stdenv.cc
-        pkgsCross.arm-embedded.stdenv.cc
-        pkgsLLVM.crossLibcStdenv
-        ncurses6
-        ncurses5
-        libcxx
-        ninja
-        pkg-config
-        glibc
         bc
         bison
         coreutils
@@ -97,6 +90,9 @@ in
         which
         zlib
         zstd
+
+        gcc-aarch64-linux-android
+        gcc-arm-linux-androideabi
       ]
       ++ (
         if customGoogleClang.CLANG_VERSION != null && customGoogleClang.CLANG_BRANCH != null
