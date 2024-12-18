@@ -94,8 +94,6 @@ in
         zlib
         zstd
 
-        gcc-aarch64-linux-android
-        gcc-arm-linux-androideabi
       ]
       ++ (
         if customGoogleClang.CLANG_VERSION != null && customGoogleClang.CLANG_BRANCH != null
