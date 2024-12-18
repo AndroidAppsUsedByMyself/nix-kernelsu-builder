@@ -95,7 +95,6 @@ in
         zlib
         zstd
 
-        gcc
         gcc-aarch64-linux-android
         gcc-arm-linux-androideabi
       ]
