@@ -8,7 +8,6 @@
   ninja,
   pkgconfig,
   glibc,
-  libc6,
   bc,
   bison,
   coreutils,
@@ -72,7 +71,6 @@ in
         libcxx
         ninja
         pkgconfig
-        libc6
         glibc
         bc
         bison
