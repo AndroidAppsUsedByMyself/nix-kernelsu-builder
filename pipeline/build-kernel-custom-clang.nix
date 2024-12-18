@@ -10,6 +10,7 @@
   glibc,
   pkgsCross,
   pkgsLLVM,
+  wrapCC,
   bc,
   bison,
   coreutils,
@@ -41,8 +42,8 @@
   additionalKernelConfig ? "",
   ...
 }: let
-  gcc-aarch64-linux-android = pkgs.callPackage ../pkgs/gcc-aarch64-linux-android.nix { };
-  gcc-arm-linux-androideabi = pkgs.callPackage ../pkgs/gcc-arm-linux-androideabi.nix { };
+  gcc-aarch64-linux-android = pkgs.callPackage ../pkgs/gcc-aarch64-linux-android.nix {};
+  gcc-arm-linux-androideabi = pkgs.callPackage ../pkgs/gcc-arm-linux-androideabi.nix {};
   inherit customGoogleClang;
   finalMakeFlags =
     [
@@ -70,6 +71,7 @@ in
 
     nativeBuildInputs =
       [
+        pkg-config
         glibc
         bc
         bison
@@ -98,10 +100,12 @@ in
       ++ (
         if customGoogleClang.CLANG_VERSION != null && customGoogleClang.CLANG_BRANCH != null
         then [
+          wrapCC
           (pkgs.callPackage ../pkgs/android_prebuilts_clang_custom.nix {inherit customGoogleClang;})
         ]
         else if clangPrebuilt != null
         then [
+          wrapCC
           (pkgs.callPackage (../. + "/pkgs/${clangPrebuilt}.nix") {})
         ]
         else []
