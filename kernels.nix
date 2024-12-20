@@ -75,8 +75,10 @@ _: {
           kernelMakeFlags = [
             "KCFLAGS=\"-w\""
             "KCPPFLAGS=\"-w\""
+            "LOCALVERSION=-official-kernelsu"
           ];
           kernelSrc = sources.linux-moto-pstar-lineageos-22_0.src;
+          oemBootImg = boot/lineage-21.0-20241216-nightly-pstar.img;
         };
       };
     };
