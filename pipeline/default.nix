@@ -10,6 +10,9 @@
   clangVersion ? null,
   clangPrebuilt ? null,
   customGoogleClang ? null,
+  enableGcc32 ? false,
+  enableGcc64 ? false,
+  enableLLVM ? true,
   enableKernelSU ? true,
   kernelConfig ? "",
   kernelDefconfigs,
@@ -33,6 +36,9 @@ let
         clangPrebuilt
         customGoogleClang
         enableKernelSU
+        enableGcc64
+        enableGcc32
+        enableLLVM
         ;
       src = patchedKernelSrc;
       defconfigs = kernelDefconfigs;
