@@ -50,7 +50,7 @@ _: {
         };
         moto-pstar-lineageos-22_0 = {
           anyKernelVariant = "kernelsu";
-          clangVersion = "custom";
+          clangVersion = null;
           # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
           customGoogleClang = {
             CLANG_VERSION = "r416183b1";
