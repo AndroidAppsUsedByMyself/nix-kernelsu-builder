@@ -8,6 +8,8 @@
   arch ? "arm64",
   anyKernelVariant ? "osm0sis",
   clangVersion ? null,
+  clangPrebuilt ? null,
+  customGoogleClang ? null,
   enableKernelSU ? true,
   kernelConfig ? "",
   kernelDefconfigs,
@@ -25,6 +27,15 @@ let
       patches = kernelPatches;
     };
 
+    kernelBuildCustomClang = callPackage ./build-kernel-custom-clang.nix {
+      inherit arch clangPrebuilt customGoogleClang enableKernelSU;
+      src = patchedKernelSrc;
+      defconfigs = kernelDefconfigs;
+      makeFlags = kernelMakeFlags;
+      extraKernelConfigs = kernelConfig;
+    };
+
+
     kernelBuildClang = callPackage ./build-kernel-clang.nix {
       inherit arch clangVersion enableKernelSU;
       src = patchedKernelSrc;
@@ -41,7 +52,12 @@ let
       extraKernelConfigs = kernelConfig;
     };
 
-    kernelBuild = if clangVersion == null then kernelBuildGcc else kernelBuildClang;
+    kernelBuild =
+      if clangVersion == null
+      then kernelBuildGcc
+      else if clangVersion == "custom"
+      then kernelBuildCustomClang
+      else kernelBuildClang;
 
     anykernelZip = callPackage ./build-anykernel-zip.nix {
       inherit arch kernelImageName;

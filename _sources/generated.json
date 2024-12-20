@@ -1,4 +1,25 @@
 {
+    "android_prebuilts_clang_kernel_linux-x86_clang-r416183b": {
+        "cargoLocks": null,
+        "date": "2022-11-01",
+        "extract": null,
+        "name": "android_prebuilts_clang_kernel_linux-x86_clang-r416183b",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "LineageOS",
+            "repo": "android_prebuilts_clang_kernel_linux-x86_clang-r416183b",
+            "rev": "54220fd601050b350b2af7adc913089ebf0e7aed",
+            "sha256": "sha256-o9e5VRR6s2T9NDwDY8XuG2GYUKbZQF1s687gPlE0+RY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "54220fd601050b350b2af7adc913089ebf0e7aed"
+    },
     "anykernel-kernelsu": {
         "cargoLocks": null,
         "date": "2023-10-30",
@@ -138,6 +159,27 @@
             "type": "github"
         },
         "version": "e22c713c7c4f0c8d08267f6bba98b8c4cde8310f"
+    },
+    "linux-moto-pstar-lineageos-22_0": {
+        "cargoLocks": null,
+        "date": "2024-12-18",
+        "extract": null,
+        "name": "linux-moto-pstar-lineageos-22_0",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "AndroidAppsUsedByMyself",
+            "repo": "android_kernel_motorola_sm8250",
+            "rev": "6dc0e340204d087b8ac1fa8bc06c227650717a9c",
+            "sha256": "sha256-Iib6VU57UXlPppSUQu8LAzPYCwSQk8gWRy+G0OWGINE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "6dc0e340204d087b8ac1fa8bc06c227650717a9c"
     },
     "linux-moto-rtwo-lineageos-21": {
         "cargoLocks": null,

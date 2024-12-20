@@ -42,6 +42,14 @@
           packages = {
             gcc-aarch64-linux-android = pkgs.callPackage pkgs/gcc-aarch64-linux-android.nix { };
             gcc-arm-linux-androideabi = pkgs.callPackage pkgs/gcc-arm-linux-androideabi.nix { };
+            android_prebuilts_clang_kernel_linux-x86_clang-r416183b = pkgs.callPackage pkgs/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.nix {};
+            android_prebuilts_clang_r416183b1 = pkgs.callPackage pkgs/android_prebuilts_clang_custom.nix {
+              customGoogleClang = {
+                CLANG_VERSION = "r416183b1";
+                CLANG_BRANCH = "android12-release";
+                CLANG_SHA256 = "1zg1cm8zn8prawgz3h1qnapxrgkmj894pl10i1q11nfcv3ycic41";
+              };
+            };
           };
         };
     };
