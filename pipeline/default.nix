@@ -30,7 +30,7 @@ let
       patches = kernelPatches;
     };
 
-    kernelBuildCustomClang = callPackage ./build-kernel-custom-clang.nix {
+    kernelBuildCustom = callPackage ./build-kernel-custom.nix {
       inherit
         arch
         clangPrebuilt
@@ -66,7 +66,7 @@ let
       if clangVersion == null then
         kernelBuildGcc
       else if clangVersion == "custom" then
-        kernelBuildCustomClang
+        kernelBuildCustom
       else
         kernelBuildClang;
 

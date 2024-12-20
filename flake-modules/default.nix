@@ -56,7 +56,21 @@
               default = null;
             };
           };
-
+          enableLLVM = lib.mkOption {
+            type = lib.types.bool;
+            description = "Whether to use LLVM backend";
+            default = true;
+          };
+          enableGcc32 = lib.mkOption {
+            type = lib.types.bool;
+            description = "Whether to use gcc-32 backend";
+            default = true;
+          };
+          enableGcc64 = lib.mkOption {
+            type = lib.types.bool;
+            description = "Whether to use gcc-64 backend";
+            default = true;
+          };
           enableKernelSU = lib.mkOption {
             type = lib.types.bool;
             description = "Whether to apply KernelSU patch";
