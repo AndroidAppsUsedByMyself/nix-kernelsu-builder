@@ -48,6 +48,36 @@ _: {
             CONFIG_LTO_CLANG=y
           '';
         };
+        moto-pstar-lineageos-22_0 = {
+          anyKernelVariant = "kernelsu";
+          clangVersion = "custom";
+          enableGcc64 = true;
+          enableGcc32 = true;
+          enableLLVM = false;
+          # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
+          customGoogleClang = {
+            CLANG_VERSION = "r416183b1";
+            CLANG_BRANCH = "android12-release";
+            CLANG_SHA256 = "1zg1cm8zn8prawgz3h1qnapxrgkmj894pl10i1q11nfcv3ycic41";
+          };
+          kernelDefconfigs = [
+            # separated configs
+            #"vendor/kona-perf_defconfig"
+            #"vendor/ext_config/moto-kona.config"
+            #"vendor/ext_config/pstar-default.config"
+            #"vendor/debugfs.config"
+            # the one which need to be generated before build
+            #"lineageos_pstar_defconfig"
+            # the one which extract from a real device
+            "lineageos_pstar_stock_defconfig"
+          ];
+          kernelImageName = "Image";
+          kernelMakeFlags = [
+            "KCFLAGS=\"-w\""
+            "KCPPFLAGS=\"-w\""
+          ];
+          kernelSrc = sources.linux-moto-pstar-lineageos-22_0.src;
+        };
       };
     };
 }
