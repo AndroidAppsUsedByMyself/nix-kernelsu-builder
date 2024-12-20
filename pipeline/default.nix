@@ -28,13 +28,17 @@ let
     };
 
     kernelBuildCustomClang = callPackage ./build-kernel-custom-clang.nix {
-      inherit arch clangPrebuilt customGoogleClang enableKernelSU;
+      inherit
+        arch
+        clangPrebuilt
+        customGoogleClang
+        enableKernelSU
+        ;
       src = patchedKernelSrc;
       defconfigs = kernelDefconfigs;
       makeFlags = kernelMakeFlags;
       extraKernelConfigs = kernelConfig;
     };
-
 
     kernelBuildClang = callPackage ./build-kernel-clang.nix {
       inherit arch clangVersion enableKernelSU;
@@ -53,11 +57,12 @@ let
     };
 
     kernelBuild =
-      if clangVersion == null
-      then kernelBuildGcc
-      else if clangVersion == "custom"
-      then kernelBuildCustomClang
-      else kernelBuildClang;
+      if clangVersion == null then
+        kernelBuildGcc
+      else if clangVersion == "custom" then
+        kernelBuildCustomClang
+      else
+        kernelBuildClang;
 
     anykernelZip = callPackage ./build-anykernel-zip.nix {
       inherit arch kernelImageName;

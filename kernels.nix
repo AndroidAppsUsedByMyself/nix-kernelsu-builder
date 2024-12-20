@@ -58,6 +58,14 @@ _: {
             CLANG_SHA256 = "1zg1cm8zn8prawgz3h1qnapxrgkmj894pl10i1q11nfcv3ycic41";
           };
           kernelDefconfigs = [
+            # separated configs
+            #"vendor/kona-perf_defconfig"
+            #"vendor/ext_config/moto-kona.config"
+            #"vendor/ext_config/pstar-default.config"
+            #"vendor/debugfs.config"
+            # the one which need to be generated before build
+            #"lineageos_pstar_defconfig"
+            # the one which extract from a real device
             "lineageos_pstar_stock_defconfig"
           ];
           kernelImageName = "Image";
