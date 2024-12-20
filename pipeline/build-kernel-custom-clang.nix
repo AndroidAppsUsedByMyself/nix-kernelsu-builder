@@ -63,7 +63,7 @@
 in
   stdenv.mkDerivation {
     name = "clang-kernel-${
-      if customGoogleClang.CLANG_VERSION != null && customGoogleClang.CLANG_BRANCH != null
+      if customGoogleClang != null && customGoogleClang.CLANG_VERSION != null && customGoogleClang.CLANG_BRANCH != null
       then "${customGoogleClang.CLANG_BRANCH}-${customGoogleClang.CLANG_VERSION}"
       else if clangPrebuilt != null
       then clangPrebuilt
@@ -101,7 +101,7 @@ in
         gcc-arm-linux-androideabi
       ]
       ++ (
-        if customGoogleClang.CLANG_VERSION != null && customGoogleClang.CLANG_BRANCH != null
+        if customGoogleClang != null && customGoogleClang.CLANG_VERSION != null && customGoogleClang.CLANG_BRANCH != null
         then [
           (wrapCC
             (pkgs.callPackage ../pkgs/android_prebuilts_clang_custom.nix {inherit customGoogleClang;}))

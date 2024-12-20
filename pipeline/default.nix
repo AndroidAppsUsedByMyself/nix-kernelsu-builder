@@ -12,7 +12,7 @@
   customGoogleClang ? null,
   enableKernelSU ? true,
   kernelConfig ? "",
-  kernelDefconfigs ? [ ],
+  kernelDefconfigs,
   kernelImageName ? "Image",
   kernelMakeFlags ? [ ],
   kernelPatches ? [ ],
