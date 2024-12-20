@@ -5,7 +5,6 @@
   pkg-config,
   glibc,
   gcc,
-  gcc-unwrapped,
   wrapCC,
   bc,
   bison,
@@ -53,8 +52,8 @@ let
     "CLANG_TRIPLE=aarch64-linux-gnu-"
     (lib.optionalString enableLLVM "LLVM=1")
     (lib.optionalString enableLLVM "LLVM_IAS=1")
-    (lib.optionalString enableGcc32 "${gcc-arm-linux-androideabi}/bin/arm-linux-androideabi-")
-    (lib.optionalString enableGcc64 "i${gcc-aarch64-linux-android}/bin/aarch64-linux-android-")
+    (lib.optionalString enableGcc32 "CROSS_COMPILE_ARM32=arm-linux-androideabi-")
+    (lib.optionalString enableGcc64 "CROSS_COMPILE=aarch64-linux-android-")
   ] ++ makeFlags;
 
   defconfig = lib.last defconfigs;
@@ -99,8 +98,9 @@ stdenv.mkDerivation {
       which
       zlib
       zstd
-
     ]
+    ++ (if enableGcc64 then [ gcc-aarch64-linux-android ] else [ ])
+    ++ (if enableGcc32 then [ gcc-arm-linux-androideabi ] else [ ])
     ++ (
       if
         customGoogleClang != null
@@ -140,16 +140,13 @@ stdenv.mkDerivation {
     ''
     + (lib.optionalString enableKernelSU ''
       # Inject KernelSU options
-      echo "CONFIG_MODULES=y" >> $CFG_PATH
+      echo "CONFIG_lineageos_pstar_stock_defconfigMODULES=y" >> $CFG_PATH
       echo "CONFIG_KPROBES=y" >> $CFG_PATH
       echo "CONFIG_HAVE_KPROBES=y" >> $CFG_PATH
       echo "CONFIG_KPROBE_EVENTS=y" >> $CFG_PATH
       echo "CONFIG_OVERLAY_FS=y" >> $CFG_PATH
     '')
     + ''
-
-      export LD_LIBRARY_PATH=${gcc-aarch64-linux-android}/lib:${gcc-arm-linux-androideabi}/lib:${gcc-unwrapped}/lib:$LD_LIBRARY_PATH
-      export LIBRARY_PATH=${gcc-aarch64-linux-android}/lib:${gcc-arm-linux-androideabi}/lib:${gcc-unwrapped}/lib:$LIBRARY_PATH
 
       mkdir -p $out
       make ${builtins.concatStringsSep " " (finalMakeFlags ++ defconfigs)}
