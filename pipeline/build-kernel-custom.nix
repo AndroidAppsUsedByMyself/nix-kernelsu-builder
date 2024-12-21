@@ -140,7 +140,7 @@ stdenv.mkDerivation {
     ''
     + (lib.optionalString enableKernelSU ''
       # Inject KernelSU options
-      echo "CONFIG_lineageos_pstar_stock_defconfigMODULES=y" >> $CFG_PATH
+      echo "CONFIG_MODULES=y" >> $CFG_PATH
       echo "CONFIG_KPROBES=y" >> $CFG_PATH
       echo "CONFIG_HAVE_KPROBES=y" >> $CFG_PATH
       echo "CONFIG_KPROBE_EVENTS=y" >> $CFG_PATH
