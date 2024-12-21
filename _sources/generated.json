@@ -139,6 +139,21 @@
         },
         "version": "11872"
     },
+    "lineage-nightly-pstar_bootImg": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "lineage-nightly-pstar_bootImg",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-jN0hH9ThSVCtnxfK3XDsUodZmfQEzoQQxy5vAATNyDI=",
+            "type": "url",
+            "url": "https://mirrorbits.lineageos.org/full/pstar/20241216/boot.img"
+        },
+        "version": "20241216"
+    },
     "linux-amazon-karnak": {
         "cargoLocks": null,
         "date": "2023-10-09",

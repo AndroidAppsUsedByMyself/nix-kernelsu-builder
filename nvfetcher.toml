@@ -49,3 +49,8 @@ fetch.github = "AndroidAppsUsedByMyself/android_kernel_motorola_sm8250"
 src.git = "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
 src.branch = "lineage-20.0"
 fetch.github = "LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b"
+
+[lineage-nightly-pstar_bootImg]
+src.webpage = "https://download.lineageos.org/api/v2/devices/pstar/builds"
+src.regex = "https://mirrorbits.lineageos.org/full/pstar/([0-9]{8})/boot.img"
+fetch.url = "https://mirrorbits.lineageos.org/full/pstar/$ver/boot.img"
