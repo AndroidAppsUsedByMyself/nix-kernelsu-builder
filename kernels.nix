@@ -48,6 +48,7 @@ _: {
             CONFIG_LTO_CLANG=y
           '';
         };
+
         moto-pstar-lineageos-22_0 = {
           anyKernelVariant = "kernelsu";
           clangVersion = "custom";
@@ -79,6 +80,28 @@ _: {
           ];
           kernelSrc = sources.linux-moto-pstar-lineageos-22_0.src;
           oemBootImg = sources.lineage-nightly-pstar_bootImg.src;
+        };
+
+        ztc1997-android_gki_kernel_5-10_common = {
+          anyKernelVariant = "osm0sis";
+          clangVersion = "latest";
+          kernelDefconfigs = [ "gki_defconfig" ];
+          kernelImageName = "Image";
+          kernelSrc = sources.ztc1997-android_gki_kernel_5-10_common.src;
+          kernelConfig = ''
+            CONFIG_LTO_CLANG=y
+          '';
+        };
+
+        ztc1997-android_gki_kernel_5-15_common = {
+          anyKernelVariant = "osm0sis";
+          clangVersion = "latest";
+          kernelDefconfigs = [ "gki_defconfig" ];
+          kernelImageName = "Image";
+          kernelSrc = sources.ztc1997-android_gki_kernel_5-15_common;
+          kernelConfig = ''
+            CONFIG_LTO_CLANG=y
+          '';
         };
       };
     };
