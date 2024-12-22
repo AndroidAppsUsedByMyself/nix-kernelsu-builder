@@ -237,5 +237,47 @@
             "type": "github"
         },
         "version": "2248fcf83d2a19ac0adb12bc6ed319b31090f6f4"
+    },
+    "ztc1997-android_gki_kernel_5-10_common": {
+        "cargoLocks": null,
+        "date": "2024-12-18",
+        "extract": null,
+        "name": "ztc1997-android_gki_kernel_5-10_common",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ztc1997",
+            "repo": "android_gki_kernel_5.10_common",
+            "rev": "c9a80e00191ed9d05f6b5492b54a55a8afe87c87",
+            "sha256": "sha256-r8XRHNpIsqVFTgzdycRpAEaE3L5n+8ohurqGX9/+gSw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "c9a80e00191ed9d05f6b5492b54a55a8afe87c87"
+    },
+    "ztc1997-android_gki_kernel_5-15_common": {
+        "cargoLocks": null,
+        "date": "2024-09-03",
+        "extract": null,
+        "name": "ztc1997-android_gki_kernel_5-15_common",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ztc1997",
+            "repo": "android_gki_kernel_5.15_common",
+            "rev": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117",
+            "sha256": "sha256-uJNVK/kJgWCBUxHurKAedokKz2WtYaZ17Ib0yp7N9WI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117"
     }
 }
