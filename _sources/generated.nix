@@ -140,15 +140,15 @@
   };
   ztc1997-android_gki_kernel_5-10_common = {
     pname = "ztc1997-android_gki_kernel_5-10_common";
-    version = "c9a80e00191ed9d05f6b5492b54a55a8afe87c87";
+    version = "228759f8bb6d505cd1d158d66dea70dda6680e95";
     src = fetchFromGitHub {
       owner = "ztc1997";
       repo = "android_gki_kernel_5.10_common";
-      rev = "c9a80e00191ed9d05f6b5492b54a55a8afe87c87";
+      rev = "228759f8bb6d505cd1d158d66dea70dda6680e95";
       fetchSubmodules = false;
-      sha256 = "sha256-r8XRHNpIsqVFTgzdycRpAEaE3L5n+8ohurqGX9/+gSw=";
+      sha256 = "sha256-aZqyB/AGS8GnBQB8QRxJGmlw6kDefXAzIFiHneaAOPo=";
     };
-    date = "2024-12-18";
+    date = "2024-12-27";
   };
   ztc1997-android_gki_kernel_5-15_common = {
     pname = "ztc1997-android_gki_kernel_5-15_common";

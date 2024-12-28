@@ -240,7 +240,7 @@
     },
     "ztc1997-android_gki_kernel_5-10_common": {
         "cargoLocks": null,
-        "date": "2024-12-18",
+        "date": "2024-12-27",
         "extract": null,
         "name": "ztc1997-android_gki_kernel_5-10_common",
         "passthru": null,
@@ -252,12 +252,12 @@
             "name": null,
             "owner": "ztc1997",
             "repo": "android_gki_kernel_5.10_common",
-            "rev": "c9a80e00191ed9d05f6b5492b54a55a8afe87c87",
-            "sha256": "sha256-r8XRHNpIsqVFTgzdycRpAEaE3L5n+8ohurqGX9/+gSw=",
+            "rev": "228759f8bb6d505cd1d158d66dea70dda6680e95",
+            "sha256": "sha256-aZqyB/AGS8GnBQB8QRxJGmlw6kDefXAzIFiHneaAOPo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "c9a80e00191ed9d05f6b5492b54a55a8afe87c87"
+        "version": "228759f8bb6d505cd1d158d66dea70dda6680e95"
     },
     "ztc1997-android_gki_kernel_5-15_common": {
         "cargoLocks": null,
