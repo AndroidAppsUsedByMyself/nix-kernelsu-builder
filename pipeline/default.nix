@@ -8,6 +8,7 @@
   arch ? "arm64",
   anyKernelVariant ? "osm0sis",
   clangVersion ? null,
+  gkiVersion ? null,
   clangPrebuilt ? null,
   customGoogleClang ? null,
   enableGcc32 ? false,
@@ -62,11 +63,21 @@ let
       extraKernelConfigs = kernelConfig;
     };
 
+    kernelBuildGki = callPackage ./build-kernel-gki.nix {
+      inherit arch enableKernelSU gkiVersion;
+      src = patchedKernelSrc;
+      defconfigs = kernelDefconfigs;
+      makeFlags = kernelMakeFlags;
+      extraKernelConfigs = kernelConfig;
+    };
+
     kernelBuild =
-      if clangVersion == null then
+      if clangVersion == null || clangVersion == "gcc" then
         kernelBuildGcc
       else if clangVersion == "custom" then
         kernelBuildCustom
+      else if clangVersion == "gki" then
+        kernelBuildGki
       else
         kernelBuildClang;
 

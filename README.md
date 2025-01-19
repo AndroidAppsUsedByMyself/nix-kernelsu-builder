@@ -24,8 +24,9 @@ Each kernel definition takes these arguments:
 - `clangVersion`: Version of clang used in kernel build.
   - Can be set to any version present in [nixpkgs](https://github.com/NixOS/nixpkgs). Currently the value can be 8 to 17.
   - If set to `latest`, will use the latest clang in nixpkgs. Recommended.
-  - If set to `null`, uses Google's GCC 4.9 toolchain instead.
-  - If set to `custom`, will use the `customGoogleClang` or `clangPrebuilt`.
+  - If set to `null` or `"gcc"`, uses Google's GCC 4.9 toolchain instead.
+  - If set to `"custom"`, will use the `customGoogleClang` or `clangPrebuilt`.
+  - If set to `"gki"`, will use `gkiVersion`
 - `customGoogleClang`: Google Clang.
   - `CLANG_VERSION`: Version of Google Clang to be used in kernel build.
   - `CLANG_BRANCH`: Branch of Google Clang to be used in kernel build.

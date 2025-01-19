@@ -102,7 +102,8 @@ _: {
 
         ztc1997-android_gki_kernel_5-10_common = {
           anyKernelVariant = "osm0sis";
-          clangVersion = "latest";
+          clangVersion = "gki";
+          gkiVersion = "android12-5.10";
           kernelDefconfigs = [ "gki_defconfig" ];
           kernelImageName = "Image";
           kernelSrc = sources.ztc1997-android_gki_kernel_5-10_common.src;
@@ -113,7 +114,8 @@ _: {
 
         ztc1997-android_gki_kernel_5-15_common = {
           anyKernelVariant = "osm0sis";
-          clangVersion = "latest";
+          clangVersion = "gki";
+          gkiVersion = "android13-5.15";
           kernelDefconfigs = [ "gki_defconfig" ];
           kernelImageName = "Image";
           kernelSrc = sources.ztc1997-android_gki_kernel_5-15_common;
