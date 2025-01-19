@@ -26,7 +26,7 @@ Each kernel definition takes these arguments:
   - If set to `latest`, will use the latest clang in nixpkgs. Recommended.
   - If set to `null` or `"gcc"`, uses Google's GCC 4.9 toolchain instead.
   - If set to `"custom"`, will use the `customGoogleClang` or `clangPrebuilt`.
-  - If set to `"gki"`, will use `gkiVersion`
+  - If set to `"gki"`, will use `gkiVersion` (under development)
 - `customGoogleClang`: Google Clang.
   - `CLANG_VERSION`: Version of Google Clang to be used in kernel build.
   - `CLANG_BRANCH`: Branch of Google Clang to be used in kernel build.
