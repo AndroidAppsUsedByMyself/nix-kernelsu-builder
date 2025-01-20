@@ -148,11 +148,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-tjARCTroZx5Ycg0ScvKhdXaxOUhZDyxONrNnS7SJlVg=",
+            "sha256": "sha256-AaC6Y8nRAENjSslFkLuMeGOuFNK5teZcHjAmtPzY/6U=",
             "type": "url",
-            "url": "https://mirrorbits.lineageos.org/full/pstar/20250113/boot.img"
+            "url": "https://mirrorbits.lineageos.org/full/pstar/20250120/boot.img"
         },
-        "version": "20250113"
+        "version": "20250120"
     },
     "linux-amazon-karnak": {
         "cargoLocks": null,

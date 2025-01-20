@@ -84,10 +84,10 @@
   };
   lineage-nightly-pstar_bootImg = {
     pname = "lineage-nightly-pstar_bootImg";
-    version = "20250113";
+    version = "20250120";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20250113/boot.img";
-      sha256 = "sha256-tjARCTroZx5Ycg0ScvKhdXaxOUhZDyxONrNnS7SJlVg=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20250120/boot.img";
+      sha256 = "sha256-AaC6Y8nRAENjSslFkLuMeGOuFNK5teZcHjAmtPzY/6U=";
     };
   };
   linux-amazon-karnak = {
