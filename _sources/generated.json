@@ -177,7 +177,7 @@
     },
     "linux-moto-pstar-lineageos-22_0": {
         "cargoLocks": null,
-        "date": "2024-12-21",
+        "date": "2025-02-07",
         "extract": null,
         "name": "linux-moto-pstar-lineageos-22_0",
         "passthru": null,
@@ -189,12 +189,12 @@
             "name": null,
             "owner": "AndroidAppsUsedByMyself",
             "repo": "android_kernel_motorola_sm8250",
-            "rev": "8a3a7fa629d0846adc83f42b6d880e717e4f9783",
-            "sha256": "sha256-eCTtAcJibh5OYhEdzgApnAce7ZBuCqcS4PD3eh9dUZk=",
+            "rev": "8ddd25033379fc316172d0f50198b22b16cdaaae",
+            "sha256": "sha256-/7/6nHHL97UG1Fhf34k+lJb8K0ahCDaJs1bwypD3pdE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "8a3a7fa629d0846adc83f42b6d880e717e4f9783"
+        "version": "8ddd25033379fc316172d0f50198b22b16cdaaae"
     },
     "linux-moto-rtwo-lineageos-21": {
         "cargoLocks": null,
