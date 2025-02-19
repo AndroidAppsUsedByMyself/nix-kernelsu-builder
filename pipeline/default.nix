@@ -53,7 +53,7 @@ let
       src = patchedKernelSrc;
       defconfigs = kernelDefconfigs;
       makeFlags = kernelMakeFlags;
-      extraKernelConfigs = kernelConfig;
+      additionalKernelConfig = kernelConfig;
     };
 
     kernelBuildClang = callPackage ./build-kernel-clang.nix {
@@ -66,7 +66,7 @@ let
       src = patchedKernelSrc;
       defconfigs = kernelDefconfigs;
       makeFlags = kernelMakeFlags;
-      extraKernelConfigs = kernelConfig;
+      additionalKernelConfig = kernelConfig;
     };
 
     kernelBuildGcc = callPackage ./build-kernel-gcc.nix {
@@ -74,7 +74,7 @@ let
       src = patchedKernelSrc;
       defconfigs = kernelDefconfigs;
       makeFlags = kernelMakeFlags;
-      extraKernelConfigs = kernelConfig;
+      additionalKernelConfig = kernelConfig;
     };
 
     kernelBuildGki = callPackage ./build-kernel-gki.nix {
@@ -87,7 +87,7 @@ let
       src = patchedKernelSrc;
       defconfigs = kernelDefconfigs;
       makeFlags = kernelMakeFlags;
-      extraKernelConfigs = kernelConfig;
+      additionalKernelConfig = kernelConfig;
     };
 
     kernelBuild =
