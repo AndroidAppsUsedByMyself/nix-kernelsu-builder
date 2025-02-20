@@ -62,3 +62,28 @@ fetch.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
 [wildplus-kernel-patches]
 src.git = "https://github.com/WildPlusKernel/kernel_patches.git"
 fetch.github = "WildPlusKernel/kernel_patches"
+
+[linux-moto-pstar-lineageos-22_1]
+src.git = "https://github.com/AndroidAppsUsedByMyself/android_kernel_motorola_sm8250.git"
+src.branch = "lineage-22.1"
+fetch.github = "AndroidAppsUsedByMyself/android_kernel_motorola_sm8250"
+
+[android_prebuilts_clang_kernel_linux-x86_clang-r416183b]
+src.git = "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
+src.branch = "lineage-20.0"
+fetch.github = "LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b"
+
+[lineage-nightly-pstar_bootImg]
+src.webpage = "https://download.lineageos.org/api/v2/devices/pstar/builds"
+src.regex = "https://mirrorbits.lineageos.org/full/pstar/([0-9]{8})/boot.img"
+fetch.url = "https://mirrorbits.lineageos.org/full/pstar/$ver/boot.img"
+
+[ztc1997-android_gki_kernel_5-10_common]
+src.git = "https://github.com/ztc1997/android_gki_kernel_5.10_common.git"
+src.branch = "android12-5.10-2024-11"
+fetch.github = "ztc1997/android_gki_kernel_5.10_common"
+
+[ztc1997-android_gki_kernel_5-15_common]
+src.git = "https://github.com/ztc1997/android_gki_kernel_5.15_common.git"
+src.branch = "android13-5.15-2024-08"
+fetch.github = "ztc1997/android_gki_kernel_5.15_common"

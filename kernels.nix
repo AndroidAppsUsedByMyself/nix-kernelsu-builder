@@ -90,7 +90,7 @@ _: {
           '';
         };
 
-        moto-pstar-lineageos-22_0 = {
+        moto-pstar-lineageos-22_1 = {
           anyKernelVariant = "kernelsu";
           clangVersion = "custom";
           kernelSU = {
@@ -123,7 +123,7 @@ _: {
             "KCPPFLAGS=\"-w\""
             "LOCALVERSION=-official-kernelsu"
           ];
-          kernelSrc = sources.linux-moto-pstar-lineageos-22_0.src;
+          kernelSrc = sources.linux-moto-pstar-lineageos-22_1.src;
           oemBootImg = sources.lineage-nightly-pstar_bootImg.src;
         };
 
