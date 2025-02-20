@@ -25,7 +25,7 @@
   gkiVersion,
   src,
   arch,
-  enableKernelSU,
+  kernelSU,
   ...
 }:
 pkgs.stdenv.mkDerivation {
@@ -64,7 +64,7 @@ pkgs.stdenv.mkDerivation {
       runHook preBuild
 
     ''
-    + (lib.optionalString enableKernelSU ''
+    + (lib.optionalString kernelSU.enable ''
       # Inject KernelSU options
       echo "CONFIG_MODULES=y" >> $CFG_PATH
       echo "CONFIG_KPROBES=y" >> $CFG_PATH

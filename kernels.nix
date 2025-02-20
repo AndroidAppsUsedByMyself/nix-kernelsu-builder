@@ -8,7 +8,7 @@ _: {
       kernelsu = {
         amazon-fire-hd-karnak = {
           anyKernelVariant = "osm0sis";
-          enableKernelSU = false;
+          kernelSU.enable = false;
           kernelDefconfigs = [ "lineageos_karnak_defconfig" ];
           kernelImageName = "Image.gz-dtb";
           kernelMakeFlags = [
@@ -22,6 +22,14 @@ _: {
         moto-rtwo-lineageos-21 = {
           anyKernelVariant = "kernelsu";
           clangVersion = "latest";
+
+          kernelSU.variant = "next";
+          susfs = {
+            enable = true;
+            inherit (sources.susfs-android13-5_15) src;
+            kernelsuPatch = "${sources.wildplus-kernel-patches.src}/KernelSU-Next-Implement-SUSFS-v1.5.5-Universal.patch";
+          };
+
           kernelDefconfigs = [
             "gki_defconfig"
             "vendor/kalama_GKI.config"
@@ -33,6 +41,9 @@ _: {
           kernelMakeFlags = [
             "KCFLAGS=\"-w\""
             "KCPPFLAGS=\"-w\""
+          ];
+          kernelPatches = [
+            "${sources.wildplus-kernel-patches.src}/69_hide_stuff.patch"
           ];
           kernelSrc = sources.linux-moto-rtwo-lineageos-21.src;
         };
@@ -40,6 +51,14 @@ _: {
         moto-rtwo-lineageos-22_1 = {
           anyKernelVariant = "kernelsu";
           clangVersion = "latest";
+
+          kernelSU.variant = "next";
+          susfs = {
+            enable = true;
+            inherit (sources.susfs-android13-5_15) src;
+            kernelsuPatch = "${sources.wildplus-kernel-patches.src}/KernelSU-Next-Implement-SUSFS-v1.5.5-Universal.patch";
+          };
+
           kernelDefconfigs = [
             "gki_defconfig"
             "vendor/kalama_GKI.config"
@@ -52,12 +71,16 @@ _: {
             "KCFLAGS=\"-w\""
             "KCPPFLAGS=\"-w\""
           ];
+          kernelPatches = [
+            "${sources.wildplus-kernel-patches.src}/69_hide_stuff.patch"
+          ];
           kernelSrc = sources.linux-moto-rtwo-lineageos-22_1.src;
         };
 
         oneplus-8t-blu-spark = {
           anyKernelVariant = "osm0sis";
           clangVersion = "latest";
+          kernelSU.variant = "next";
           kernelDefconfigs = [ "blu_spark_defconfig" ];
           kernelImageName = "Image";
           kernelSrc = sources.linux-oneplus-8t-blu-spark.src;
@@ -70,6 +93,10 @@ _: {
         moto-pstar-lineageos-22_0 = {
           anyKernelVariant = "kernelsu";
           clangVersion = "custom";
+          kernelSU = {
+            enable = true;
+            variant = "next";
+          };
           enableGcc64 = true;
           enableGcc32 = true;
           enableLLVM = false;

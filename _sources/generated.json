@@ -1,25 +1,4 @@
 {
-    "android_prebuilts_clang_kernel_linux-x86_clang-r416183b": {
-        "cargoLocks": null,
-        "date": "2022-11-01",
-        "extract": null,
-        "name": "android_prebuilts_clang_kernel_linux-x86_clang-r416183b",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "LineageOS",
-            "repo": "android_prebuilts_clang_kernel_linux-x86_clang-r416183b",
-            "rev": "54220fd601050b350b2af7adc913089ebf0e7aed",
-            "sha256": "sha256-o9e5VRR6s2T9NDwDY8XuG2GYUKbZQF1s687gPlE0+RY=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "54220fd601050b350b2af7adc913089ebf0e7aed"
-    },
     "anykernel-kernelsu": {
         "cargoLocks": null,
         "date": "2023-10-30",
@@ -104,6 +83,41 @@
         },
         "version": "3ecb542702c2ca0e502533c3f6d02f0f06f584f1"
     },
+    "kernelsu-next": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "kernelsu-next",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "v1.0.4",
+            "sha256": "sha256-AczEjmtgL32TmWP/4FdM3Wc5XD7+VP7iIuZ2lR1OdJI=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/rifsxd/KernelSU-Next.git"
+        },
+        "version": "v1.0.4"
+    },
+    "kernelsu-next-revision-code": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "kernelsu-next-revision-code",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=",
+            "type": "url",
+            "url": "https://example.com"
+        },
+        "version": "12335"
+    },
     "kernelsu-stable": {
         "cargoLocks": null,
         "date": null,
@@ -139,21 +153,6 @@
         },
         "version": "11872"
     },
-    "lineage-nightly-pstar_bootImg": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "lineage-nightly-pstar_bootImg",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-MlSEE6LQRb5M0SKdHZKItgvR68JbQKvA1s4uPmmLrTg=",
-            "type": "url",
-            "url": "https://mirrorbits.lineageos.org/full/pstar/20250217/boot.img"
-        },
-        "version": "20250217"
-    },
     "linux-amazon-karnak": {
         "cargoLocks": null,
         "date": "2023-10-09",
@@ -174,27 +173,6 @@
             "type": "github"
         },
         "version": "e22c713c7c4f0c8d08267f6bba98b8c4cde8310f"
-    },
-    "linux-moto-pstar-lineageos-22_0": {
-        "cargoLocks": null,
-        "date": "2025-02-07",
-        "extract": null,
-        "name": "linux-moto-pstar-lineageos-22_0",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "AndroidAppsUsedByMyself",
-            "repo": "android_kernel_motorola_sm8250",
-            "rev": "8ddd25033379fc316172d0f50198b22b16cdaaae",
-            "sha256": "sha256-/7/6nHHL97UG1Fhf34k+lJb8K0ahCDaJs1bwypD3pdE=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "8ddd25033379fc316172d0f50198b22b16cdaaae"
     },
     "linux-moto-rtwo-lineageos-21": {
         "cargoLocks": null,
@@ -259,11 +237,11 @@
         },
         "version": "64c109e3f3ba97fa7aed730ab7b4238b91df028b"
     },
-    "ztc1997-android_gki_kernel_5-10_common": {
+    "susfs-android13-5_15": {
         "cargoLocks": null,
-        "date": "2025-01-21",
+        "date": "2025-02-10",
         "extract": null,
-        "name": "ztc1997-android_gki_kernel_5-10_common",
+        "name": "susfs-android13-5_15",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -271,20 +249,19 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "ztc1997",
-            "repo": "android_gki_kernel_5.10_common",
-            "rev": "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce",
-            "sha256": "sha256-tZWaP+q8p7gCHBbZdcdzqIGT051eoTnR3gPWzGlp7+c=",
+            "rev": "dc4023a48ec5a49a6d02223891021e2853ebe78a",
+            "sha256": "sha256-stf2nGY4qvY76IXW2Wqc+AMjcMLsxCrA3uNY0nQzzhs=",
             "sparseCheckout": [],
-            "type": "github"
+            "type": "git",
+            "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
         },
-        "version": "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce"
+        "version": "dc4023a48ec5a49a6d02223891021e2853ebe78a"
     },
-    "ztc1997-android_gki_kernel_5-15_common": {
+    "wildplus-kernel-patches": {
         "cargoLocks": null,
-        "date": "2024-09-03",
+        "date": "2025-02-19",
         "extract": null,
-        "name": "ztc1997-android_gki_kernel_5-15_common",
+        "name": "wildplus-kernel-patches",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -292,13 +269,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "ztc1997",
-            "repo": "android_gki_kernel_5.15_common",
-            "rev": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117",
-            "sha256": "sha256-uJNVK/kJgWCBUxHurKAedokKz2WtYaZ17Ib0yp7N9WI=",
+            "owner": "WildPlusKernel",
+            "repo": "kernel_patches",
+            "rev": "7fddee33117b6e66f748959bf665fdc4f6feca3c",
+            "sha256": "sha256-tJRgVf5xvU8soqo7N7EsmCveGVzXVLFw0aXbBGBw2wA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117"
+        "version": "7fddee33117b6e66f748959bf665fdc4f6feca3c"
     }
 }

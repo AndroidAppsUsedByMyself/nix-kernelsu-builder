@@ -5,28 +5,29 @@
   ...
 }:
 {
-  arch ? "arm64",
-  anyKernelVariant ? "osm0sis",
-  clangVersion ? null,
+  arch,
+  anyKernelVariant,
+  clangVersion,
+  kernelSU,
+  kernelConfig,
   gkiVersion ? null,
   clangPrebuilt ? null,
   customGoogleClang ? null,
   enableGcc32 ? false,
   enableGcc64 ? false,
   enableLLVM ? true,
-  enableKernelSU ? true,
-  kernelConfig ? "",
   kernelDefconfigs,
-  kernelImageName ? "Image",
-  kernelMakeFlags ? [ ],
-  kernelPatches ? [ ],
+  kernelImageName,
+  kernelMakeFlags,
+  kernelPatches,
   kernelSrc,
-  oemBootImg ? null,
+  oemBootImg,
+  susfs,
 }:
 let
   pipeline = rec {
     patchedKernelSrc = callPackage ./patch-kernel-src.nix {
-      inherit enableKernelSU;
+      inherit kernelSU susfs;
       src = kernelSrc;
       patches = kernelPatches;
     };
@@ -36,7 +37,7 @@ let
         arch
         clangPrebuilt
         customGoogleClang
-        enableKernelSU
+        kernelSU
         enableGcc64
         enableGcc32
         enableLLVM
@@ -48,7 +49,12 @@ let
     };
 
     kernelBuildClang = callPackage ./build-kernel-clang.nix {
-      inherit arch clangVersion enableKernelSU;
+      inherit
+        arch
+        clangVersion
+        kernelSU
+        susfs
+        ;
       src = patchedKernelSrc;
       defconfigs = kernelDefconfigs;
       makeFlags = kernelMakeFlags;
@@ -56,7 +62,7 @@ let
     };
 
     kernelBuildGcc = callPackage ./build-kernel-gcc.nix {
-      inherit arch enableKernelSU;
+      inherit arch kernelSU susfs;
       src = patchedKernelSrc;
       defconfigs = kernelDefconfigs;
       makeFlags = kernelMakeFlags;
@@ -64,7 +70,7 @@ let
     };
 
     kernelBuildGki = callPackage ./build-kernel-gki.nix {
-      inherit arch enableKernelSU gkiVersion;
+      inherit arch kernelSU gkiVersion;
       src = patchedKernelSrc;
       defconfigs = kernelDefconfigs;
       makeFlags = kernelMakeFlags;

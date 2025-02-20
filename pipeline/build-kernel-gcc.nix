@@ -26,7 +26,8 @@
   src,
   arch,
   defconfigs,
-  enableKernelSU,
+  kernelSU,
+  susfs,
   makeFlags,
   additionalKernelConfig ? "",
   ...
@@ -43,6 +44,17 @@ let
   ] ++ makeFlags;
 
   defconfig = lib.last defconfigs;
+  kernelConfigCmd = pkgs.callPackage ./kernel-config-cmd.nix {
+    inherit
+      arch
+      defconfig
+      defconfigs
+      additionalKernelConfig
+      kernelSU
+      susfs
+      finalMakeFlags
+      ;
+  };
 in
 stdenv.mkDerivation {
   name = "gcc-kernel";
@@ -75,29 +87,13 @@ stdenv.mkDerivation {
     gcc-arm-linux-androideabi
   ];
 
-  buildPhase =
-    ''
-      runHook preBuild
+  buildPhase = ''
+    runHook preBuild
 
-      export CFG_PATH=arch/${arch}/configs/${defconfig}
-      cat >>$CFG_PATH <<EOF
-      ${additionalKernelConfig}
-      EOF
-    ''
-    + (lib.optionalString enableKernelSU ''
-      # Inject KernelSU options
-      echo "CONFIG_MODULES=y" >> $CFG_PATH
-      echo "CONFIG_KPROBES=y" >> $CFG_PATH
-      echo "CONFIG_HAVE_KPROBES=y" >> $CFG_PATH
-      echo "CONFIG_KPROBE_EVENTS=y" >> $CFG_PATH
-      echo "CONFIG_OVERLAY_FS=y" >> $CFG_PATH
-    '')
-    + ''
-      mkdir -p $out
-      make ${builtins.concatStringsSep " " (finalMakeFlags ++ defconfigs)}
+    ${kernelConfigCmd}
 
-      runHook postBuild
-    '';
+    runHook postBuild
+  '';
 
   installPhase = ''
     runHook preInstall
