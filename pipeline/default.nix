@@ -38,6 +38,7 @@ let
         clangPrebuilt
         customGoogleClang
         kernelSU
+        susfs
         enableGcc64
         enableGcc32
         enableLLVM
@@ -70,7 +71,12 @@ let
     };
 
     kernelBuildGki = callPackage ./build-kernel-gki.nix {
-      inherit arch kernelSU gkiVersion;
+      inherit
+        arch
+        kernelSU
+        susfs
+        gkiVersion
+        ;
       src = patchedKernelSrc;
       defconfigs = kernelDefconfigs;
       makeFlags = kernelMakeFlags;
