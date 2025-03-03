@@ -21,8 +21,8 @@ jobs:
           #- moto-rtwo-lineageos-22_1
           #- oneplus-8t-blu-spark
           - moto-pstar-lineageos-22_1
-          - ztc1997-android_gki_kernel_5-10_common
-          - ztc1997-android_gki_kernel_5-15_common
+          # - ztc1997-android_gki_kernel_5-10_common
+          # - ztc1997-android_gki_kernel_5-15_common
     runs-on: ubuntu-latest
     env:
       GIT_SSL_NO_VERIFY: 'true'
