@@ -126,7 +126,7 @@ _: {
           kernelSrc = sources.linux-moto-pstar-lineageos-22_1.src;
           oemBootImg = sources.lineage-nightly-pstar_bootImg.src;
           kernelPatches = [
-            "${sources.los-pstar-kernel-patches.src}/kernel_patches/patches/4.19.157/module.patch"
+            "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/module.patch"
           ];
           kernelConfig = ''
             CONFIG_MODULE_FORCE_LOAD=y
