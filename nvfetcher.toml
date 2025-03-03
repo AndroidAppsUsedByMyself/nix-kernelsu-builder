@@ -78,6 +78,11 @@ src.webpage = "https://download.lineageos.org/api/v2/devices/pstar/builds"
 src.regex = "https://mirrorbits.lineageos.org/full/pstar/([0-9]{8})/boot.img"
 fetch.url = "https://mirrorbits.lineageos.org/full/pstar/$ver/boot.img"
 
+[los-pstar-kernel-patches]
+src.git = "https://github.com/AndroidAppsUsedByMyself/kernel_patches.git"
+src.branch = "main"
+fetch.github = "AndroidAppsUsedByMyself/kernel_patches"
+
 [ztc1997-android_gki_kernel_5-10_common]
 src.git = "https://github.com/ztc1997/android_gki_kernel_5.10_common.git"
 src.branch = "android12-5.10-2024-11"
