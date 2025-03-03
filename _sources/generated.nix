@@ -171,6 +171,18 @@
     };
     date = "2024-12-26";
   };
+  los-pstar-kernel-patches = {
+    pname = "los-pstar-kernel-patches";
+    version = "508f67fb6c474ade86b66e02a1f0f818ea8f9d92";
+    src = fetchFromGitHub {
+      owner = "AndroidAppsUsedByMyself";
+      repo = "kernel_patches";
+      rev = "508f67fb6c474ade86b66e02a1f0f818ea8f9d92";
+      fetchSubmodules = false;
+      sha256 = "sha256-qdW7+4nq5kqGSlTFEMsDlmfnxqakR0yzMtvOlBtdxk0=";
+    };
+    date = "2025-02-09";
+  };
   susfs-android13-5_15 = {
     pname = "susfs-android13-5_15";
     version = "eeb4737559da1321d0f121f1b3aa75ae9567075a";

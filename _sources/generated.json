@@ -294,6 +294,27 @@
         },
         "version": "64c109e3f3ba97fa7aed730ab7b4238b91df028b"
     },
+    "los-pstar-kernel-patches": {
+        "cargoLocks": null,
+        "date": "2025-02-09",
+        "extract": null,
+        "name": "los-pstar-kernel-patches",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "AndroidAppsUsedByMyself",
+            "repo": "kernel_patches",
+            "rev": "508f67fb6c474ade86b66e02a1f0f818ea8f9d92",
+            "sha256": "sha256-qdW7+4nq5kqGSlTFEMsDlmfnxqakR0yzMtvOlBtdxk0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "508f67fb6c474ade86b66e02a1f0f818ea8f9d92"
+    },
     "susfs-android13-5_15": {
         "cargoLocks": null,
         "date": "2025-02-23",
