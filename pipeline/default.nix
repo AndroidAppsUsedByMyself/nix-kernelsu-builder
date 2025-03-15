@@ -7,6 +7,7 @@
 {
   arch,
   anyKernelVariant,
+  build-toolchain,
   clangVersion,
   kernelSU,
   kernelConfig,
@@ -15,6 +16,7 @@
   customGoogleClang ? null,
   enableGcc32 ? false,
   enableGcc64 ? false,
+  enableGccCompat ? false,
   enableLLVM ? true,
   kernelDefconfigs,
   kernelImageName,
@@ -41,6 +43,7 @@ let
         susfs
         enableGcc64
         enableGcc32
+        enableGccCompat
         enableLLVM
         ;
       src = patchedKernelSrc;
@@ -84,14 +87,16 @@ let
     };
 
     kernelBuild =
-      if clangVersion == null || clangVersion == "gcc" then
+      if build-toolchain == "gcc-only" then
         kernelBuildGcc
-      else if clangVersion == "custom" then
+      else if build-toolchain == "clang-with-gcc" then
         kernelBuildCustom
       else if clangVersion == "gki" then
         kernelBuildGki
+      else if build-toolchain == "clang-with-llvm" then
+        kernelBuildClang
       else
-        kernelBuildClang;
+        (_: lib.throw "function not implement");
 
     anykernelZip = callPackage ./build-anykernel-zip.nix {
       inherit arch kernelImageName;

@@ -28,9 +28,9 @@
   zstd,
   # User args
   clangPrebuilt,
-  customGoogleClang,
   enableGcc32,
   enableGcc64,
+  enableGccCompat,
   enableLLVM,
   src,
   arch,
@@ -44,7 +44,6 @@
 let
   gcc-aarch64-linux-android = pkgs.callPackage ../pkgs/gcc-aarch64-linux-android.nix { };
   gcc-arm-linux-androideabi = pkgs.callPackage ../pkgs/gcc-arm-linux-androideabi.nix { };
-  inherit customGoogleClang;
   finalMakeFlags = [
     "ARCH=${arch}"
     "CC=clang"
@@ -55,6 +54,7 @@ let
     (lib.optionalString enableLLVM "LLVM_IAS=1")
     (lib.optionalString enableGcc32 "CROSS_COMPILE_ARM32=arm-linux-androideabi-")
     (lib.optionalString enableGcc64 "CROSS_COMPILE=aarch64-linux-android-")
+    (lib.optionalString enableGccCompat "CROSS_COMPILE_COMPAT=arm-linux-android-")
   ] ++ makeFlags;
 
   defconfig = lib.last defconfigs;
@@ -71,18 +71,7 @@ let
   };
 in
 stdenv.mkDerivation {
-  name = "clang-kernel-${
-    if
-      customGoogleClang != null
-      && customGoogleClang.CLANG_VERSION != null
-      && customGoogleClang.CLANG_BRANCH != null
-    then
-      "${customGoogleClang.CLANG_BRANCH}-${customGoogleClang.CLANG_VERSION}"
-    else if clangPrebuilt != null then
-      clangPrebuilt
-    else
-      ""
-  }";
+  name = "clang-kernel";
   inherit src;
 
   nativeBuildInputs =
@@ -114,22 +103,12 @@ stdenv.mkDerivation {
     ++ (if enableGcc64 then [ gcc-aarch64-linux-android ] else [ ])
     ++ (if enableGcc32 then [ gcc-arm-linux-androideabi ] else [ ])
     ++ (
-      if
-        customGoogleClang != null
-        && customGoogleClang.CLANG_VERSION != null
-        && customGoogleClang.CLANG_BRANCH != null
-      then
-        [
-          (wrapCC (
-            pkgs.callPackage ../pkgs/android_prebuilts_clang_custom.nix { inherit customGoogleClang; }
-          ))
-        ]
-      else if clangPrebuilt != null then
+      if clangPrebuilt != null then
         if lib.isString clangPrebuilt then
           [
             (wrapCC (pkgs.callPackage (../. + "/pkgs/${clangPrebuilt}.nix") { }))
           ]
-        else if lib.isDerivation then
+        else if lib.isDerivation clangPrebuilt then
           [
             (wrapCC clangPrebuilt)
           ]

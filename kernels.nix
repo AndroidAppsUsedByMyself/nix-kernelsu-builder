@@ -3,10 +3,12 @@ _: {
     { pkgs, ... }:
     let
       sources = pkgs.callPackage _sources/generated.nix { };
+      fetchGooglePrebuiltClang = pkgs.callPackage pkgs/android_prebuilts_clang_custom.nix;
     in
     {
       kernelsu = {
         amazon-fire-hd-karnak = {
+          build-toolchain = "gcc-only";
           anyKernelVariant = "osm0sis";
           kernelSU.enable = false;
           kernelDefconfigs = [ "lineageos_karnak_defconfig" ];
@@ -20,6 +22,7 @@ _: {
         };
 
         moto-rtwo-lineageos-21 = {
+          build-toolchain = "clang-with-llvm";
           anyKernelVariant = "kernelsu";
           clangVersion = "latest";
 
@@ -49,6 +52,7 @@ _: {
         };
 
         moto-rtwo-lineageos-22_1 = {
+          build-toolchain = "clang-with-llvm";
           anyKernelVariant = "kernelsu";
           clangVersion = "latest";
 
@@ -78,6 +82,7 @@ _: {
         };
 
         oneplus-8t-blu-spark = {
+          build-toolchain = "clang-with-llvm";
           anyKernelVariant = "osm0sis";
           clangVersion = "latest";
           kernelSU.variant = "next";
@@ -91,6 +96,7 @@ _: {
         };
 
         moto-pstar-lineageos-22_1 = {
+          build-toolchain = "clang-with-gcc";
           anyKernelVariant = "kernelsu";
           clangVersion = "custom";
           kernelSU = {
@@ -101,10 +107,12 @@ _: {
           enableGcc32 = true;
           enableLLVM = false;
           # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
-          customGoogleClang = {
-            CLANG_VERSION = "r416183b1";
-            CLANG_BRANCH = "android12-release";
-            CLANG_SHA256 = "1zg1cm8zn8prawgz3h1qnapxrgkmj894pl10i1q11nfcv3ycic41";
+          clangPrebuilt = fetchGooglePrebuiltClang {
+            customGoogleClang = {
+              CLANG_VERSION = "r416183b1";
+              CLANG_BRANCH = "android12-release";
+              CLANG_SHA256 = "1zg1cm8zn8prawgz3h1qnapxrgkmj894pl10i1q11nfcv3ycic41";
+            };
           };
           kernelDefconfigs = [
             # separated configs
@@ -135,6 +143,7 @@ _: {
         };
 
         ztc1997-android_gki_kernel_5-10_common = {
+          build-toolchain = "gki";
           anyKernelVariant = "osm0sis";
           clangVersion = "gki";
           gkiVersion = "android12-5.10";
@@ -147,6 +156,7 @@ _: {
         };
 
         ztc1997-android_gki_kernel_5-15_common = {
+          build-toolchain = "gki";
           anyKernelVariant = "osm0sis";
           clangVersion = "gki";
           gkiVersion = "android13-5.15";
@@ -158,19 +168,19 @@ _: {
           '';
         };
         android_kernel_samsung_sm8250_TabS7 = {
-
+          build-toolchain = "clang-with-gcc";
           anyKernelVariant = "kernelsu";
           clangVersion = "custom";
           # We already have integrated it
           kernelSU.enable = false;
           enableGcc64 = true;
-          enableGcc32 = true;
-          enableLLVM = false;
+          enableGccCompat = false;
+          enableLLVM = true;
           # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
           customGoogleClang = {
-            CLANG_VERSION = "r416183b1";
-            CLANG_BRANCH = "android12-release";
-            CLANG_SHA256 = "1zg1cm8zn8prawgz3h1qnapxrgkmj894pl10i1q11nfcv3ycic41";
+            CLANG_VERSION = "r377782d";
+            CLANG_REV = "c013e9459821e16de10b14b8c03c090cf6640dbf";
+            CLANG_SHA256 = "1z4icr0qkvhf6hvg3ybf10zllvr5p6sqnkf17vz1gd4ms7d7ik3q";
           };
           kernelSrc = sources.android_kernel_samsung_sm8250_TabS7.src;
           kernelDefconfigs = [

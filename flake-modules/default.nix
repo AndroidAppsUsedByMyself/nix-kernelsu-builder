@@ -31,6 +31,16 @@
               description = "Architecture of the kernel";
               default = "osm0sis";
             };
+            build-toolchain = lib.mkOption {
+              type = lib.types.enum [
+                "gcc-only"
+                "clang-with-llvm"
+                "clang-with-gcc"
+                "gki"
+              ];
+              description = "Toolchains used in kernel build, the build workflow will depend on it";
+              default = null;
+            };
             clangVersion = lib.mkOption {
               type = lib.types.nullOr (lib.types.either lib.types.str lib.types.int);
               description = "Version of clang used in kernel build. Can be set to any version present in [nixpkgs](https://github.com/NixOS/nixpkgs). Currently the value can be 8 to 17. If set to `latest`, will use the latest clang in nixpkgs. If set to `null`, uses Google's GCC 4.9 toolchain instead. If set to `custom`, will use `customGoogleClang` or `clangPrebuilt`. If set to `gki`, will use `gkiVersion`";
@@ -46,6 +56,7 @@
               variant = lib.mkOption {
                 type = lib.types.enum [
                   "official"
+                  "rsuntk"
                   "next"
                   "custom"
                 ];
@@ -131,26 +142,9 @@
               default = null;
             };
             clangPrebuilt = lib.mkOption {
-              type = lib.types.nullOr (lib.types.either lib.types.str lib.types.isDerivation);
+              type = lib.types.nullOr (lib.types.either lib.types.str lib.types.package);
               description = "Clang prebuilt to be used in kernel build. Can be set to any clang package.";
               default = null;
-            };
-            customGoogleClang = {
-              CLANG_BRANCH = lib.mkOption {
-                type = lib.types.nullOr lib.types.str;
-                description = "Branch of clang to be used in kernel build";
-                default = null;
-              };
-              CLANG_VERSION = lib.mkOption {
-                type = lib.types.nullOr lib.types.str;
-                description = "Version of clang to be used in kernel build";
-                default = null;
-              };
-              CLANG_SHA256 = lib.mkOption {
-                type = lib.types.nullOr lib.types.str;
-                description = "SHA256 of Google Clang which you choose";
-                default = null;
-              };
             };
             enableLLVM = lib.mkOption {
               type = lib.types.bool;
@@ -163,6 +157,11 @@
               default = true;
             };
             enableGcc64 = lib.mkOption {
+              type = lib.types.bool;
+              description = "Whether to use gcc-64 backend";
+              default = true;
+            };
+            enableGccCompat = lib.mkOption {
               type = lib.types.bool;
               description = "Whether to use gcc-64 backend";
               default = true;
