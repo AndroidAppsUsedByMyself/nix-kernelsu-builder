@@ -103,3 +103,12 @@ fetch.github = "DataEraserC/android_kernel_samsung_sm8250_TabS7"
 src.git = "https://github.com/proprietary-stuff/llvm-arm-toolchain-ship-10.0.git"
 src.branch = "master"
 fetch.github = "proprietary-stuff/llvm-arm-toolchain-ship-10.0"
+
+[kernelsu-rksu]
+src.github = "rifsxd/KernelSU-Next"
+fetch.git = "https://github.com/rsuntk/KernelSU.git"
+
+[kernelsu-rksu-revision-code]
+src.webpage = "https://api.github.com/repos/rsuntk/KernelSU/releases?per_page=1"
+src.regex = "download\\/v[0-9\\._]+\\/KernelSU[^\"]*_([0-9]+)-release\\.apk"
+fetch.url = "https://example.com"
