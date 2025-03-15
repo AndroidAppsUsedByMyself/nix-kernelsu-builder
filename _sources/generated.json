@@ -13,12 +13,12 @@
             "name": null,
             "owner": "DataEraserC",
             "repo": "android_kernel_samsung_sm8250_TabS7",
-            "rev": "229c9c891c9095d2e786819eafdfe02538fe5751",
-            "sha256": "sha256-X1m1Ehmi3OZOia1yByRov52fwY/9qzM14+e3YOfSzSg=",
+            "rev": "c67ef1772df513cb73969d46d63cfc2b891eb306",
+            "sha256": "sha256-QcbYaJJX5OQbjocn8RKL6WKQnKith68CKh1tid1PlVU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "229c9c891c9095d2e786819eafdfe02538fe5751"
+        "version": "c67ef1772df513cb73969d46d63cfc2b891eb306"
     },
     "android_prebuilts_clang_kernel_linux-x86_clang-r416183b": {
         "cargoLocks": null,
