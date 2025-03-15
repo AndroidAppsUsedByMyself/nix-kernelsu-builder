@@ -3,13 +3,13 @@
 {
   android_kernel_samsung_sm8250_TabS7 = {
     pname = "android_kernel_samsung_sm8250_TabS7";
-    version = "c67ef1772df513cb73969d46d63cfc2b891eb306";
+    version = "a06a3c6904d3a7c7fd4d09769d18a44053fcca7e";
     src = fetchFromGitHub {
       owner = "DataEraserC";
       repo = "android_kernel_samsung_sm8250_TabS7";
-      rev = "c67ef1772df513cb73969d46d63cfc2b891eb306";
+      rev = "a06a3c6904d3a7c7fd4d09769d18a44053fcca7e";
       fetchSubmodules = true;
-      sha256 = "sha256-QcbYaJJX5OQbjocn8RKL6WKQnKith68CKh1tid1PlVU=";
+      sha256 = "sha256-dHwai7E/e4Y/V4SnGwNJchRjkbS01IKuDZQmiT9ifyI=";
     };
     date = "2025-03-15";
   };
@@ -89,6 +89,27 @@
   kernelsu-next-revision-code = {
     pname = "kernelsu-next-revision-code";
     version = "12430";
+    src = fetchurl {
+      url = "https://example.com";
+      sha256 = "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=";
+    };
+  };
+  kernelsu-rksu = {
+    pname = "kernelsu-rksu";
+    version = "v1.0.3-10-legacy";
+    src = fetchgit {
+      url = "https://github.com/rsuntk/KernelSU.git";
+      rev = "v1.0.3-10-legacy";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-mKrv/GTW6RV7pIUAh53fulnE2N57inT3H5oG1O9TcgY=";
+    };
+  };
+  kernelsu-rksu-revision-code = {
+    pname = "kernelsu-rksu-revision-code";
+    version = "12066";
     src = fetchurl {
       url = "https://example.com";
       sha256 = "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=";
@@ -182,6 +203,18 @@
       sha256 = "sha256-KWLtY7KWhHmk6LVYpvIz6XT93+yjteex/250crk9Lxw=";
     };
     date = "2024-12-26";
+  };
+  llvm-arm-toolchain-ship-10_0 = {
+    pname = "llvm-arm-toolchain-ship-10_0";
+    version = "c6aaf7026bd49a06e12ec0551285ffded148d186";
+    src = fetchFromGitHub {
+      owner = "proprietary-stuff";
+      repo = "llvm-arm-toolchain-ship-10.0";
+      rev = "c6aaf7026bd49a06e12ec0551285ffded148d186";
+      fetchSubmodules = false;
+      sha256 = "sha256-PwJj4yZv/FotEncyw5nZmw5upUz7gx35TdDCVkb0+xU=";
+    };
+    date = "2020-09-27";
   };
   los-pstar-kernel-patches = {
     pname = "los-pstar-kernel-patches";

@@ -13,12 +13,12 @@
             "name": null,
             "owner": "DataEraserC",
             "repo": "android_kernel_samsung_sm8250_TabS7",
-            "rev": "c67ef1772df513cb73969d46d63cfc2b891eb306",
-            "sha256": "sha256-QcbYaJJX5OQbjocn8RKL6WKQnKith68CKh1tid1PlVU=",
+            "rev": "a06a3c6904d3a7c7fd4d09769d18a44053fcca7e",
+            "sha256": "sha256-dHwai7E/e4Y/V4SnGwNJchRjkbS01IKuDZQmiT9ifyI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "c67ef1772df513cb73969d46d63cfc2b891eb306"
+        "version": "a06a3c6904d3a7c7fd4d09769d18a44053fcca7e"
     },
     "android_prebuilts_clang_kernel_linux-x86_clang-r416183b": {
         "cargoLocks": null,
@@ -159,6 +159,41 @@
             "url": "https://example.com"
         },
         "version": "12430"
+    },
+    "kernelsu-rksu": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "kernelsu-rksu",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "v1.0.3-10-legacy",
+            "sha256": "sha256-mKrv/GTW6RV7pIUAh53fulnE2N57inT3H5oG1O9TcgY=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/rsuntk/KernelSU.git"
+        },
+        "version": "v1.0.3-10-legacy"
+    },
+    "kernelsu-rksu-revision-code": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "kernelsu-rksu-revision-code",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=",
+            "type": "url",
+            "url": "https://example.com"
+        },
+        "version": "12066"
     },
     "kernelsu-stable": {
         "cargoLocks": null,
@@ -314,6 +349,27 @@
             "type": "github"
         },
         "version": "64c109e3f3ba97fa7aed730ab7b4238b91df028b"
+    },
+    "llvm-arm-toolchain-ship-10_0": {
+        "cargoLocks": null,
+        "date": "2020-09-27",
+        "extract": null,
+        "name": "llvm-arm-toolchain-ship-10_0",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "proprietary-stuff",
+            "repo": "llvm-arm-toolchain-ship-10.0",
+            "rev": "c6aaf7026bd49a06e12ec0551285ffded148d186",
+            "sha256": "sha256-PwJj4yZv/FotEncyw5nZmw5upUz7gx35TdDCVkb0+xU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "c6aaf7026bd49a06e12ec0551285ffded148d186"
     },
     "los-pstar-kernel-patches": {
         "cargoLocks": null,
