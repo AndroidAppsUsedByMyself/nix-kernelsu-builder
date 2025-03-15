@@ -45,6 +45,7 @@
             android_prebuilts_clang_kernel_linux-x86_clang-r416183b =
               pkgs.callPackage pkgs/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.nix
                 { };
+            llvm-arm-toolchain-ship-10_0 = pkgs.callPackage pkgs/llvm-arm-toolchain-ship-10_0.nix { };
             android_prebuilts_clang_r416183b1 = pkgs.callPackage pkgs/android_prebuilts_clang_custom.nix {
               customGoogleClang = {
                 CLANG_REV = null;
