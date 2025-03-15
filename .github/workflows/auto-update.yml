@@ -1,5 +1,9 @@
 name: 'Auto update packages'
 on:
+  push:
+    branches: [ "main", "master" ]
+    paths:
+      - 'nvfetcher.toml'
   workflow_dispatch:
   schedule:
     # rebuild everyday at 2:51
