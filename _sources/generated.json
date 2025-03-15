@@ -1,4 +1,25 @@
 {
+    "android_kernel_samsung_sm8250_TabS7": {
+        "cargoLocks": null,
+        "date": "2025-03-15",
+        "extract": null,
+        "name": "android_kernel_samsung_sm8250_TabS7",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "DataEraserC",
+            "repo": "android_kernel_samsung_sm8250_TabS7",
+            "rev": "229c9c891c9095d2e786819eafdfe02538fe5751",
+            "sha256": "sha256-X1m1Ehmi3OZOia1yByRov52fwY/9qzM14+e3YOfSzSg=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "229c9c891c9095d2e786819eafdfe02538fe5751"
+    },
     "android_prebuilts_clang_kernel_linux-x86_clang-r416183b": {
         "cargoLocks": null,
         "date": "2022-11-01",
@@ -212,7 +233,7 @@
     },
     "linux-moto-pstar-lineageos-22_1": {
         "cargoLocks": null,
-        "date": "2025-02-18",
+        "date": "2025-03-15",
         "extract": null,
         "name": "linux-moto-pstar-lineageos-22_1",
         "passthru": null,
@@ -224,12 +245,12 @@
             "name": null,
             "owner": "AndroidAppsUsedByMyself",
             "repo": "android_kernel_motorola_sm8250",
-            "rev": "85e6c6ea3adf04eafca566152bfc71d6b27eed9c",
-            "sha256": "sha256-VoeazEybEyKbswiQayfXdIZsT3YENHUhRumfJ4/Y95Q=",
+            "rev": "8a06559e98bb6685033d8771865bac00e9618cce",
+            "sha256": "sha256-yrjP65l1U5DwEdhyuu1AsJdfa78qXaqHqt53gBOvWEQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "85e6c6ea3adf04eafca566152bfc71d6b27eed9c"
+        "version": "8a06559e98bb6685033d8771865bac00e9618cce"
     },
     "linux-moto-rtwo-lineageos-21": {
         "cargoLocks": null,
@@ -397,26 +418,5 @@
             "type": "github"
         },
         "version": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117"
-    },
-    "android_kernel_samsung_sm8250_TabS7": {
-        "cargoLocks": null,
-        "date": "2025-03-15",
-        "extract": null,
-        "name": "android_kernel_samsung_sm8250_TabS7",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "DataEraserC",
-            "repo": "android_kernel_samsung_sm8250_TabS7",
-            "rev": "229c9c891c9095d2e786819eafdfe02538fe5751",
-            "sha256": "sha256-lFmcljcfP12yN/KedWWKXL1JEDWHfiPkHqcBzI7CiGI=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "229c9c891c9095d2e786819eafdfe02538fe5751"
     }
 }
