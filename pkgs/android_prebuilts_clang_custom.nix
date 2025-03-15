@@ -17,8 +17,8 @@ let
   ClangSource =
     if useClangRev then
       {
-        pname = "clang-rev=${customGoogleClang.CLANG_REV}-version=${customGoogleClang.CLANG_VERSION}";
-        version = customGoogleClang.CLANG_VERSION;
+        pname = "clang";
+        version = "rev=${customGoogleClang.CLANG_REV}-version=${customGoogleClang.CLANG_VERSION}";
         src = fetchTarball {
           url = "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/${customGoogleClang.CLANG_REV}/clang-${customGoogleClang.CLANG_VERSION}.tar.gz";
           sha256 = customGoogleClang.CLANG_SHA256;
@@ -26,8 +26,8 @@ let
       }
     else
       {
-        pname = "clang-branch=${customGoogleClang.CLANG_BRANCH}-version=${customGoogleClang.CLANG_VERSION}";
-        version = customGoogleClang.CLANG_VERSION;
+        pname = "clang";
+        version = "branch=${customGoogleClang.CLANG_BRANCH}-version=${customGoogleClang.CLANG_VERSION}";
         src = fetchTarball {
           url = "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/${customGoogleClang.CLANG_BRANCH}/clang-${customGoogleClang.CLANG_VERSION}.tar.gz";
           sha256 = customGoogleClang.CLANG_SHA256;
