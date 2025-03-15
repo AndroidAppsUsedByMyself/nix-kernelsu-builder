@@ -105,10 +105,10 @@
   };
   lineage-nightly-pstar_bootImg = {
     pname = "lineage-nightly-pstar_bootImg";
-    version = "20250303";
+    version = "20250310";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20250303/boot.img";
-      sha256 = "sha256-SUP6oBTPjSusOhsnR9DJZwcr4itUuLoshZOwUG/OKbc=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20250310/boot.img";
+      sha256 = "sha256-fEr0vY7F8C4MX3R5g5dsY/xX/2ic6fyYZgPCvImY5MU=";
     };
   };
   linux-amazon-karnak = {
@@ -149,15 +149,15 @@
   };
   linux-moto-rtwo-lineageos-22_1 = {
     pname = "linux-moto-rtwo-lineageos-22_1";
-    version = "8752a2ee05d02f80998b515158b1f41ca1b623f6";
+    version = "f31482b33068951d3a29bade94c0eecebeb558b3";
     src = fetchFromGitHub {
       owner = "LineageOS";
       repo = "android_kernel_motorola_sm8550";
-      rev = "8752a2ee05d02f80998b515158b1f41ca1b623f6";
+      rev = "f31482b33068951d3a29bade94c0eecebeb558b3";
       fetchSubmodules = false;
-      sha256 = "sha256-TAyxsYM8wzYVJDc5o5OzCgAI9alN4IbmhUbPfIg+VNg=";
+      sha256 = "sha256-HayzpNIWja4rnpE7xhDKF6cgZAqK6osZvbUTVarPMDk=";
     };
-    date = "2025-01-12";
+    date = "2025-03-02";
   };
   linux-oneplus-8t-blu-spark = {
     pname = "linux-oneplus-8t-blu-spark";
@@ -199,15 +199,15 @@
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
-    version = "93870a80959768feb280cac61323b2e7ab1f8a1b";
+    version = "ebf90e499eb87d42a70cc17b431a03f2c650ca71";
     src = fetchFromGitHub {
       owner = "WildPlusKernel";
       repo = "kernel_patches";
-      rev = "93870a80959768feb280cac61323b2e7ab1f8a1b";
+      rev = "ebf90e499eb87d42a70cc17b431a03f2c650ca71";
       fetchSubmodules = false;
-      sha256 = "sha256-lGmYI3SY/C2JgT90cPGdl2zSJOQ+N/cjZ6gqLtqgODc=";
+      sha256 = "sha256-TKyabYIjmZs4GcWpkMV1u2FOL8ecR+IEjk+vCmRYHAg=";
     };
-    date = "2025-03-04";
+    date = "2025-03-09";
   };
   ztc1997-android_gki_kernel_5-10_common = {
     pname = "ztc1997-android_gki_kernel_5-10_common";
