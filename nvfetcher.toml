@@ -99,3 +99,7 @@ src.branch = "main"
 git.fetchSubmodules = true
 fetch.github = "DataEraserC/android_kernel_samsung_sm8250_TabS7"
 
+[llvm-arm-toolchain-ship-10_0]
+src.git = "https://github.com/proprietary-stuff/llvm-arm-toolchain-ship-10.0.git"
+src.branch = "master"
+fetch.github = "proprietary-stuff/llvm-arm-toolchain-ship-10.0"
