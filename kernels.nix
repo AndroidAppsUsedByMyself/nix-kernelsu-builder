@@ -152,9 +152,56 @@ _: {
           gkiVersion = "android13-5.15";
           kernelDefconfigs = [ "gki_defconfig" ];
           kernelImageName = "Image";
-          kernelSrc = sources.ztc1997-android_gki_kernel_5-15_common;
+          kernelSrc = sources.ztc1997-android_gki_kernel_5-15_common.src;
           kernelConfig = ''
             CONFIG_LTO_CLANG=y
+          '';
+        };
+        android_kernel_samsung_sm8250_TabS7 = {
+
+          anyKernelVariant = "kernelsu";
+          clangVersion = "custom";
+          # We already have integrated it
+          kernelSU.enable = false;
+          enableGcc64 = true;
+          enableGcc32 = true;
+          enableLLVM = false;
+          # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
+          customGoogleClang = {
+            CLANG_VERSION = "r416183b1";
+            CLANG_BRANCH = "android12-release";
+            CLANG_SHA256 = "1zg1cm8zn8prawgz3h1qnapxrgkmj894pl10i1q11nfcv3ycic41";
+          };
+          kernelSrc = sources.android_kernel_samsung_sm8250_TabS7.src;
+          kernelDefconfigs = [
+            "gts7xl_eur_openx_defconfig"
+          ];
+          kernelMakeFlags = [
+            "LOCALVERSION=-Kokuban-Hua-S5DXA1"
+          ];
+          kernelConfig = ''
+            KSU=y
+
+            UH=n
+            RKP=n
+            KDP=n
+            SECURITY_DEFEX=n
+            INTEGRITY=n
+            FIVE=n
+            TRIM_UNUSED_KSYMS=n
+            PROCA=n
+            PROCA_GKI_10=n
+            PROCA_S_OS=n
+            PROCA_CERTIFICATES_XATTR=n
+            PROCA_CERT_ENG=n
+            PROCA_CERT_USER=n
+            GAF_V6=n
+            FIVE=n
+            FIVE_CERT_USER=n
+            FIVE_DEFAULT_HASH=n
+
+            # LTO_CLANG_THIN=y
+            # LTO_CLANG_FULL=n
           '';
         };
       };

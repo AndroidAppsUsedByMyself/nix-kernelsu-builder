@@ -92,3 +92,10 @@ fetch.github = "ztc1997/android_gki_kernel_5.10_common"
 src.git = "https://github.com/ztc1997/android_gki_kernel_5.15_common.git"
 src.branch = "android13-5.15-2024-08"
 fetch.github = "ztc1997/android_gki_kernel_5.15_common"
+
+[android_kernel_samsung_sm8250_TabS7]
+src.git = "https://github.com/DataEraserC/android_kernel_samsung_sm8250_TabS7.git"
+src.branch = "main"
+git.fetchSubmodules = true
+fetch.github = "DataEraserC/android_kernel_samsung_sm8250_TabS7"
+

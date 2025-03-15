@@ -233,4 +233,16 @@
     };
     date = "2024-09-03";
   };
+  android_kernel_samsung_sm8250_TabS7 = {
+    pname = "android_kernel_samsung_sm8250_TabS7";
+    version = "229c9c891c9095d2e786819eafdfe02538fe5751";
+    src = fetchFromGitHub {
+      owner = "DataEraserC";
+      repo = "android_kernel_samsung_sm8250_TabS7";
+      rev = "229c9c891c9095d2e786819eafdfe02538fe5751";
+      fetchSubmodules = false;
+      sha256 = "sha256-lFmcljcfP12yN/KedWWKXL1JEDWHfiPkHqcBzI7CiGI=";
+    };
+    date = "2025-03-15";
+  };
 }
