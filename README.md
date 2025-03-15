@@ -18,23 +18,32 @@ See `kernels.nix` for definitions of pipelines (builds for different devices).
 Each kernel definition takes these arguments:
 
 - `arch`: Kernel architecture, usually `arm64`.
+
 - `anyKernelVariant`: Variant of AnyKernel used during packaging. Can have two values:
   - `osm0sis`: [Official version](https://github.com/osm0sis/AnyKernel3). Works with devices before Android Generic Kernel Image (GKI).
   - `kernelsu`: [Modified by KernelSU team](https://github.com/Kernel-SU/AnyKernel3). Works with devices using GKI.
-- `clangVersion`: Version of clang used in kernel build.
 
+- `clangVersion`: Version of clang used in kernel build.
   - Can be set to any version present in [nixpkgs](https://github.com/NixOS/nixpkgs). Currently the value can be 8 to 17.
-  - If set to `latest`, will use the latest clang in nixpkgs. Recommended.
+  - If set to `"latest"`, will use the latest clang in nixpkgs. Recommended.
   - If set to `null` or `"gcc"`, uses Google's GCC 4.9 toolchain instead.
   - If set to `"custom"`, will use the `customGoogleClang` or `clangPrebuilt`.
   - If set to `"gki"`, will use `gkiVersion` (under development)
 
-- `customGoogleClang`: Google Clang.
-  - `CLANG_VERSION`: Version of Google Clang to be used in kernel build.
-  - `CLANG_BRANCH`: Branch of Google Clang to be used in kernel build.
-  - `CLANG_SHA256`: SHA256 of Google Clang which you choose.
+- `build-toolchain`: Toolchains used in kernel build, the build workflow will depend on it
+  - If set to `"gcc-only"`, will go to `kernelBuildGcc`.
+  - If set to `"clang-with-llvm"`, will go to `kernelBuildCustom`.
+  - If set to `"clang-with-gcc"`, will go to `kernelBuildGki`.
+  - If set to `"gki"`, will go to `kernelBuildClang`.
 
 - `clangPrebuilt`: The clang used in kernel build if `clangVersion` == `custom`.
+
+- Function named `fetchGooglePrebuiltClang`: accept attr `customGoogleClang`, and output .
+  - `customGoogleClang`: Google Clang.
+    - `CLANG_VERSION`: Version of Google Clang to be used in kernel build.
+    - `CLANG_BRANCH`: Branch of Google Clang to be used in kernel build. Conflict with `CLANG_REV`.
+    - `CLANG_REV`: REV of Google Clang to be used in kernel build. Conflict with `CLANG_BRANCH`.
+    - `CLANG_SHA256`: SHA256 of Google Clang which you choose.
 
 - `kernelSU.enable`: Whether to apply KernelSU patch.
 - `kernelSU.variant`: Variant of KernelSU to use. Can be [`official`](https://github.com/tiann/KernelSU), [`next`](https://github.com/rifsxd/KernelSU-Next) or `custom`.
@@ -48,10 +57,12 @@ Each kernel definition takes these arguments:
 - `susfs.kernelsuPatch`: Path to SusFS's KernelSU patch. If set, will override the patch used. Used for overriding patch to adapt to different KernelSU versions.
 
 - `kernelConfig`: Additional kernel config to be applied during build.
+
 - `kernelDefconfigs`: List of kernel config files applied during build.
   - Older kernels usually have a single `_defconfig` file. Newer devices may have several.
   - If you're building for a open source third party ROM, check the `android_device_[Codename of your device]` repo and `android_device_[Codename of your device]_common` repo, take a look at the `BoardConfig.mk` and `BoardConfigCommon.mk`, and take note of all config files in `TARGET_KERNEL_CONFIG` variable.
   - If you do not have access to such repos, you will need to do some guesswork.
+
 - `kernelImageName`: Generated kernel image name at end of compilation process. Usually `Image`. If you are unsure, again check the `BoardConfig.mk` or `BoardConfigCommon.mk`, and look for `BOARD_KERNEL_IMAGE_NAME`.
 - `kernelMakeFlags`: Additional make flags passed to kernel build process. Can be used to ignore some compiler warnings.
 - `kernelPatches`: List of patch files to be applied to kernel.
