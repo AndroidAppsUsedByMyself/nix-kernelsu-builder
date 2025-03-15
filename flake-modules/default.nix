@@ -178,6 +178,11 @@
               kernelSU.revision = sources.kernelsu-next-revision-code.version;
               kernelSU.subdirectory = "KernelSU-Next";
             })
+            (lib.mkIf (config.kernelSU.variant == "rsuntk") {
+              kernelSU.src = sources.kernelsu-rksu.src;
+              kernelSU.revision = sources.kernelsu-rksu-revision-code.version;
+              kernelSU.subdirectory = "KernelSU";
+            })
           ];
         };
     in
