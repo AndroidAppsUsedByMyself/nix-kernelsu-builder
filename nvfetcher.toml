@@ -105,7 +105,7 @@ src.branch = "master"
 fetch.github = "proprietary-stuff/llvm-arm-toolchain-ship-10.0"
 
 [kernelsu-rksu]
-src.github = "rifsxd/KernelSU-Next"
+src.github = "rsuntk/KernelSU"
 fetch.git = "https://github.com/rsuntk/KernelSU.git"
 
 [kernelsu-rksu-revision-code]

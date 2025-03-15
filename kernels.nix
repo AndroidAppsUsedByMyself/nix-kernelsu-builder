@@ -151,14 +151,7 @@ _: {
           enableGcc64 = true;
           enableGccCompat = false;
           enableLLVM = true;
-          # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
-          clangPrebuilt = fetchGooglePrebuiltClang {
-            customGoogleClang = {
-              CLANG_VERSION = "r377782d";
-              CLANG_REV = "c013e9459821e16de10b14b8c03c090cf6640dbf";
-              CLANG_SHA256 = "1z4icr0qkvhf6hvg3ybf10zllvr5p6sqnkf17vz1gd4ms7d7ik3q";
-            };
-          };
+          clangPrebuilt = "llvm-arm-toolchain-ship-10_0";
           kernelSrc = sources.android_kernel_samsung_sm8250_TabS7.src;
           kernelDefconfigs = [
             "gts7xl_eur_openx_defconfig"
