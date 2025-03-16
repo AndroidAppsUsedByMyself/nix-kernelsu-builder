@@ -142,22 +142,32 @@ _: {
           '';
         };
 
-        android_kernel_samsung_sm8250_TabS7 = {
+        # this workflow require python2 which is removed from nixpkgs
+        _android_kernel_samsung_sm8250_TabS7 = {
           build-toolchain = "clang-with-gcc";
           anyKernelVariant = "kernelsu";
-          clangVersion = "custom";
           # We already have integrated it
           kernelSU.enable = false;
           enableGcc64 = true;
-          enableGccCompat = false;
+          enableGccCompat = true;
           enableLLVM = true;
-          clangPrebuilt = "llvm-arm-toolchain-ship-10_0";
+          clangPrebuilt = fetchGooglePrebuiltClang {
+            customGoogleClang = {
+              CLANG_VERSION = "r377782d";
+              CLANG_REV = "c013e9459821e16de10b14b8c03c090cf6640dbf";
+              CLANG_SHA256 = "1z4icr0qkvhf6hvg3ybf10zllvr5p6sqnkf17vz1gd4ms7d7ik3q";
+            };
+          };
           kernelSrc = sources.android_kernel_samsung_sm8250_TabS7.src;
           kernelDefconfigs = [
             "gts7xl_eur_openx_defconfig"
           ];
           kernelMakeFlags = [
             "LOCALVERSION=-Kokuban-Hua-S5DXA1"
+            "DTC_EXT=${sources.android_kernel_samsung_sm8250_TabS7.src}/tools/dtc"
+            "CONFIG_BUILD_ARM64_DT_OVERLAY=y"
+            "CLANG_TRIPLE=aarch64-linux-gnu-"
+            "-C ${sources.android_kernel_samsung_sm8250_TabS7.src}"
           ];
           kernelConfig = ''
             KSU=y
@@ -182,6 +192,47 @@ _: {
 
             # LTO_CLANG_THIN=y
             # LTO_CLANG_FULL=n
+          '';
+        };
+
+        android_kernel_samsung_lykanlte = {
+          build-toolchain = "clang-with-gcc";
+          anyKernelVariant = "kernelsu";
+          kernelSU = {
+            enable = false;
+            variant = "next";
+          };
+          enableGcc64 = true;
+          enableGcc32 = true;
+          enableLLVM = false;
+          # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
+          clangPrebuilt = fetchGooglePrebuiltClang {
+            customGoogleClang = {
+              CLANG_VERSION = "r416183b1";
+              CLANG_BRANCH = "android12-release";
+              CLANG_SHA256 = "1zg1cm8zn8prawgz3h1qnapxrgkmj894pl10i1q11nfcv3ycic41";
+            };
+          };
+          kernelDefconfigs = [
+            # separated configs
+            #"vendor/kona-perf_defconfig"
+            #"vendor/ext_config/moto-kona.config"
+            #"vendor/ext_config/pstar-default.config"
+            #"vendor/debugfs.config"
+            # the one which need to be generated before build
+            #"lineageos_pstar_defconfig"
+            # the one which extract from a real device
+            "lykanlte_chn_open_defconfig"
+          ];
+          kernelImageName = "Image";
+          kernelMakeFlags = [
+            "KCFLAGS=\"-w\""
+            "KCPPFLAGS=\"-w\""
+          ];
+          kernelSrc = sources.android_kernel_samsung_lykanlte.src;
+          kernelConfig = ''
+            CONFIG_MODULE_FORCE_LOAD=y
+            CONFIG_MODULE_SIG_FORCE=n
           '';
         };
 

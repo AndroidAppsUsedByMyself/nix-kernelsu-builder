@@ -20,7 +20,6 @@ stdenv.mkDerivation {
   autoPatchelfIgnoreMissingDeps = [
     # TODO:
     # I wonder how to have old library if we do not import a old nixpkgs
-    "libtinfo.so.5"
     "libclang.so.10"
     "libstdc++.so.6"
     "liblog.so"
@@ -41,5 +40,8 @@ stdenv.mkDerivation {
   installPhase = ''
     mkdir -p $out
     cp -r . $out/
+    find $out/bin $out/lib -type f -exec sh -c '
+      file -b "$1" | grep -q "^ELF " && patchelf --replace-needed libtinfo.so.5 libtinfo.so.6 "$1"
+    ' sh {} \;
   '';
 }

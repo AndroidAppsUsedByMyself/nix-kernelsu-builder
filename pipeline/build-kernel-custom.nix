@@ -1,5 +1,5 @@
 {
-  stdenv,
+  stdenvNoCC,
   pkgs,
   lib,
   pkg-config,
@@ -70,7 +70,7 @@ let
       ;
   };
 in
-stdenv.mkDerivation {
+stdenvNoCC.mkDerivation {
   name = "clang-kernel";
   inherit src;
 
