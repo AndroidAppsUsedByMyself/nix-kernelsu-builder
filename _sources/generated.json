@@ -1,4 +1,25 @@
 {
+    "android_kernel_samsung_lykanlte": {
+        "cargoLocks": null,
+        "date": "2025-03-16",
+        "extract": null,
+        "name": "android_kernel_samsung_lykanlte",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "DataEraserC",
+            "repo": "android_kernel_samsung_lykanlte",
+            "rev": "6dc072a8985cabd22296f02c09550e4888aa9499",
+            "sha256": "sha256-IMGDb45SPcojkDdwNr41BVN6JulijpRCUOTumsP/9Wk=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "6dc072a8985cabd22296f02c09550e4888aa9499"
+    },
     "android_kernel_samsung_sm8250_TabS7": {
         "cargoLocks": null,
         "date": "2025-03-15",
