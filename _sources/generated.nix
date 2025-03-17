@@ -3,15 +3,15 @@
 {
   android_kernel_samsung_lykanlte = {
     pname = "android_kernel_samsung_lykanlte";
-    version = "6dc072a8985cabd22296f02c09550e4888aa9499";
+    version = "c7e14de69d0124bf1827325aba013ec7b25e5bcb";
     src = fetchFromGitHub {
       owner = "DataEraserC";
       repo = "android_kernel_samsung_lykanlte";
-      rev = "6dc072a8985cabd22296f02c09550e4888aa9499";
+      rev = "c7e14de69d0124bf1827325aba013ec7b25e5bcb";
       fetchSubmodules = true;
-      sha256 = "sha256-IMGDb45SPcojkDdwNr41BVN6JulijpRCUOTumsP/9Wk=";
+      sha256 = "sha256-AP9m+TwFJXQ1AusKl6ZuNK9Jv+D5B/akaZ/6La3Z+t8=";
     };
-    date = "2025-03-16";
+    date = "2025-03-17";
   };
   android_kernel_samsung_sm8250_TabS7 = {
     pname = "android_kernel_samsung_sm8250_TabS7";
