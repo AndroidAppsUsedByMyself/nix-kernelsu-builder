@@ -134,7 +134,8 @@ stdenvNoCC.mkDerivation {
   installPhase = ''
     runHook preInstall
 
-    echo "The PATH is $PATH"
+    echo "[Debug] The PATH is:"
+    echo ":$PATH" | sed 's/:/\n[Path] /g '
     make -j$(nproc) ${builtins.concatStringsSep " " finalMakeFlags}
 
     runHook postInstall
