@@ -146,7 +146,7 @@ _: {
           enableGcc64 = true;
           enableGccCompat = true;
           enableLLVM = true;
-          clangPrebuilt = config.packages.llvm-arm-toolchain-ship-10_0;
+          clangPrebuilt = config.packages.google_clang_r377782d;
           kernelSrc = sources.android_kernel_samsung_sm8250_TabS7.src;
           kernelDefconfigs = [
             "gts7xl_eur_openx_defconfig"
