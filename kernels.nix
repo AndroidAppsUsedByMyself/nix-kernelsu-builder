@@ -1,6 +1,6 @@
 _: {
   perSystem =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     let
       sources = pkgs.callPackage _sources/generated.nix { };
       fetchGooglePrebuiltClang = pkgs.callPackage pkgs/android_prebuilts_clang_custom.nix;
@@ -107,13 +107,7 @@ _: {
           enableGcc32 = true;
           enableLLVM = false;
           # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
-          clangPrebuilt = fetchGooglePrebuiltClang {
-            customGoogleClang = {
-              CLANG_VERSION = "r416183b1";
-              CLANG_BRANCH = "android12-release";
-              CLANG_SHA256 = "1zg1cm8zn8prawgz3h1qnapxrgkmj894pl10i1q11nfcv3ycic41";
-            };
-          };
+          clangPrebuilt = config.packages.android_prebuilts_clang_r416183b1;
           kernelDefconfigs = [
             # separated configs
             #"vendor/kona-perf_defconfig"
@@ -152,13 +146,7 @@ _: {
           enableGcc64 = true;
           enableGccCompat = true;
           enableLLVM = true;
-          clangPrebuilt = fetchGooglePrebuiltClang {
-            customGoogleClang = {
-              CLANG_VERSION = "r377782d";
-              CLANG_REV = "c013e9459821e16de10b14b8c03c090cf6640dbf";
-              CLANG_SHA256 = "1z4icr0qkvhf6hvg3ybf10zllvr5p6sqnkf17vz1gd4ms7d7ik3q";
-            };
-          };
+          clangPrebuilt = config.packages.llvm-arm-toolchain-ship-10_0;
           kernelSrc = sources.android_kernel_samsung_sm8250_TabS7.src;
           kernelDefconfigs = [
             "gts7xl_eur_openx_defconfig"
