@@ -5,7 +5,7 @@
   pkg-config,
   glibc,
   gcc,
-  wrapCC,
+  # wrapCC,
   bc,
   bison,
   coreutils,
@@ -109,11 +109,11 @@ stdenvNoCC.mkDerivation {
       if clangPrebuilt != null then
         if lib.isString clangPrebuilt then
           [
-            (wrapCC (pkgs.callPackage (../. + "/pkgs/${clangPrebuilt}.nix") { }))
+            (pkgs.callPackage (../. + "/pkgs/${clangPrebuilt}.nix") { })
           ]
         else if lib.isDerivation clangPrebuilt then
           [
-            (wrapCC clangPrebuilt)
+            clangPrebuilt
           ]
         else
           [ ]
@@ -134,6 +134,7 @@ stdenvNoCC.mkDerivation {
   installPhase = ''
     runHook preInstall
 
+    echo "The PATH is $PATH"
     make -j$(nproc) ${builtins.concatStringsSep " " finalMakeFlags}
 
     runHook postInstall
