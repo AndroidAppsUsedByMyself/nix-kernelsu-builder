@@ -32,6 +32,8 @@
   enableGcc64,
   enableGccCompat,
   enableLLVM,
+  enablePython2,
+  inputs,
   src,
   arch,
   defconfigs,
@@ -102,6 +104,7 @@ stdenvNoCC.mkDerivation {
     ]
     ++ (if enableGcc64 then [ gcc-aarch64-linux-android ] else [ ])
     ++ (if enableGcc32 then [ gcc-arm-linux-androideabi ] else [ ])
+    ++ (if enablePython2 then [ inputs.nixpkgs-python.packages.${pkgs.system}."2.7" ] else [ ])
     ++ (
       if clangPrebuilt != null then
         if lib.isString clangPrebuilt then

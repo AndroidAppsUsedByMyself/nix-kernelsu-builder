@@ -145,6 +145,7 @@ _: {
         # this workflow require python2 which is removed from nixpkgs
         _android_kernel_samsung_sm8250_TabS7 = {
           build-toolchain = "clang-with-gcc";
+          enablePython2 = true;
           anyKernelVariant = "kernelsu";
           # We already have integrated it
           kernelSU.enable = false;
@@ -195,7 +196,7 @@ _: {
           '';
         };
 
-        android_kernel_samsung_lykanlte = {
+        _android_kernel_samsung_lykanlte = {
           build-toolchain = "clang-with-gcc";
           anyKernelVariant = "kernelsu";
           kernelSU = {

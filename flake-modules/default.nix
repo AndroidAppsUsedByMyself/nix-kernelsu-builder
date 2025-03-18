@@ -1,5 +1,6 @@
 {
   flake-parts-lib,
+  inputs,
   ...
 }:
 {
@@ -11,7 +12,7 @@
       ...
     }:
     let
-      pipeline = pkgs.callPackage ../pipeline { };
+      pipeline = pkgs.callPackage ../pipeline { inherit inputs; };
       sources = pkgs.callPackage ../_sources/generated.nix { };
 
       kernelOptions =
@@ -165,6 +166,11 @@
               type = lib.types.bool;
               description = "Whether to use gcc-64 backend";
               default = true;
+            };
+            enablePython2 = lib.mkOption {
+              type = lib.types.bool;
+              description = "Whether to use python2";
+              default = false;
             };
           };
           config = lib.mkMerge [

@@ -3,6 +3,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    nixpkgs-python.url = "github:cachix/nixpkgs-python";
 
     nur-xddxdd = {
       # url = "/home/lantian/Projects/nur-packages";

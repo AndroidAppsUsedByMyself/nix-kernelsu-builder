@@ -2,6 +2,7 @@
   lib,
   callPackage,
   runCommand,
+  inputs,
   ...
 }:
 {
@@ -18,6 +19,7 @@
   enableGcc64 ? false,
   enableGccCompat ? false,
   enableLLVM ? true,
+  enablePython2 ? false,
   kernelDefconfigs,
   kernelImageName,
   kernelMakeFlags,
@@ -45,6 +47,8 @@ let
         enableGcc32
         enableGccCompat
         enableLLVM
+        enablePython2
+        inputs
         ;
       src = patchedKernelSrc;
       defconfigs = kernelDefconfigs;
