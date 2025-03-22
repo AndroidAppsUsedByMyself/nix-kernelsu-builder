@@ -136,6 +136,46 @@ _: {
           '';
         };
 
+        xiaomi-gauguin-lineageos-22_1 = {
+          build-toolchain = "clang-with-gcc";
+          anyKernelVariant = "kernelsu";
+          clangVersion = "custom";
+          kernelSU = {
+            enable = true;
+            variant = "next";
+          };
+          enableGcc64 = true;
+          enableGcc32 = true;
+          enableLLVM = false;
+          # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
+          clangPrebuilt = config.packages.android_prebuilts_clang_r416183b1;
+          kernelDefconfigs = [
+            # separated configs
+            #"vendor/kona-perf_defconfig"
+            #"vendor/ext_config/moto-kona.config"
+            #"vendor/ext_config/pstar-default.config"
+            #"vendor/debugfs.config"
+            # the one which need to be generated before build
+            #"lineageos_pstar_defconfig"
+            # the one which extract from a real device
+            "lineageos_pstar_stock_defconfig"
+          ];
+          kernelImageName = "Image";
+          kernelMakeFlags = [
+            "KCFLAGS=\"-w\""
+            "KCPPFLAGS=\"-w\""
+            "LOCALVERSION=-official-kernelsu"
+          ];
+          kernelSrc = sources.linux-xiaomi-gauguin-lineageos-22_1.src;
+          kernelPatches = [
+            "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/module.patch"
+          ];
+          kernelConfig = ''
+            CONFIG_MODULE_FORCE_LOAD=y
+            CONFIG_MODULE_SIG_FORCE=n
+          '';
+        };
+
         # this workflow require python2 which is removed from nixpkgs
         _android_kernel_samsung_sm8250_TabS7 = {
           build-toolchain = "clang-with-gcc";
