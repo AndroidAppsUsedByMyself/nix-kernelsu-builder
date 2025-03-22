@@ -107,7 +107,7 @@ _: {
           enableGcc32 = true;
           enableLLVM = false;
           # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
-          clangPrebuilt = config.packages.android_prebuilts_clang_r416183b1;
+          clangPrebuilt = config.packages.google_clang_r416183b1;
           kernelDefconfigs = [
             # separated configs
             #"vendor/kona-perf_defconfig"
@@ -148,17 +148,10 @@ _: {
           enableGcc32 = true;
           enableLLVM = false;
           # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
-          clangPrebuilt = config.packages.android_prebuilts_clang_r416183b1;
+          clangPrebuilt = config.packages.google_clang_r383902;
           kernelDefconfigs = [
-            # separated configs
-            #"vendor/kona-perf_defconfig"
-            #"vendor/ext_config/moto-kona.config"
-            #"vendor/ext_config/pstar-default.config"
-            #"vendor/debugfs.config"
-            # the one which need to be generated before build
-            #"lineageos_pstar_defconfig"
-            # the one which extract from a real device
-            "lineageos_pstar_stock_defconfig"
+            "vendor/lito-perf_defconfig"
+            "gauguin_defconfig"
           ];
           kernelImageName = "Image";
           kernelMakeFlags = [
