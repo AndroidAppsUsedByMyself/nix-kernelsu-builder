@@ -216,6 +216,18 @@
     };
     date = "2024-12-26";
   };
+  linux-xiaomi-gauguin-lineageos-22_1 = {
+    pname = "linux-xiaomi-gauguin-lineageos-22_1";
+    version = "f4d1fb1bbf7ab26374fd26fc2b032d85b7bb2361";
+    src = fetchFromGitHub {
+      owner = "LineageOS";
+      repo = "android_kernel_xiaomi_gauguin";
+      rev = "f4d1fb1bbf7ab26374fd26fc2b032d85b7bb2361";
+      fetchSubmodules = false;
+      sha256 = "sha256-rCsq3ulazpn4hgUVYJu8ISFtAji+LhfYd1dbXmXYv4o=";
+    };
+    date = "2025-03-03";
+  };
   llvm-arm-toolchain-ship-10_0 = {
     pname = "llvm-arm-toolchain-ship-10_0";
     version = "c6aaf7026bd49a06e12ec0551285ffded148d186";
