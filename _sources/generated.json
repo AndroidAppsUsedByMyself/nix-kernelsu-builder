@@ -371,6 +371,27 @@
         },
         "version": "64c109e3f3ba97fa7aed730ab7b4238b91df028b"
     },
+    "linux-xiaomi-gauguin-lineageos-22_1": {
+        "cargoLocks": null,
+        "date": "2025-03-03",
+        "extract": null,
+        "name": "linux-xiaomi-gauguin-lineageos-22_1",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "LineageOS",
+            "repo": "android_kernel_xiaomi_gauguin",
+            "rev": "f4d1fb1bbf7ab26374fd26fc2b032d85b7bb2361",
+            "sha256": "sha256-rCsq3ulazpn4hgUVYJu8ISFtAji+LhfYd1dbXmXYv4o=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "f4d1fb1bbf7ab26374fd26fc2b032d85b7bb2361"
+    },
     "llvm-arm-toolchain-ship-10_0": {
         "cargoLocks": null,
         "date": "2020-09-27",
