@@ -97,7 +97,7 @@ _: {
 
         moto-pstar-lineageos-22_1 = {
           build-toolchain = "clang-with-gcc";
-          anyKernelVariant = "kernelsu";
+          anyKernelVariant = "osm0sis";
           clangVersion = "custom";
           kernelSU = {
             enable = true;
@@ -138,7 +138,7 @@ _: {
 
         xiaomi-gauguin-lineageos-22_1 = {
           build-toolchain = "clang-with-gcc";
-          anyKernelVariant = "kernelsu";
+          anyKernelVariant = "osm0sis";
           clangVersion = "custom";
           kernelSU = {
             enable = true;
@@ -180,7 +180,7 @@ _: {
         _android_kernel_samsung_sm8250_TabS7 = {
           build-toolchain = "clang-with-gcc";
           enablePython2 = true;
-          anyKernelVariant = "kernelsu";
+          anyKernelVariant = "osm0sis";
           # We already have integrated it
           kernelSU.enable = false;
           enableGcc64 = true;
@@ -226,7 +226,7 @@ _: {
 
         _android_kernel_samsung_lykanlte = {
           build-toolchain = "clang-with-gcc";
-          anyKernelVariant = "kernelsu";
+          anyKernelVariant = "osm0sis";
           kernelSU = {
             enable = false;
             variant = "next";
@@ -267,7 +267,7 @@ _: {
 
         ztc1997-android_gki_kernel_5-10_common = {
           build-toolchain = "gki";
-          anyKernelVariant = "osm0sis";
+          anyKernelVariant = "kernelsu";
           clangVersion = "gki";
           gkiVersion = "android12-5.10";
           kernelDefconfigs = [ "gki_defconfig" ];
@@ -280,7 +280,7 @@ _: {
 
         ztc1997-android_gki_kernel_5-15_common = {
           build-toolchain = "gki";
-          anyKernelVariant = "osm0sis";
+          anyKernelVariant = "kernelsu";
           clangVersion = "gki";
           gkiVersion = "android13-5.15";
           kernelDefconfigs = [ "gki_defconfig" ];
