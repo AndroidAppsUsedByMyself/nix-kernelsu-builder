@@ -25,7 +25,7 @@ jobs:
           # - oneplus-8t-blu-spark
           - moto-pstar-lineageos-22_1
           - xiaomi-gauguin-lineageos-22_1
-          - _android_kernel_samsung_sm8250_TabS7
+          # - _android_kernel_samsung_sm8250_TabS7
           # - ztc1997-android_gki_kernel_5-10_common
           # - ztc1997-android_gki_kernel_5-15_common
     runs-on: ubuntu-latest
