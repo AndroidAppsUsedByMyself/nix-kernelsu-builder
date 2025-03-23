@@ -106,14 +106,14 @@ _: {
           clangPrebuilt = config.packages.google_clang_r416183b1;
           kernelDefconfigs = [
             # separated configs
-            "vendor/kona-perf_defconfig"
-            "vendor/ext_config/moto-kona.config"
-            "vendor/ext_config/pstar-default.config"
-            "vendor/debugfs.config"
+            #"vendor/kona-perf_defconfig"
+            #"vendor/ext_config/moto-kona.config"
+            #"vendor/ext_config/pstar-default.config"
+            #"vendor/debugfs.config"
             # the one which need to be generated before build
             #"lineageos_pstar_defconfig"
             # the one which extract from a real device
-            #"lineageos_pstar_stock_defconfig"
+            "lineageos_pstar_stock_defconfig"
           ];
           kernelImageName = "Image";
           kernelMakeFlags = [

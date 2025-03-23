@@ -10,16 +10,8 @@
   finalMakeFlags,
 }:
 ''
-  export FINAL_DEFCONFIG=final_defconfig
-  export CFG_DIR_PATH=arch/${arch}/configs
-  export CFG_PATH=$CFG_DIR_PATH/$FINAL_DEFCONFIG
-  ${
-    lib.concatMapStringsSep
-    "\n"
-    (cfg: "cat $CFG_DIR_PATH/${cfg} >> $CFG_PATH")
-    defconfigs
-  }
-  cat >> $CFG_PATH << EOF
+  export CFG_PATH=arch/${arch}/configs/${defconfig}
+  cat >>$CFG_PATH <<EOF
   ${additionalKernelConfig}
   EOF
 ''
@@ -53,5 +45,5 @@
 '')
 + ''
   mkdir -p $out
-  make ${builtins.concatStringsSep " " finalMakeFlags} $FINAL_DEFCONFIG
+  make ${builtins.concatStringsSep " " (finalMakeFlags ++ defconfigs)}
 ''
