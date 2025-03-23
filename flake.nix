@@ -47,6 +47,14 @@
               pkgs.callPackage pkgs/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.nix
                 { };
             llvm-arm-toolchain-ship-10_0 = pkgs.callPackage pkgs/llvm-arm-toolchain-ship-10_0.nix { };
+            google_clang_r450784d = pkgs.callPackage pkgs/android_prebuilts_clang_custom.nix {
+              customGoogleClang = {
+                CLANG_REV = null;
+                CLANG_VERSION = "r450784d";
+                CLANG_BRANCH = "android13-release";
+                CLANG_SHA256 = "1b569iypxq52bfblpz96y81vf1rxjv1pkcmg0wcsmr78r8gp5wcb";
+              };
+            };
             google_clang_r416183b1 = pkgs.callPackage pkgs/android_prebuilts_clang_custom.nix {
               customGoogleClang = {
                 CLANG_REV = null;
