@@ -144,7 +144,7 @@ _: {
           enableGcc32 = true;
           enableLLVM = false;
           # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
-          clangPrebuilt = config.packages.google_clang_r450784d;
+          clangPrebuilt = config.packages.google_clang_r383902;
           kernelDefconfigs = [
             "vendor/lito-perf_defconfig"
             "gauguin_defconfig"
