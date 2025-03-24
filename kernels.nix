@@ -97,7 +97,7 @@ _: {
           clangVersion = "custom";
           kernelSU = {
             enable = true;
-            variant = "next";
+            variant = "rsuntk";
           };
           enableGcc64 = true;
           enableGcc32 = true;
@@ -125,6 +125,10 @@ _: {
           oemBootImg = sources.lineage-nightly-pstar_bootImg.src;
           kernelPatches = [
             "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/module.patch"
+            "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0001-BACKPORT-maccess-rename-strncpy_from_unsafe_user-to-.patch"
+            "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0001-Reapply-cred-switch-to-using-atomic_long_t.patch"
+            "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0002-BACKPORT-cred-add-get_cred_rcu.patch"
+            "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/path_umount_backport.patch"
           ];
           kernelConfig = ''
             CONFIG_MODULE_FORCE_LOAD=y
