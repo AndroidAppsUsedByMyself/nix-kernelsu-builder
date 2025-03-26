@@ -193,13 +193,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "v1.0.3-35-legacy",
-            "sha256": "sha256-cBh5ts00bWUX3bORwjj9qzZYNoAWM6tea5yJPG5wTOo=",
+            "rev": "v1.0.3-38-legacy",
+            "sha256": "sha256-goaCovAG7Idwn/q6M1VlI2B8OG+SRl/tOSID5o6XsOk=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/rsuntk/KernelSU.git"
         },
-        "version": "v1.0.3-35-legacy"
+        "version": "v1.0.3-38-legacy"
     },
     "kernelsu-rksu-revision-code": {
         "cargoLocks": null,
@@ -214,7 +214,7 @@
             "type": "url",
             "url": "https://example.com"
         },
-        "version": "12122"
+        "version": "12128"
     },
     "kernelsu-stable": {
         "cargoLocks": null,
