@@ -226,11 +226,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1742983571,
-        "narHash": "sha256-HD1oB4h035jsJ6araMenvFWtgYmCi4EWWBli5LF05Bo=",
+        "lastModified": 1743069986,
+        "narHash": "sha256-ClrpWljpUtPduMT2E7tYnwSH5yuCPrkgYQkG+adit9E=",
         "owner": "xddxdd",
         "repo": "nur-packages",
-        "rev": "493f15ccdca9bce25a4cfce270329748546bb977",
+        "rev": "19c8e8ee6d1b2c3aaad7a95084f5a0d22a72d8b5",
         "type": "github"
       },
       "original": {
