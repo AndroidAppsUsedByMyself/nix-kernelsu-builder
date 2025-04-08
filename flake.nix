@@ -41,6 +41,7 @@
         { pkgs, ... }:
         {
           packages = {
+            emptyFile = pkgs.writeText "empty" "";
             gcc-aarch64-linux-android = pkgs.callPackage pkgs/gcc-aarch64-linux-android.nix { };
             gcc-arm-linux-androideabi = pkgs.callPackage pkgs/gcc-arm-linux-androideabi.nix { };
             android_prebuilts_clang_kernel_linux-x86_clang-r416183b =

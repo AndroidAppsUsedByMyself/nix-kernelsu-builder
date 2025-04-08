@@ -65,12 +65,14 @@
                 default = true;
               };
               variant = lib.mkOption {
-                type = lib.types.enum [
-                  "official"
-                  "rsuntk"
-                  "next"
-                  "custom"
-                ];
+                type = lib.types.either lib.types.str (
+                  lib.types.enum [
+                    "official"
+                    "rsuntk"
+                    "next"
+                    "custom"
+                  ]
+                );
                 description = "Architecture of the kernel";
                 default = "official";
               };
@@ -185,19 +187,19 @@
           };
           config = lib.mkMerge [
             (lib.mkIf (config.kernelSU.variant == "official") {
-              kernelSU.src = sources.kernelsu-stable.src;
-              kernelSU.revision = sources.kernelsu-stable-revision-code.version;
-              kernelSU.subdirectory = "KernelSU";
+              kernelSU.src = lib.mkForce sources.kernelsu-stable.src;
+              kernelSU.revision = lib.mkForce sources.kernelsu-stable-revision-code.version;
+              kernelSU.subdirectory = lib.mkForce "KernelSU";
             })
             (lib.mkIf (config.kernelSU.variant == "next") {
-              kernelSU.src = sources.kernelsu-next.src;
-              kernelSU.revision = sources.kernelsu-next-revision-code.version;
-              kernelSU.subdirectory = "KernelSU-Next";
+              kernelSU.src = lib.mkForce sources.kernelsu-next.src;
+              kernelSU.revision = lib.mkForce sources.kernelsu-next-revision-code.version;
+              kernelSU.subdirectory = lib.mkForce "KernelSU-Next";
             })
             (lib.mkIf (config.kernelSU.variant == "rsuntk") {
-              kernelSU.src = sources.kernelsu-rksu.src;
-              kernelSU.revision = sources.kernelsu-rksu-revision-code.version;
-              kernelSU.subdirectory = "KernelSU";
+              kernelSU.src = lib.mkForce sources.kernelsu-rksu.src;
+              kernelSU.revision = lib.mkForce sources.kernelsu-rksu-revision-code.version;
+              kernelSU.subdirectory = lib.mkForce "KernelSU";
             })
           ];
         };

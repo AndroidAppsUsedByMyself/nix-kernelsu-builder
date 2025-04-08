@@ -25,6 +25,7 @@ jobs:
           # - oneplus-8t-blu-spark
           - moto-pstar-lineageos-22_1-kernelsu-rsuntk
           - moto-pstar-lineageos-22_1-kernelsu-rsuntk-susfs
+          # - moto-pstar-lineageos-22_1-kernelsu-next
           # - xiaomi-gauguin-lineageos-22_1
           # - _android_kernel_samsung_sm8250_TabS7
           # - ztc1997-android_gki_kernel_5-10_common

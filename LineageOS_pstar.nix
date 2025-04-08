@@ -1,15 +1,11 @@
 {
   lib,
-  pkgs,
   config,
   sources,
   ...
 }:
 let
-  emptyFile = pkgs.writeText {
-    name = "empty";
-    text = "";
-  };
+  inherit (config.packages) emptyFile;
   kernelsuVariants = {
     # builtin variants do not require these fields
     rsuntk = {
@@ -33,7 +29,7 @@ let
       inherit (sources.kernelsu-rksu-susfs) src;
       revision = sources.kernelsu-rksu-susfs-revision-code.version;
       subdirectory = "KernelSU";
-      susfs_kernelsuPatch = emptyFile;
+      susfs_kernelsuPatch = "${emptyFile}";
     };
   };
 
@@ -47,7 +43,7 @@ let
       susfs ? {
         enable = false;
         inherit (sources.susfs-4_19) src;
-        kernelsuPatch = kernelSU.susfs_kernelsuPatch or emptyFile;
+        kernelsuPatch = kernelSU.susfs_kernelsuPatch or "${emptyFile}";
         kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
       },
       kernelSU ? {
@@ -142,7 +138,7 @@ in
     susfs = {
       enable = false;
       inherit (sources.susfs-4_19) src;
-      kernelsuPatch = kernelSU.susfs_kernelsuPatch or emptyFile;
+      kernelsuPatch = kernelSU.susfs_kernelsuPatch or "${emptyFile}";
       kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
     };
     kernelConfig =
@@ -173,7 +169,7 @@ in
     susfs = {
       enable = false;
       inherit (sources.susfs-4_19) src;
-      kernelsuPatch = kernelSU.susfs_kernelsuPatch or emptyFile;
+      kernelsuPatch = kernelSU.susfs_kernelsuPatch or "${emptyFile}";
       kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
     };
     kernelConfig =
@@ -204,7 +200,7 @@ in
     susfs = {
       enable = true;
       inherit (sources.susfs-4_19) src;
-      kernelsuPatch = kernelSU.susfs_kernelsuPatch or emptyFile;
+      kernelsuPatch = kernelSU.susfs_kernelsuPatch or "${emptyFile}";
       kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
     };
     kernelConfig =
