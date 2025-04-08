@@ -96,7 +96,7 @@ let
         kernelBuildGcc
       else if build-toolchain == "clang-with-gcc" then
         kernelBuildCustom
-      else if clangVersion == "gki" then
+      else if build-toolchain == "gki" then
         kernelBuildGki
       else if build-toolchain == "clang-with-llvm" then
         kernelBuildClang

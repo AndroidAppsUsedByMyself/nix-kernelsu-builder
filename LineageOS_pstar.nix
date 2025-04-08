@@ -50,7 +50,15 @@ let
         kernelsuPatch = kernelSU.susfs_kernelsuPatch or emptyFile;
         kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
       },
-      kernelSU ? kernelsuVariants.rsuntk,
+      kernelSU ? {
+        inherit (kernelsuVariants.rsuntk)
+          enable
+          variant
+          src
+          revision
+          subdirectory
+          ;
+      },
       build-toolchain ? "clang-with-gcc",
       anyKernelVariant ? "osm0sis",
       clangVersion ? "custom",
@@ -79,15 +87,16 @@ let
         "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0002-BACKPORT-cred-add-get_cred_rcu.patch"
         "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/path_umount_backport.patch"
       ],
+      # not right currently
       kernelConfig ?
         ''
-          CONFIG_MODULE_FORCE_LOAD?y
-          CONFIG_MODULE_SIG_FORCE?n
+          CONFIG_MODULE_FORCE_LOAD=y
+          CONFIG_MODULE_SIG_FORCE=n
         ''
         + (
           if (susfs.enable && (builtins.elem kernelSU.variant kernelsuMagicVariants)) then
             ''
-              KSU_SUSFS_HAS_MAGIC_MOUNT?y
+              KSU_SUSFS_HAS_MAGIC_MOUNT=y
             ''
           else
             ""
@@ -120,19 +129,96 @@ in
 {
   moto-pstar-lineageos-22_1-base = baseKernel;
 
-  moto-pstar-lineageos-22_1-kernelsu-rsuntk = baseKernel.override (_old: {
-    kernelSU = kernelsuVariants.rsuntk;
-  });
-
-  moto-pstar-lineageos-22_1-kernelsu-next = baseKernel.override (_old: {
-    kernelSU = kernelsuVariants.next;
-  });
-
-  moto-pstar-lineageos-22_1-kernelsu-rsuntk-susfs = baseKernel.override (old: {
-    kernelSU = kernelsuVariants.rsuntk-susfs;
-    susfs = old.susfs // {
-      enable = true;
-      kernelsuPatch = emptyFile;
+  moto-pstar-lineageos-22_1-kernelsu-rsuntk = baseKernel.override (_: rec {
+    kernelSU = {
+      inherit (kernelsuVariants.rsuntk)
+        enable
+        variant
+        src
+        revision
+        subdirectory
+        ;
     };
+    susfs = {
+      enable = false;
+      inherit (sources.susfs-4_19) src;
+      kernelsuPatch = kernelSU.susfs_kernelsuPatch or emptyFile;
+      kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
+    };
+    kernelConfig =
+      ''
+        CONFIG_MODULE_FORCE_LOAD=y
+        CONFIG_MODULE_SIG_FORCE=n
+      ''
+      + (
+        if (susfs.enable && (builtins.elem kernelSU.variant kernelsuMagicVariants)) then
+          ''
+            KSU_SUSFS_HAS_MAGIC_MOUNT=y
+          ''
+        else
+          ""
+      );
+  });
+
+  moto-pstar-lineageos-22_1-kernelsu-next = baseKernel.override (_: rec {
+    kernelSU = {
+      inherit (kernelsuVariants.next)
+        enable
+        variant
+        src
+        revision
+        subdirectory
+        ;
+    };
+    susfs = {
+      enable = false;
+      inherit (sources.susfs-4_19) src;
+      kernelsuPatch = kernelSU.susfs_kernelsuPatch or emptyFile;
+      kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
+    };
+    kernelConfig =
+      ''
+        CONFIG_MODULE_FORCE_LOAD=y
+        CONFIG_MODULE_SIG_FORCE=n
+      ''
+      + (
+        if (susfs.enable && (builtins.elem kernelSU.variant kernelsuMagicVariants)) then
+          ''
+            KSU_SUSFS_HAS_MAGIC_MOUNT=y
+          ''
+        else
+          ""
+      );
+  });
+
+  moto-pstar-lineageos-22_1-kernelsu-rsuntk-susfs = baseKernel.override (_: rec {
+    kernelSU = {
+      inherit (kernelsuVariants.rsuntk-susfs)
+        enable
+        variant
+        src
+        revision
+        subdirectory
+        ;
+    };
+    susfs = {
+      enable = true;
+      inherit (sources.susfs-4_19) src;
+      kernelsuPatch = kernelSU.susfs_kernelsuPatch or emptyFile;
+      kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
+    };
+    kernelConfig =
+      ''
+        CONFIG_MODULE_FORCE_LOAD=y
+        CONFIG_MODULE_SIG_FORCE=n
+      ''
+      + (
+        if (susfs.enable && (builtins.elem kernelSU.variant kernelsuMagicVariants)) then
+          ''
+            KSU_SUSFS_HAS_MAGIC_MOUNT=y
+          ''
+        else
+          ""
+      );
   });
 }

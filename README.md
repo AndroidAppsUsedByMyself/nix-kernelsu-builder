@@ -9,7 +9,7 @@ Currently I build boot images for 3 devices:
 - `.#amazon-fire-hd-karnak`: Amazon Fire HD 8 2018. Kernel compiles, but KernelSU doesn't work for lack of 32-bit userland app.
 - `.#moto-rtwo-lineageos-21`: Motorola Edge+ 2023, unofficial LineageOS 21. Working perfectly.
 - `.#oneplus-8t-blu-spark`: OnePlus 8T, Blu_spark kernel for LineageOS 21. Working perfectly.
-- `.#moto-pstar-lineageos-22.0`: Motorola Edge 20 pro, LineageOS 22. Not Working perfectly.
+- `.#moto-pstar-lineageos-22_1`: Motorola Edge 20 pro, LineageOS 22. Working perfectly.
 
 # How to add my own device
 
@@ -27,7 +27,6 @@ Each kernel definition takes these arguments:
   - Can be set to any version present in [nixpkgs](https://github.com/NixOS/nixpkgs). Currently the value can be 8 to 17.
   - If set to `"latest"`, will use the latest clang in nixpkgs. Recommended.
   - If set to `null` or `"gcc"`, uses Google's GCC 4.9 toolchain instead.
-  - If set to `"custom"`, will use the `customGoogleClang` or `clangPrebuilt`.
   - If set to `"gki"`, will use `gkiVersion` (under development)
 
 - `build-toolchain`: Toolchains used in kernel build, the build workflow will depend on it
@@ -36,7 +35,7 @@ Each kernel definition takes these arguments:
   - If set to `"clang-with-gcc"`, will go to `kernelBuildGki`.
   - If set to `"gki"`, will go to `kernelBuildClang`.
 
-- `clangPrebuilt`: The clang used in kernel build if `clangVersion` == `custom`.
+- `clangPrebuilt`: The clang used in kernel build.
 
 - Function named `fetchGooglePrebuiltClang`: accept attr `customGoogleClang`, and output .
   - `customGoogleClang`: Google Clang.
