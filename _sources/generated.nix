@@ -263,15 +263,15 @@
   };
   los-pstar-kernel-patches = {
     pname = "los-pstar-kernel-patches";
-    version = "ce080c7de236c5e470917a7209211c3df5c16f44";
+    version = "aab4d3a1354c51bf1908764e308b267f9fd15dcb";
     src = fetchFromGitHub {
       owner = "AndroidAppsUsedByMyself";
       repo = "kernel_patches";
-      rev = "ce080c7de236c5e470917a7209211c3df5c16f44";
+      rev = "aab4d3a1354c51bf1908764e308b267f9fd15dcb";
       fetchSubmodules = false;
-      sha256 = "sha256-vy+jnChIb+QI8mcCj0vMY0I1hJ2+HUwjMCVSuPJRb8M=";
+      sha256 = "sha256-Bobi8YxmzamAOhfFNaX1vUa7p91fxiJazEMssRYLFE4=";
     };
-    date = "2025-04-08";
+    date = "2025-04-09";
   };
   susfs-4_19 = {
     pname = "susfs-4_19";
