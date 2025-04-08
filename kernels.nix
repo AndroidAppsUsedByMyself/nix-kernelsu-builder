@@ -4,6 +4,10 @@ _: {
     let
       sources = pkgs.callPackage _sources/generated.nix { };
       fetchGooglePrebuiltClang = pkgs.callPackage pkgs/android_prebuilts_clang_custom.nix;
+      LineageOS_pstar = pkgs.callPackage ./LineageOS_pstar.nix {
+        inherit sources;
+        inherit config;
+      };
     in
     {
       kernelsu = {
@@ -91,50 +95,91 @@ _: {
           kernelSrc = sources.linux-oneplus-8t-blu-spark.src;
         };
 
-        moto-pstar-lineageos-22_1 = {
-          build-toolchain = "clang-with-gcc";
-          anyKernelVariant = "osm0sis";
-          clangVersion = "custom";
-          kernelSU = {
-            enable = true;
-            variant = "rsuntk";
+        _moto-pstar-lineageos-22_1 =
+          let
+            susfs_enable = true;
+            emptyFile = pkgs.writeText {
+              text = '''';
+            };
+            KernelSU = rec {
+              rsuntk_susfs = {
+                variant = "rsuntk-susfs";
+                inherit (sources.kernelsu-rksu-susfs) src;
+                revision = sources.kernelsu-rksu-susfs-revision-code.version;
+                subdirectory = "KernelSU";
+                susfs_kernelsuPatch = emptyFile;
+              };
+              default = rsuntk_susfs;
+            };
+            KernelSU_variant_magic = [
+              "rsuntk"
+              "next"
+            ];
+          in
+          {
+            build-toolchain = "clang-with-gcc";
+            anyKernelVariant = "osm0sis";
+            clangVersion = "custom";
+            kernelSU = {
+              enable = true;
+              inherit (KernelSU.default)
+                variant
+                src
+                revision
+                subdirectory
+                ;
+            };
+            susfs = {
+              enable = susfs_enable;
+              inherit (sources.susfs-4_19) src;
+              kernelsuPatch = KernelSU.default.susfs_kernelsuPatch;
+              kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
+            };
+            enableGcc64 = true;
+            enableGcc32 = true;
+            enableLLVM = false;
+            # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
+            clangPrebuilt = config.packages.google_clang_r416183b1;
+            kernelDefconfigs = [
+              # separated configs
+              "vendor/kona-perf_defconfig"
+              "vendor/ext_config/moto-kona.config"
+              "vendor/ext_config/pstar-default.config"
+              "vendor/debugfs.config"
+              # the one which need to be generated before build
+              #"lineageos_pstar_defconfig"
+              # the one which extract from a real device
+              #"lineageos_pstar_stock_defconfig"
+            ];
+            kernelImageName = "Image";
+            kernelMakeFlags = [
+              "KCFLAGS=\"-w\""
+              "KCPPFLAGS=\"-w\""
+              "LOCALVERSION=-rk"
+            ];
+            kernelSrc = sources.linux-moto-pstar-lineageos-22_1.src;
+            oemBootImg = sources.lineage-nightly-pstar_bootImg.src;
+            kernelPatches = [
+              "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/module.patch"
+              "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0001-BACKPORT-maccess-rename-strncpy_from_unsafe_user-to-.patch"
+              "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0001-Reapply-cred-switch-to-using-atomic_long_t.patch"
+              "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0002-BACKPORT-cred-add-get_cred_rcu.patch"
+              "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/path_umount_backport.patch"
+            ];
+            kernelConfig =
+              ''
+                CONFIG_MODULE_FORCE_LOAD=y
+                CONFIG_MODULE_SIG_FORCE=n
+              ''
+              ++ (
+                if susfs_enable && (builtins.elem KernelSU.default KernelSU_variant_magic) && true then
+                  ''
+                    KSU_SUSFS_HAS_MAGIC_MOUNT=y
+                  ''
+                else
+                  ""
+              );
           };
-          enableGcc64 = true;
-          enableGcc32 = true;
-          enableLLVM = false;
-          # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
-          clangPrebuilt = config.packages.google_clang_r416183b1;
-          kernelDefconfigs = [
-            # separated configs
-            "vendor/kona-perf_defconfig"
-            "vendor/ext_config/moto-kona.config"
-            "vendor/ext_config/pstar-default.config"
-            "vendor/debugfs.config"
-            # the one which need to be generated before build
-            #"lineageos_pstar_defconfig"
-            # the one which extract from a real device
-            #"lineageos_pstar_stock_defconfig"
-          ];
-          kernelImageName = "Image";
-          kernelMakeFlags = [
-            "KCFLAGS=\"-w\""
-            "KCPPFLAGS=\"-w\""
-            "LOCALVERSION=-rk"
-          ];
-          kernelSrc = sources.linux-moto-pstar-lineageos-22_1.src;
-          oemBootImg = sources.lineage-nightly-pstar_bootImg.src;
-          kernelPatches = [
-            "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/module.patch"
-            "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0001-BACKPORT-maccess-rename-strncpy_from_unsafe_user-to-.patch"
-            "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0001-Reapply-cred-switch-to-using-atomic_long_t.patch"
-            "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0002-BACKPORT-cred-add-get_cred_rcu.patch"
-            "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/path_umount_backport.patch"
-          ];
-          kernelConfig = ''
-            CONFIG_MODULE_FORCE_LOAD=y
-            CONFIG_MODULE_SIG_FORCE=n
-          '';
-        };
 
         xiaomi-gauguin-lineageos-22_1 = {
           build-toolchain = "clang-with-gcc";
@@ -283,6 +328,6 @@ _: {
             CONFIG_LTO_CLANG=y
           '';
         };
-      };
+      } // LineageOS_pstar;
     };
 }

@@ -123,3 +123,17 @@ fetch.git = "https://github.com/rsuntk/KernelSU.git"
 src.webpage = "https://api.github.com/repos/rsuntk/KernelSU/releases?per_page=1"
 src.regex = "KernelSU[^\"]*_([0-9]+)-release\\.apk"
 fetch.url = "https://example.com"
+
+[kernelsu-rksu-susfs]
+src.github = "rsuntk/KernelSU"
+fetch.git = "https://github.com/rsuntk/KernelSU.git"
+
+[kernelsu-rksu-susfs-revision-code]
+src.webpage = "https://api.github.com/repos/rsuntk/KernelSU/releases?per_page=1"
+src.regex = "KernelSU[^\"]*_([0-9]+)-release\\.apk"
+fetch.url = "https://example.com"
+
+[susfs-4_19]
+src.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
+src.branch = "kernel-4.19"
+fetch.git = "https://gitlab.com/simonpunk/susfs4ksu.git"

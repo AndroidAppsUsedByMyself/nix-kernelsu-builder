@@ -19,6 +19,16 @@
         { config, ... }:
         {
           options = {
+            override = lib.mkOption {
+              type = lib.types.nullOr lib.types.function;
+              description = "We will ignore this";
+              default = null;
+            };
+            overrideDerivation = lib.mkOption {
+              type = lib.types.nullOr lib.types.function;
+              description = "We will ignore this";
+              default = null;
+            };
             arch = lib.mkOption {
               type = lib.types.str;
               description = "Kernel architecture, usually `arm64`";

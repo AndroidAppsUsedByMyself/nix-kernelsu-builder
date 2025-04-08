@@ -216,6 +216,41 @@
         },
         "version": "12128"
     },
+    "kernelsu-rksu-susfs": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "kernelsu-rksu-susfs",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "v1.0.3-38-legacy",
+            "sha256": "sha256-goaCovAG7Idwn/q6M1VlI2B8OG+SRl/tOSID5o6XsOk=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/rsuntk/KernelSU.git"
+        },
+        "version": "v1.0.3-38-legacy"
+    },
+    "kernelsu-rksu-susfs-revision-code": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "kernelsu-rksu-susfs-revision-code",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=",
+            "type": "url",
+            "url": "https://example.com"
+        },
+        "version": "12128"
+    },
     "kernelsu-stable": {
         "cargoLocks": null,
         "date": null,
@@ -260,11 +295,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-Or3bZ9s846/ZH9Br+NnAZ8kWVfdmpNWInSTJzCFIYkg=",
+            "sha256": "sha256-PsQJh2uhLnx5WpEbFfP56nQiqr8TEv6vjKlQjgGLWyI=",
             "type": "url",
-            "url": "https://mirrorbits.lineageos.org/full/pstar/20250331/boot.img"
+            "url": "https://mirrorbits.lineageos.org/full/pstar/20250407/boot.img"
         },
-        "version": "20250331"
+        "version": "20250407"
     },
     "linux-amazon-karnak": {
         "cargoLocks": null,
@@ -415,7 +450,7 @@
     },
     "los-pstar-kernel-patches": {
         "cargoLocks": null,
-        "date": "2025-02-09",
+        "date": "2025-04-08",
         "extract": null,
         "name": "los-pstar-kernel-patches",
         "passthru": null,
@@ -427,12 +462,32 @@
             "name": null,
             "owner": "AndroidAppsUsedByMyself",
             "repo": "kernel_patches",
-            "rev": "508f67fb6c474ade86b66e02a1f0f818ea8f9d92",
-            "sha256": "sha256-qdW7+4nq5kqGSlTFEMsDlmfnxqakR0yzMtvOlBtdxk0=",
+            "rev": "ce080c7de236c5e470917a7209211c3df5c16f44",
+            "sha256": "sha256-vy+jnChIb+QI8mcCj0vMY0I1hJ2+HUwjMCVSuPJRb8M=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "508f67fb6c474ade86b66e02a1f0f818ea8f9d92"
+        "version": "ce080c7de236c5e470917a7209211c3df5c16f44"
+    },
+    "susfs-4_19": {
+        "cargoLocks": null,
+        "date": "2025-02-23",
+        "extract": null,
+        "name": "susfs-4_19",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "001e69919c6271f690fd00b17e4c721c9e599152",
+            "sha256": "sha256-j4OIvgOE64nm67NyGsEnSRNygVVZaF5uhMx8ju+p6fQ=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
+        },
+        "version": "001e69919c6271f690fd00b17e4c721c9e599152"
     },
     "susfs-android13-5_15": {
         "cargoLocks": null,

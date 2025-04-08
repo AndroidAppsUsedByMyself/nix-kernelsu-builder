@@ -27,6 +27,7 @@
   kernelSrc,
   oemBootImg,
   susfs,
+  ...
 }:
 let
   pipeline = rec {

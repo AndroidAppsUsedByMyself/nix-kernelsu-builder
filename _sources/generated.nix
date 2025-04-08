@@ -127,6 +127,27 @@
       sha256 = "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=";
     };
   };
+  kernelsu-rksu-susfs = {
+    pname = "kernelsu-rksu-susfs";
+    version = "v1.0.3-38-legacy";
+    src = fetchgit {
+      url = "https://github.com/rsuntk/KernelSU.git";
+      rev = "v1.0.3-38-legacy";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-goaCovAG7Idwn/q6M1VlI2B8OG+SRl/tOSID5o6XsOk=";
+    };
+  };
+  kernelsu-rksu-susfs-revision-code = {
+    pname = "kernelsu-rksu-susfs-revision-code";
+    version = "12128";
+    src = fetchurl {
+      url = "https://example.com";
+      sha256 = "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=";
+    };
+  };
   kernelsu-stable = {
     pname = "kernelsu-stable";
     version = "v0.9.5";
@@ -150,10 +171,10 @@
   };
   lineage-nightly-pstar_bootImg = {
     pname = "lineage-nightly-pstar_bootImg";
-    version = "20250331";
+    version = "20250407";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20250331/boot.img";
-      sha256 = "sha256-Or3bZ9s846/ZH9Br+NnAZ8kWVfdmpNWInSTJzCFIYkg=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20250407/boot.img";
+      sha256 = "sha256-PsQJh2uhLnx5WpEbFfP56nQiqr8TEv6vjKlQjgGLWyI=";
     };
   };
   linux-amazon-karnak = {
@@ -242,15 +263,29 @@
   };
   los-pstar-kernel-patches = {
     pname = "los-pstar-kernel-patches";
-    version = "508f67fb6c474ade86b66e02a1f0f818ea8f9d92";
+    version = "ce080c7de236c5e470917a7209211c3df5c16f44";
     src = fetchFromGitHub {
       owner = "AndroidAppsUsedByMyself";
       repo = "kernel_patches";
-      rev = "508f67fb6c474ade86b66e02a1f0f818ea8f9d92";
+      rev = "ce080c7de236c5e470917a7209211c3df5c16f44";
       fetchSubmodules = false;
-      sha256 = "sha256-qdW7+4nq5kqGSlTFEMsDlmfnxqakR0yzMtvOlBtdxk0=";
+      sha256 = "sha256-vy+jnChIb+QI8mcCj0vMY0I1hJ2+HUwjMCVSuPJRb8M=";
     };
-    date = "2025-02-09";
+    date = "2025-04-08";
+  };
+  susfs-4_19 = {
+    pname = "susfs-4_19";
+    version = "001e69919c6271f690fd00b17e4c721c9e599152";
+    src = fetchgit {
+      url = "https://gitlab.com/simonpunk/susfs4ksu.git";
+      rev = "001e69919c6271f690fd00b17e4c721c9e599152";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-j4OIvgOE64nm67NyGsEnSRNygVVZaF5uhMx8ju+p6fQ=";
+    };
+    date = "2025-02-23";
   };
   susfs-android13-5_15 = {
     pname = "susfs-android13-5_15";
