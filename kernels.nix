@@ -111,10 +111,6 @@ _: {
               };
               default = rsuntk_susfs;
             };
-            KernelSU_variant_magic = [
-              "rsuntk"
-              "next"
-            ];
           in
           {
             build-toolchain = "clang-with-gcc";
@@ -166,19 +162,10 @@ _: {
               "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0002-BACKPORT-cred-add-get_cred_rcu.patch"
               "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/path_umount_backport.patch"
             ];
-            kernelConfig =
-              ''
-                CONFIG_MODULE_FORCE_LOAD=y
-                CONFIG_MODULE_SIG_FORCE=n
-              ''
-              ++ (
-                if susfs_enable && (builtins.elem KernelSU.default KernelSU_variant_magic) && true then
-                  ''
-                    KSU_SUSFS_HAS_MAGIC_MOUNT=y
-                  ''
-                else
-                  ""
-              );
+            kernelConfig = ''
+              CONFIG_MODULE_FORCE_LOAD=y
+              CONFIG_MODULE_SIG_FORCE=n
+            '';
           };
 
         xiaomi-gauguin-lineageos-22_1 = {

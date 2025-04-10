@@ -126,6 +126,7 @@ fetch.url = "https://example.com"
 
 [kernelsu-rksu-susfs]
 src.github = "rsuntk/KernelSU"
+src.branch = "susfs-v1.5.5"
 fetch.git = "https://github.com/rsuntk/KernelSU.git"
 
 [kernelsu-rksu-susfs-revision-code]

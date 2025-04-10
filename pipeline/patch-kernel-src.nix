@@ -36,10 +36,14 @@ stdenv.mkDerivation {
       cp -r ${kernelSU.src} ${kernelSU.subdirectory}
       chmod -R +w ${kernelSU.subdirectory}
     '')
-    + (lib.optionalString (
-      kernelSU.enable && kernelSU.integrateMethod == "manually_patch_cmd"
-    ) kernelSU.integrateManuallyPatchCmd)
+    + (
+      lib.optionalString (kernelSU.enable && kernelSU.integrateMethod == "manually_patch_cmd") ''
+        echo "[KernelSUIntegrate] manually patch kernel source to integrate KernelSU"
+      ''
+      + kernelSU.integrateManuallyPatchCmd
+    )
     + (lib.optionalString (kernelSU.enable && susfs.enable) ''
+      echo "[SUSFSIntegrate] manually patch source to integrate SUSFS"
       cp -r ${susfs.src}/kernel_patches/fs/* fs/
       cp -r ${susfs.src}/kernel_patches/include/linux/* include/linux/
       chmod -R +w fs include/linux
@@ -77,6 +81,11 @@ stdenv.mkDerivation {
     runHook preInstall
 
     mkdir -p $out
+
+    pushd $out
+    pwd
+    popd
+
     cp -r * $out/
 
     runHook postInstall

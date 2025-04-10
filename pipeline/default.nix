@@ -114,6 +114,11 @@ let
       bootImg = oemBootImg;
       kernel = kernelBuild;
     };
+
+    kernelConfigOutput = callPackage ./build-kernelConfigOutput.nix {
+      inherit arch kernelImageName;
+      kernel = kernelBuild;
+    };
   };
 in
 runCommand "kernel-bundle" { passthru = pipeline; } (
@@ -127,5 +132,8 @@ runCommand "kernel-bundle" { passthru = pipeline; } (
   ''
   + (lib.optionalString (oemBootImg != null) ''
     cp ${pipeline.bootImg}/boot.img $out/
+  '')
+  + (lib.optionalString true ''
+    cp ${pipeline.kernelConfigOutput}/kernelConfigOutput $out/
   '')
 )

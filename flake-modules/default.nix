@@ -98,6 +98,11 @@
                 type = lib.types.str;
                 description = "Command to apply KernelSU patch manually";
                 default = ''
+                  # Patches author: weishu <twsxtd@gmail.com>
+                  # Shell authon: xiaoleGun <1592501605@qq.com>
+                  #               bdqllW <bdqllT@gmail.com>
+                  # Tested kernel versions: 5.4, 4.19, 4.14, 4.9
+                  # 20240123
                   echo "Applying KernelSU patch manually"
                   patch_files=(
                       fs/exec.c
@@ -168,6 +173,12 @@
                       esac
 
                   done
+
+                  # Patches author: backslashxx @Github
+                  # Shell authon: JackA1ltman <cs2dtzq@163.com>
+                  # Tested kernel versions: 5.4, 4.19, 4.14, 4.9, 4.4
+                  # 20250323
+
                 '';
               };
               src = lib.mkOption {
@@ -281,22 +292,22 @@
           };
           config = lib.mkMerge [
             (lib.mkIf (config.kernelSU.variant == "official") {
-              kernelSU.src = lib.mkForce sources.kernelsu-stable.src;
-              kernelSU.revision = lib.mkForce sources.kernelsu-stable-revision-code.version;
-              kernelSU.subdirectory = lib.mkForce "KernelSU";
-              kernelSU.moduleSystemImpl = lib.mkForce "overlayfs";
+              kernelSU.src = lib.mkDefault sources.kernelsu-stable.src;
+              kernelSU.revision = lib.mkDefault sources.kernelsu-stable-revision-code.version;
+              kernelSU.subdirectory = lib.mkDefault "KernelSU";
+              kernelSU.moduleSystemImpl = lib.mkDefault "overlayfs";
             })
             (lib.mkIf (config.kernelSU.variant == "next") {
-              kernelSU.src = lib.mkForce sources.kernelsu-next.src;
-              kernelSU.revision = lib.mkForce sources.kernelsu-next-revision-code.version;
-              kernelSU.subdirectory = lib.mkForce "KernelSU-Next";
-              kernelSU.moduleSystemImpl = lib.mkForce "magicmount";
+              kernelSU.src = lib.mkDefault sources.kernelsu-next.src;
+              kernelSU.revision = lib.mkDefault sources.kernelsu-next-revision-code.version;
+              kernelSU.subdirectory = lib.mkDefault "KernelSU-Next";
+              kernelSU.moduleSystemImpl = lib.mkDefault "magicmount";
             })
             (lib.mkIf (config.kernelSU.variant == "rsuntk") {
-              kernelSU.src = lib.mkForce sources.kernelsu-rksu.src;
-              kernelSU.revision = lib.mkForce sources.kernelsu-rksu-revision-code.version;
-              kernelSU.subdirectory = lib.mkForce "KernelSU";
-              kernelSU.moduleSystemImpl = lib.mkForce "magicmount";
+              kernelSU.src = lib.mkDefault sources.kernelsu-rksu.src;
+              kernelSU.revision = lib.mkDefault sources.kernelsu-rksu-revision-code.version;
+              kernelSU.subdirectory = lib.mkDefault "KernelSU";
+              kernelSU.moduleSystemImpl = lib.mkDefault "magicmount";
             })
           ];
         };

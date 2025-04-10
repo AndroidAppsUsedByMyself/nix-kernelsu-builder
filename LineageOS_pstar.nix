@@ -14,6 +14,7 @@ let
       src = null;
       revision = null;
       subdirectory = null;
+      susfs_kernelsuPatch = "${sources.susfs-4_19.src}/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch";
       integrateMethod = "manually_patch_cmd";
       moduleSystemImpl = "magicmount";
     };
@@ -23,6 +24,7 @@ let
       src = null;
       revision = null;
       subdirectory = null;
+      susfs_kernelsuPatch = "${sources.susfs-4_19.src}/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch";
       integrateMethod = "manually_patch_cmd";
       moduleSystemImpl = "magicmount";
     };
@@ -38,12 +40,6 @@ let
       moduleSystemImpl = "magicmount";
     };
   };
-
-  kernelsuMagicVariants = [
-    "rsuntk-susfs"
-    "rsuntk"
-    "next"
-  ];
   mkKernel = lib.makeOverridable (
     {
       susfs ? {
@@ -90,20 +86,11 @@ let
         "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0002-BACKPORT-cred-add-get_cred_rcu.patch"
         "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/path_umount_backport.patch"
       ],
-      # not right currently
-      kernelConfig ?
-        ''
-          CONFIG_MODULE_FORCE_LOAD=y
-          CONFIG_MODULE_SIG_FORCE=n
-        ''
-        + (
-          if (susfs.enable && (builtins.elem kernelSU.variant kernelsuMagicVariants)) then
-            ''
-              KSU_SUSFS_HAS_MAGIC_MOUNT=y
-            ''
-          else
-            ""
-        ),
+      # without this kernel modules will refuse to be inserted
+      kernelConfig ? ''
+        CONFIG_MODULE_FORCE_LOAD=y
+        CONFIG_MODULE_SIG_FORCE=n
+      '',
     }:
     {
       inherit
@@ -147,22 +134,9 @@ in
     susfs = {
       enable = false;
       inherit (sources.susfs-4_19) src;
-      kernelsuPatch = kernelSU.susfs_kernelsuPatch or "${emptyFile}";
+      kernelsuPatch = kernelsuVariants."${kernelSU.variant}".susfs_kernelsuPatch or "${emptyFile}";
       kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
     };
-    kernelConfig =
-      ''
-        CONFIG_MODULE_FORCE_LOAD=y
-        CONFIG_MODULE_SIG_FORCE=n
-      ''
-      + (
-        if (susfs.enable && (builtins.elem kernelSU.variant kernelsuMagicVariants)) then
-          ''
-            KSU_SUSFS_HAS_MAGIC_MOUNT=y
-          ''
-        else
-          ""
-      );
   });
 
   moto-pstar-lineageos-22_1-kernelsu-next = baseKernel.override (_: rec {
@@ -180,22 +154,9 @@ in
     susfs = {
       enable = false;
       inherit (sources.susfs-4_19) src;
-      kernelsuPatch = kernelSU.susfs_kernelsuPatch or "${emptyFile}";
+      kernelsuPatch = kernelsuVariants."${kernelSU.variant}".susfs_kernelsuPatch or "${emptyFile}";
       kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
     };
-    kernelConfig =
-      ''
-        CONFIG_MODULE_FORCE_LOAD=y
-        CONFIG_MODULE_SIG_FORCE=n
-      ''
-      + (
-        if (susfs.enable && (builtins.elem kernelSU.variant kernelsuMagicVariants)) then
-          ''
-            KSU_SUSFS_HAS_MAGIC_MOUNT=y
-          ''
-        else
-          ""
-      );
   });
 
   moto-pstar-lineageos-22_1-kernelsu-rsuntk-susfs = baseKernel.override (_: rec {
@@ -213,21 +174,8 @@ in
     susfs = {
       enable = true;
       inherit (sources.susfs-4_19) src;
-      kernelsuPatch = kernelSU.susfs_kernelsuPatch or "${emptyFile}";
+      kernelsuPatch = kernelsuVariants."${kernelSU.variant}".susfs_kernelsuPatch or "${emptyFile}";
       kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
     };
-    kernelConfig =
-      ''
-        CONFIG_MODULE_FORCE_LOAD=y
-        CONFIG_MODULE_SIG_FORCE=n
-      ''
-      + (
-        if (susfs.enable && (builtins.elem kernelSU.variant kernelsuMagicVariants)) then
-          ''
-            KSU_SUSFS_HAS_MAGIC_MOUNT=y
-          ''
-        else
-          ""
-      );
   });
 }
