@@ -28,7 +28,7 @@
 + (lib.optionalString kernelSU.enable ''
   echo "CONFIG_KSU=y" >> $CFG_PATH
 '')
-+ (lib.optionalString susfs.enable ''
++ (lib.optionalString (kernelSU.enable && susfs.enable) ''
   echo "CONFIG_KSU_SUSFS=y" >> $CFG_PATH
   echo "CONFIG_KSU_SUSFS_HAS_MAGIC_MOUNT=y" >> $CFG_PATH
   echo "CONFIG_KSU_SUSFS_SUS_PATH=y" >> $CFG_PATH
