@@ -32,7 +32,6 @@
   echo "CONFIG_KSU_SUSFS=y" >> $CFG_PATH
   echo "CONFIG_KSU_SUSFS_HAS_MAGIC_MOUNT=y" >> $CFG_PATH
   echo "CONFIG_KSU_SUSFS_SUS_PATH=y" >> $CFG_PATH
-  echo "CONFIG_KSU_SUSFS_SUS_MOUNT=y" >> $CFG_PATH
   echo "CONFIG_KSU_SUSFS_AUTO_ADD_SUS_KSU_DEFAULT_MOUNT=y" >> $CFG_PATH
   echo "CONFIG_KSU_SUSFS_AUTO_ADD_SUS_BIND_MOUNT=y" >> $CFG_PATH
   echo "CONFIG_KSU_SUSFS_SUS_KSTAT=y" >> $CFG_PATH
@@ -47,6 +46,11 @@
   echo "CONFIG_KSU_SUSFS_SUS_SU=y" >> $CFG_PATH
   echo "CONFIG_TMPFS_XATTR=y" >> $CFG_PATH
 '')
++ (lib.optionalString (susfs.enable && kernelSU.enable && kernelSU.moduleSystemImpl == "magicmount")
+  ''
+    echo "CONFIG_KSU_SUSFS_HAS_MAGIC_MOUNT=y" >> $CFG_PATH
+  ''
+)
 + ''
   mkdir -p $out
   make ${builtins.concatStringsSep " " (finalMakeFlags ++ defconfigs)}
