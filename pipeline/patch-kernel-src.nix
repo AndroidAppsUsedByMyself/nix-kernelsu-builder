@@ -36,6 +36,9 @@ stdenv.mkDerivation {
       cp -r ${kernelSU.src} ${kernelSU.subdirectory}
       chmod -R +w ${kernelSU.subdirectory}
     '')
+    + (lib.optionalString (
+      kernelSU.enable && kernelSU.integrateMethod == "manually_patch_cmd"
+    ) kernelSU.integrateManuallyPatchCmd)
     + (lib.optionalString susfs.enable ''
       cp -r ${susfs.src}/kernel_patches/fs/* fs/
       cp -r ${susfs.src}/kernel_patches/include/linux/* include/linux/

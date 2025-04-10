@@ -14,6 +14,7 @@ let
       src = null;
       revision = null;
       subdirectory = null;
+      integrateMethod = "manually_patch_cmd";
     };
     next = {
       enable = true;
@@ -21,6 +22,7 @@ let
       src = null;
       revision = null;
       subdirectory = null;
+      integrateMethod = "manually_patch_cmd";
     };
 
     rsuntk-susfs = {
@@ -30,6 +32,7 @@ let
       revision = sources.kernelsu-rksu-susfs-revision-code.version;
       subdirectory = "KernelSU";
       susfs_kernelsuPatch = "${emptyFile}";
+      integrateMethod = "manually_patch_cmd";
     };
   };
 
@@ -53,6 +56,7 @@ let
           src
           revision
           subdirectory
+          integrateMethod
           ;
       },
       build-toolchain ? "clang-with-gcc",

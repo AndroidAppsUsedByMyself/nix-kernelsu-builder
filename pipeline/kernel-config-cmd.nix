@@ -15,13 +15,17 @@
   ${additionalKernelConfig}
   EOF
 ''
-+ (lib.optionalString kernelSU.enable ''
++ (lib.optionalString (kernelSU.enable && kernelSU.integrateMethod == "kprobe") ''
   # Inject KernelSU options
   echo "CONFIG_MODULES=y" >> $CFG_PATH
   echo "CONFIG_KPROBES=y" >> $CFG_PATH
   echo "CONFIG_HAVE_KPROBES=y" >> $CFG_PATH
   echo "CONFIG_KPROBE_EVENTS=y" >> $CFG_PATH
+'')
++ (lib.optionalString (kernelSU.enable && kernelSU.moduleSystemImpl == "overlayfs") ''
   echo "CONFIG_OVERLAY_FS=y" >> $CFG_PATH
+'')
++ (lib.optionalString kernelSU.enable ''
   echo "CONFIG_KSU=y" >> $CFG_PATH
 '')
 + (lib.optionalString susfs.enable ''
