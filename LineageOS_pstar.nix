@@ -15,6 +15,7 @@ let
       revision = null;
       subdirectory = null;
       integrateMethod = "manually_patch_cmd";
+      moduleSystemImpl = "magicmount";
     };
     next = {
       enable = true;
@@ -23,6 +24,7 @@ let
       revision = null;
       subdirectory = null;
       integrateMethod = "manually_patch_cmd";
+      moduleSystemImpl = "magicmount";
     };
 
     rsuntk-susfs = {
@@ -33,6 +35,7 @@ let
       subdirectory = "KernelSU";
       susfs_kernelsuPatch = "${emptyFile}";
       integrateMethod = "manually_patch_cmd";
+      moduleSystemImpl = "magicmount";
     };
   };
 
@@ -137,6 +140,8 @@ in
         src
         revision
         subdirectory
+        integrateMethod
+        moduleSystemImpl
         ;
     };
     susfs = {
@@ -168,6 +173,8 @@ in
         src
         revision
         subdirectory
+        integrateMethod
+        moduleSystemImpl
         ;
     };
     susfs = {
@@ -199,6 +206,8 @@ in
         src
         revision
         subdirectory
+        integrateMethod
+        moduleSystemImpl
         ;
     };
     susfs = {

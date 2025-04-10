@@ -77,7 +77,12 @@
                 default = "official";
               };
               moduleSystemImpl = lib.mkOption {
-                type = lib.types.str;
+                type = lib.types.either lib.types.str (
+                  lib.types.enum [
+                    "overlayfs"
+                    "magicmount"
+                  ]
+                );
                 description = "the method that kernelsu variant uses to make modules system work";
                 default = "overlayfs";
               };
@@ -279,16 +284,19 @@
               kernelSU.src = lib.mkForce sources.kernelsu-stable.src;
               kernelSU.revision = lib.mkForce sources.kernelsu-stable-revision-code.version;
               kernelSU.subdirectory = lib.mkForce "KernelSU";
+              kernelSU.moduleSystemImpl = lib.mkForce "overlayfs";
             })
             (lib.mkIf (config.kernelSU.variant == "next") {
               kernelSU.src = lib.mkForce sources.kernelsu-next.src;
               kernelSU.revision = lib.mkForce sources.kernelsu-next-revision-code.version;
               kernelSU.subdirectory = lib.mkForce "KernelSU-Next";
+              kernelSU.moduleSystemImpl = lib.mkForce "magicmount";
             })
             (lib.mkIf (config.kernelSU.variant == "rsuntk") {
               kernelSU.src = lib.mkForce sources.kernelsu-rksu.src;
               kernelSU.revision = lib.mkForce sources.kernelsu-rksu-revision-code.version;
               kernelSU.subdirectory = lib.mkForce "KernelSU";
+              kernelSU.moduleSystemImpl = lib.mkForce "magicmount";
             })
           ];
         };
