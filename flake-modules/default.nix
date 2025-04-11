@@ -21,7 +21,20 @@
           options = {
             override = lib.mkOption {
               type = lib.types.nullOr (
-                lib.either lib.types.anything (lib.either lib.types.function (lib.types.attrsOf lib.types.anything))
+                lib.either lib.types.anything (
+                  lib.either lib.types.function (
+                    lib.types.either (lib.types.attrsOf lib.types.anything) lib.types.submodule {
+                      freeformType = lib.types.attrsOf lib.types.anything;
+
+                      options = {
+                        __functionArgs = lib.mkOption {
+                          type = lib.types.str;
+                          description = "We will ignore this";
+                        };
+                      };
+                    }
+                  )
+                )
               );
               description = "We will ignore this";
               default = null;
