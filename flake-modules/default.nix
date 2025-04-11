@@ -20,7 +20,9 @@
         {
           options = {
             override = lib.mkOption {
-              type = lib.types.nullOr lib.types.function;
+              type = lib.types.nullOr (
+                lib.either lib.types.anything (lib.either lib.types.function (lib.types.attrsOf lib.types.anything))
+              );
               description = "We will ignore this";
               default = null;
             };
