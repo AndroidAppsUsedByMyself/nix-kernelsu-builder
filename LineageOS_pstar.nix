@@ -11,9 +11,9 @@ let
     rsuntk = {
       enable = true;
       variant = "rsuntk";
-      src = null;
-      revision = null;
-      subdirectory = null;
+      inherit (sources.kernelsu-rksu) src;
+      revision = sources.kernelsu-rksu-revision-code.version;
+      subdirectory = "KernelSU";
       susfs_kernelsuPatch = "${sources.susfs-4_19.src}/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch";
       integrateMethod = "manually_patch_cmd";
       moduleSystemImpl = "magicmount";
@@ -21,14 +21,13 @@ let
     next = {
       enable = true;
       variant = "next";
-      src = null;
-      revision = null;
-      subdirectory = null;
+      inherit (sources.kernelsu-next) src;
+      revision = sources.kernelsu-next-revision-code.version;
+      subdirectory = "KernelSU";
       susfs_kernelsuPatch = "${sources.susfs-4_19.src}/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch";
       integrateMethod = "manually_patch_cmd";
       moduleSystemImpl = "magicmount";
     };
-
     rsuntk-susfs = {
       enable = true;
       variant = "rsuntk-susfs";

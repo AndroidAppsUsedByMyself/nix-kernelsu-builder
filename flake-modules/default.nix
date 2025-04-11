@@ -291,6 +291,7 @@
             };
           };
           config = lib.mkMerge [
+            # do not set these value to null or they will be overridden
             (lib.mkIf (config.kernelSU.variant == "official") {
               kernelSU.src = lib.mkDefault sources.kernelsu-stable.src;
               kernelSU.revision = lib.mkDefault sources.kernelsu-stable-revision-code.version;
