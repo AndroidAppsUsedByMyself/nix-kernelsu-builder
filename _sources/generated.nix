@@ -129,16 +129,15 @@
   };
   kernelsu-rksu-susfs = {
     pname = "kernelsu-rksu-susfs";
-    version = "v1.0.3-38-legacy";
-    src = fetchgit {
-      url = "https://github.com/rsuntk/KernelSU.git";
-      rev = "v1.0.3-38-legacy";
+    version = "e96aca34ffca2c78c2fdf8537d9c466887f358b0";
+    src = fetchFromGitHub {
+      owner = "rsuntk";
+      repo = "KernelSU";
+      rev = "e96aca34ffca2c78c2fdf8537d9c466887f358b0";
       fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-goaCovAG7Idwn/q6M1VlI2B8OG+SRl/tOSID5o6XsOk=";
+      sha256 = "sha256-WcLiF57fiQGUg/nEL79J7YTK6LdGrmlxIJ3O9pQcJ38=";
     };
+    date = "2025-03-15";
   };
   kernelsu-rksu-susfs-revision-code = {
     pname = "kernelsu-rksu-susfs-revision-code";

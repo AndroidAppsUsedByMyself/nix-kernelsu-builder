@@ -125,9 +125,9 @@ src.regex = "KernelSU[^\"]*_([0-9]+)-release\\.apk"
 fetch.url = "https://example.com"
 
 [kernelsu-rksu-susfs]
-src.github = "rsuntk/KernelSU"
+src.git = "https://github.com/rsuntk/KernelSU.git"
 src.branch = "susfs-v1.5.5"
-fetch.git = "https://github.com/rsuntk/KernelSU.git"
+fetch.github = "rsuntk/KernelSU"
 
 [kernelsu-rksu-susfs-revision-code]
 src.webpage = "https://api.github.com/repos/rsuntk/KernelSU/releases?per_page=1"

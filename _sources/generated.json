@@ -218,7 +218,7 @@
     },
     "kernelsu-rksu-susfs": {
         "cargoLocks": null,
-        "date": null,
+        "date": "2025-03-15",
         "extract": null,
         "name": "kernelsu-rksu-susfs",
         "passthru": null,
@@ -228,13 +228,14 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "v1.0.3-38-legacy",
-            "sha256": "sha256-goaCovAG7Idwn/q6M1VlI2B8OG+SRl/tOSID5o6XsOk=",
+            "owner": "rsuntk",
+            "repo": "KernelSU",
+            "rev": "e96aca34ffca2c78c2fdf8537d9c466887f358b0",
+            "sha256": "sha256-WcLiF57fiQGUg/nEL79J7YTK6LdGrmlxIJ3O9pQcJ38=",
             "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/rsuntk/KernelSU.git"
+            "type": "github"
         },
-        "version": "v1.0.3-38-legacy"
+        "version": "e96aca34ffca2c78c2fdf8537d9c466887f358b0"
     },
     "kernelsu-rksu-susfs-revision-code": {
         "cargoLocks": null,
