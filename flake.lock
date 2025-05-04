@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "devshell": {
+      "inputs": {
+        "nixpkgs": [
+          "nur-xddxdd",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1741473158,
+        "narHash": "sha256-kWNaq6wQUbUMlPgw8Y+9/9wP0F8SHkjy24/mN3UAppg=",
+        "owner": "numtide",
+        "repo": "devshell",
+        "rev": "7c9e793ebe66bcba8292989a68c0419b737a22a0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "devshell",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -211,6 +232,7 @@
     },
     "nur-xddxdd": {
       "inputs": {
+        "devshell": "devshell",
         "flake-parts": [
           "flake-parts"
         ],
@@ -226,11 +248,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1746007670,
-        "narHash": "sha256-bIP4GedMt1LXOsSbnrd0p6nGfvsiGXgP9y/SBvf9qbk=",
+        "lastModified": 1746347370,
+        "narHash": "sha256-npnbnhyQlkEtcd5dGvYtYLJrffuXc6z2dfgo1b7OY+E=",
         "owner": "xddxdd",
         "repo": "nur-packages",
-        "rev": "d0d6280632c9e6314d4bafa281e9f5e25f15a152",
+        "rev": "374ea185af9ca465087152e18011a3f6c29436d0",
         "type": "github"
       },
       "original": {
