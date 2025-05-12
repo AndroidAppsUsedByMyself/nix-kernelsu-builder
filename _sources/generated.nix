@@ -170,10 +170,10 @@
   };
   lineage-nightly-pstar_bootImg = {
     pname = "lineage-nightly-pstar_bootImg";
-    version = "20250505";
+    version = "20250512";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20250505/boot.img";
-      sha256 = "sha256-IDa8+TuWz/5qhrkF6wVXhEXIjZOpO0ruauMfUUSuYCI=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20250512/boot.img";
+      sha256 = "sha256-5LBp5dOwb1S4YpvTSsI3cTFG05wY/wLt5nvaaRqPifM=";
     };
   };
   linux-amazon-karnak = {
@@ -302,15 +302,15 @@
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
-    version = "b0147ddfe60720ff2701cde4f7b476ab518346a9";
+    version = "ef01480a960c5584109db526e02052dd8f7c9ab1";
     src = fetchFromGitHub {
       owner = "WildPlusKernel";
       repo = "kernel_patches";
-      rev = "b0147ddfe60720ff2701cde4f7b476ab518346a9";
+      rev = "ef01480a960c5584109db526e02052dd8f7c9ab1";
       fetchSubmodules = false;
-      sha256 = "sha256-55lQ0ZhtygiRZB7mBeNVfvjQh5gVs35lqdW7OPFZgX0=";
+      sha256 = "sha256-kPQtQpa2vRxfwmvxV+Wb3nCN2Ad6j15zQ2kgxMWE/3w=";
     };
-    date = "2025-05-08";
+    date = "2025-05-12";
   };
   ztc1997-android_gki_kernel_5-10_common = {
     pname = "ztc1997-android_gki_kernel_5-10_common";

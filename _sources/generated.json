@@ -296,11 +296,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-IDa8+TuWz/5qhrkF6wVXhEXIjZOpO0ruauMfUUSuYCI=",
+            "sha256": "sha256-5LBp5dOwb1S4YpvTSsI3cTFG05wY/wLt5nvaaRqPifM=",
             "type": "url",
-            "url": "https://mirrorbits.lineageos.org/full/pstar/20250505/boot.img"
+            "url": "https://mirrorbits.lineageos.org/full/pstar/20250512/boot.img"
         },
-        "version": "20250505"
+        "version": "20250512"
     },
     "linux-amazon-karnak": {
         "cargoLocks": null,
@@ -512,7 +512,7 @@
     },
     "wildplus-kernel-patches": {
         "cargoLocks": null,
-        "date": "2025-05-08",
+        "date": "2025-05-12",
         "extract": null,
         "name": "wildplus-kernel-patches",
         "passthru": null,
@@ -524,12 +524,12 @@
             "name": null,
             "owner": "WildPlusKernel",
             "repo": "kernel_patches",
-            "rev": "b0147ddfe60720ff2701cde4f7b476ab518346a9",
-            "sha256": "sha256-55lQ0ZhtygiRZB7mBeNVfvjQh5gVs35lqdW7OPFZgX0=",
+            "rev": "ef01480a960c5584109db526e02052dd8f7c9ab1",
+            "sha256": "sha256-kPQtQpa2vRxfwmvxV+Wb3nCN2Ad6j15zQ2kgxMWE/3w=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "b0147ddfe60720ff2701cde4f7b476ab518346a9"
+        "version": "ef01480a960c5584109db526e02052dd8f7c9ab1"
     },
     "ztc1997-android_gki_kernel_5-10_common": {
         "cargoLocks": null,
