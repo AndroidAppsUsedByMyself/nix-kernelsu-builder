@@ -108,20 +108,20 @@
   };
   kernelsu-rksu = {
     pname = "kernelsu-rksu";
-    version = "v1.0.5-2-legacy";
+    version = "v1.0.5-10-legacy";
     src = fetchgit {
       url = "https://github.com/rsuntk/KernelSU.git";
-      rev = "v1.0.5-2-legacy";
+      rev = "v1.0.5-10-legacy";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-oyokVx7ZTdxyDVVUzgKXwhOD3XzJN1eYYPApszsTqpE=";
+      sha256 = "sha256-O9mwIIxRo0P2ijxOfC68gVT1zNpLzJyBOC+E6G8jnLg=";
     };
   };
   kernelsu-rksu-revision-code = {
     pname = "kernelsu-rksu-revision-code";
-    version = "12142";
+    version = "12164";
     src = fetchurl {
       url = "https://example.com";
       sha256 = "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=";
@@ -141,7 +141,7 @@
   };
   kernelsu-rksu-susfs-revision-code = {
     pname = "kernelsu-rksu-susfs-revision-code";
-    version = "12142";
+    version = "12164";
     src = fetchurl {
       url = "https://example.com";
       sha256 = "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=";
