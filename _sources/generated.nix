@@ -302,15 +302,15 @@
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
-    version = "d691914b9d7bf880777e924fd167fe26d5cd13c2";
+    version = "00575706a59c7c4fbe3171f208905f53053a58ff";
     src = fetchFromGitHub {
       owner = "WildPlusKernel";
       repo = "kernel_patches";
-      rev = "d691914b9d7bf880777e924fd167fe26d5cd13c2";
+      rev = "00575706a59c7c4fbe3171f208905f53053a58ff";
       fetchSubmodules = false;
-      sha256 = "sha256-fELvN0RYKLJmNRhLKDmbybxKfdshrdv/Ct2ExabGScE=";
+      sha256 = "sha256-El6+JtJYqH0aBr20XYJgemUvBu0LKhRCD3TDLPAvf1s=";
     };
-    date = "2025-06-18";
+    date = "2025-06-28";
   };
   ztc1997-android_gki_kernel_5-10_common = {
     pname = "ztc1997-android_gki_kernel_5-10_common";
