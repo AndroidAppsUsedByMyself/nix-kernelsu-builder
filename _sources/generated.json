@@ -524,12 +524,12 @@
             "name": null,
             "owner": "WildPlusKernel",
             "repo": "kernel_patches",
-            "rev": "00575706a59c7c4fbe3171f208905f53053a58ff",
-            "sha256": "sha256-El6+JtJYqH0aBr20XYJgemUvBu0LKhRCD3TDLPAvf1s=",
+            "rev": "ec313567ce64257b7982ac20444c10bc717116d5",
+            "sha256": "sha256-DE0sDNm4KHBVEm+V61sQmP6uqp3oe0j57hAaRGKEfec=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "00575706a59c7c4fbe3171f208905f53053a58ff"
+        "version": "ec313567ce64257b7982ac20444c10bc717116d5"
     },
     "ztc1997-android_gki_kernel_5-10_common": {
         "cargoLocks": null,
