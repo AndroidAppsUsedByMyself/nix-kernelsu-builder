@@ -87,20 +87,20 @@
   };
   kernelsu-next = {
     pname = "kernelsu-next";
-    version = "v1.0.8";
+    version = "v1.0.9";
     src = fetchgit {
       url = "https://github.com/rifsxd/KernelSU-Next.git";
-      rev = "v1.0.8";
+      rev = "v1.0.9";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-+wWu7IhmlpYR9amclpvKjrEXIMNL0j8dpz7FYyvN528=";
+      sha256 = "sha256-tNSNZQcpogTm/veYKCoA9Y5FrdsQSZCNgw+DzkuqN80=";
     };
   };
   kernelsu-next-revision-code = {
     pname = "kernelsu-next-revision-code";
-    version = "12701";
+    version = "12797";
     src = fetchurl {
       url = "https://example.com";
       sha256 = "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=";
@@ -170,10 +170,10 @@
   };
   lineage-nightly-pstar_bootImg = {
     pname = "lineage-nightly-pstar_bootImg";
-    version = "20250707";
+    version = "20250714";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20250707/boot.img";
-      sha256 = "sha256-T/6+9pfs7R3fZ/6RFYGUrpHKSci+kiTbq6B4YrY8VPA=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20250714/boot.img";
+      sha256 = "sha256-uKYFGn1mLxVHa/duFSSao8vgrQhyZny4p0VViSLcA2g=";
     };
   };
   linux-amazon-karnak = {
@@ -288,29 +288,29 @@
   };
   susfs-android13-5_15 = {
     pname = "susfs-android13-5_15";
-    version = "df61f6d0084434fb575353a6ee4a643a0f005b89";
+    version = "0be7d71866ab7e16c5f9e002c00a4e0cfe50d6b9";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "df61f6d0084434fb575353a6ee4a643a0f005b89";
+      rev = "0be7d71866ab7e16c5f9e002c00a4e0cfe50d6b9";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-xhHgoGBvrmPvhJH573yOZaBsCItvqibQpEI6c/Y6XoE=";
+      sha256 = "sha256-YRn53VhobF3lKAgeiMqYQXY11whEJp3jutwfs77qP00=";
     };
-    date = "2025-07-14";
+    date = "2025-07-15";
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
-    version = "3132ad9bd710a77fbf5f124f8de2f38d4a5ee408";
+    version = "7d41f3d27b3ea0c13b6b138dca88278628239bde";
     src = fetchFromGitHub {
       owner = "WildPlusKernel";
       repo = "kernel_patches";
-      rev = "3132ad9bd710a77fbf5f124f8de2f38d4a5ee408";
+      rev = "7d41f3d27b3ea0c13b6b138dca88278628239bde";
       fetchSubmodules = false;
-      sha256 = "sha256-YWyU33ZpmhCa2jTymZRFbBEPNQm3kxRDD8ZsbA2C7cU=";
+      sha256 = "sha256-1lw4T6MFw1eCUrjMHn/1WvCph2vUpmkU/pIY++7s+NE=";
     };
-    date = "2025-07-11";
+    date = "2025-07-14";
   };
   ztc1997-android_gki_kernel_5-10_common = {
     pname = "ztc1997-android_gki_kernel_5-10_common";
