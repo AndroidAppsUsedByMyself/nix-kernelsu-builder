@@ -296,11 +296,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-uKYFGn1mLxVHa/duFSSao8vgrQhyZny4p0VViSLcA2g=",
+            "sha256": "sha256-QqlH4wc42v1hV90Sp+6AZUaWDPTWZ3nIEJLe32OJyWc=",
             "type": "url",
-            "url": "https://mirrorbits.lineageos.org/full/pstar/20250714/boot.img"
+            "url": "https://mirrorbits.lineageos.org/full/pstar/20250721/boot.img"
         },
-        "version": "20250714"
+        "version": "20250721"
     },
     "linux-amazon-karnak": {
         "cargoLocks": null,
@@ -492,7 +492,7 @@
     },
     "susfs-android13-5_15": {
         "cargoLocks": null,
-        "date": "2025-07-18",
+        "date": "2025-07-21",
         "extract": null,
         "name": "susfs-android13-5_15",
         "passthru": null,
@@ -502,17 +502,17 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "42d2a5c01b43d962a3e04ef557df2a7e2a05f8bd",
-            "sha256": "sha256-sbd7ahI+AiTBDLpuxe3n8/5yVoEvSbP6MrwfoEMZPMY=",
+            "rev": "0d05649fae522c5ff2528a1db9bcb6b8bebf3633",
+            "sha256": "sha256-aqm9NU/xp7EDmeiKLQAcUlRECzJ1c87Zl4S78zdspuk=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
         },
-        "version": "42d2a5c01b43d962a3e04ef557df2a7e2a05f8bd"
+        "version": "0d05649fae522c5ff2528a1db9bcb6b8bebf3633"
     },
     "wildplus-kernel-patches": {
         "cargoLocks": null,
-        "date": "2025-07-19",
+        "date": "2025-07-20",
         "extract": null,
         "name": "wildplus-kernel-patches",
         "passthru": null,
@@ -524,12 +524,12 @@
             "name": null,
             "owner": "WildPlusKernel",
             "repo": "kernel_patches",
-            "rev": "2fbee458fa09a5bdbbd75e92759122a7abb49181",
-            "sha256": "sha256-xbOSM/rJEoB4MLnhHwVZ3aLYWtBTDqWKmtV9GSIne88=",
+            "rev": "56706aae8928408773bc2c1015b2cace5ab78bd1",
+            "sha256": "sha256-WIWdafdcY/uBNqB0QEPh4hEZl9pPjs5RaTkbxMyS2kY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2fbee458fa09a5bdbbd75e92759122a7abb49181"
+        "version": "56706aae8928408773bc2c1015b2cace5ab78bd1"
     },
     "ztc1997-android_gki_kernel_5-10_common": {
         "cargoLocks": null,
