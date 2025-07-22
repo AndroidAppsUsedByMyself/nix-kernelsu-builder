@@ -7,6 +7,14 @@ _: {
       LineageOS_pstar = pkgs.callPackage ./LineageOS_pstar.nix {
         inherit sources;
         inherit config;
+        inherit pkgs;
+        inherit fetchGooglePrebuiltClang;
+      };
+      my_other_devices = pkgs.callPackage ./my_other_devices.nix {
+        inherit sources;
+        inherit config;
+        inherit pkgs;
+        inherit fetchGooglePrebuiltClang;
       };
     in
     {
@@ -22,7 +30,7 @@ _: {
             "KCPPFLAGS=\"-w\""
           ];
           kernelSrc = sources.linux-amazon-karnak.src;
-          oemBootImg = boot/amazon-fire-hd-karnak.img;
+          oemBootImg = resources/amazon-fire-hd-karnak-boot.img;
         };
 
         moto-rtwo-lineageos-21 = {
@@ -30,11 +38,10 @@ _: {
           anyKernelVariant = "kernelsu";
           clangVersion = "latest";
 
-          kernelSU.variant = "next";
+          kernelSU.variant = "sukisu-susfs";
           susfs = {
             enable = true;
             inherit (sources.susfs-android13-5_15) src;
-            kernelsuPatch = "${sources.wildplus-kernel-patches.src}/next/0001-kernel-patch-susfs-v1.5.5-to-KernelSU-Next-v1.0.5.patch";
           };
 
           kernelDefconfigs = [
@@ -60,11 +67,10 @@ _: {
           anyKernelVariant = "kernelsu";
           clangVersion = "latest";
 
-          kernelSU.variant = "next";
+          kernelSU.variant = "sukisu-susfs";
           susfs = {
             enable = true;
             inherit (sources.susfs-android13-5_15) src;
-            kernelsuPatch = "${sources.wildplus-kernel-patches.src}/next/0001-kernel-patch-susfs-v1.5.5-to-KernelSU-Next-v1.0.5.patch";
           };
 
           kernelDefconfigs = [
@@ -85,236 +91,85 @@ _: {
           kernelSrc = sources.linux-moto-rtwo-lineageos-22_1.src;
         };
 
+        # BROKEN FOR NOW
         oneplus-8t-blu-spark = {
           build-toolchain = "clang-with-llvm";
           anyKernelVariant = "osm0sis";
           clangVersion = "latest";
-          kernelSU.variant = "next";
+          kernelSU.variant = "sukisu";
           kernelDefconfigs = [ "blu_spark_defconfig" ];
           kernelImageName = "Image";
+          kernelMakeFlags = [
+            "KCFLAGS=\"-w\""
+            "KCPPFLAGS=\"-w\""
+          ];
           kernelSrc = sources.linux-oneplus-8t-blu-spark.src;
         };
 
-        _moto-pstar-lineageos-22_1 =
-          let
-            susfs_enable = true;
-            emptyFile = pkgs.writeText {
-              text = '''';
-            };
-            KernelSU = rec {
-              rsuntk_susfs = {
-                variant = "rsuntk-susfs";
-                inherit (sources.kernelsu-rksu-susfs) src;
-                revision = sources.kernelsu-rksu-susfs-revision-code.version;
-                subdirectory = "KernelSU";
-                susfs_kernelsuPatch = emptyFile;
-              };
-              default = rsuntk_susfs;
-            };
-          in
-          {
-            build-toolchain = "clang-with-gcc";
-            anyKernelVariant = "osm0sis";
-            clangVersion = "custom";
-            kernelSU = {
-              enable = true;
-              inherit (KernelSU.default)
-                variant
-                src
-                revision
-                subdirectory
-                ;
-            };
-            susfs = {
-              enable = susfs_enable;
-              inherit (sources.susfs-4_19) src;
-              kernelsuPatch = KernelSU.default.susfs_kernelsuPatch;
-              kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
-            };
-            enableGcc64 = true;
-            enableGcc32 = true;
-            enableLLVM = false;
-            # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
-            clangPrebuilt = config.packages.google_clang_r416183b1;
-            kernelDefconfigs = [
-              # separated configs
-              "vendor/kona-perf_defconfig"
-              "vendor/ext_config/moto-kona.config"
-              "vendor/ext_config/pstar-default.config"
-              "vendor/debugfs.config"
-              # the one which need to be generated before build
-              #"lineageos_pstar_defconfig"
-              # the one which extract from a real device
-              #"lineageos_pstar_stock_defconfig"
-            ];
-            kernelImageName = "Image";
-            kernelMakeFlags = [
-              "KCFLAGS=\"-w\""
-              "KCPPFLAGS=\"-w\""
-              "LOCALVERSION=-rk"
-            ];
-            kernelSrc = sources.linux-moto-pstar-lineageos-22_1.src;
-            oemBootImg = sources.lineage-nightly-pstar_bootImg.src;
-            kernelPatches = [
-              "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/module.patch"
-              "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0001-BACKPORT-maccess-rename-strncpy_from_unsafe_user-to-.patch"
-              "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0001-Reapply-cred-switch-to-using-atomic_long_t.patch"
-              "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0002-BACKPORT-cred-add-get_cred_rcu.patch"
-              "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/path_umount_backport.patch"
-            ];
-            kernelConfig = ''
-              CONFIG_MODULE_FORCE_LOAD=y
-              CONFIG_MODULE_SIG_FORCE=n
-            '';
-          };
-
-        xiaomi-gauguin-lineageos-22_1 = {
-          build-toolchain = "clang-with-gcc";
-          anyKernelVariant = "osm0sis";
-          clangVersion = "custom";
-          kernelSU = {
+        # DOESN'T BOOT FOR NOW
+        oneplus-13 = {
+          anyKernelVariant = "kernelsu";
+          clangVersion = "latest";
+          kernelSU.variant = "sukisu-susfs";
+          susfs = {
             enable = true;
-            variant = "next";
-          };
-          enableGcc64 = true;
-          enableGcc32 = true;
-          enableLLVM = false;
-          # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
-          clangPrebuilt = config.packages.google_clang_r383902;
-          kernelDefconfigs = [
-            "vendor/lito-perf_defconfig"
-            "gauguin_defconfig"
-          ];
-          kernelImageName = "Image";
-          kernelMakeFlags = [
-            "KCFLAGS=\"-w\""
-            "KCPPFLAGS=\"-w\""
-            "LOCALVERSION=-official-kernelsu"
-          ];
-          kernelSrc = sources.linux-xiaomi-gauguin-lineageos-22_1.src;
-          kernelPatches = [
-            "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/module.patch"
-          ];
-          kernelConfig = ''
-            CONFIG_MODULE_FORCE_LOAD=y
-            CONFIG_MODULE_SIG_FORCE=n
-          '';
-        };
-
-        # this workflow require python2 which is removed from nixpkgs
-        _android_kernel_samsung_sm8250_TabS7 = {
-          build-toolchain = "clang-with-gcc";
-          enablePython2 = true;
-          anyKernelVariant = "osm0sis";
-          # We already have integrated it
-          kernelSU.enable = false;
-          enableGcc64 = true;
-          enableGccCompat = true;
-          enableLLVM = true;
-          clangPrebuilt = config.packages.google_clang_r377782d;
-          kernelSrc = sources.android_kernel_samsung_sm8250_TabS7.src;
-          kernelDefconfigs = [
-            "gts7xl_eur_openx_defconfig"
-          ];
-          kernelMakeFlags = [
-            "LOCALVERSION=-Kokuban-Hua-S5DXA1"
-            "DTC_EXT=${sources.android_kernel_samsung_sm8250_TabS7.src}/tools/dtc"
-            "CONFIG_BUILD_ARM64_DT_OVERLAY=y"
-            "CLANG_TRIPLE=aarch64-linux-gnu-"
-            "-C ${sources.android_kernel_samsung_sm8250_TabS7.src}"
-          ];
-          kernelConfig = ''
-            KSU=y
-
-            UH=n
-            RKP=n
-            KDP=n
-            SECURITY_DEFEX=n
-            INTEGRITY=n
-            FIVE=n
-            TRIM_UNUSED_KSYMS=n
-            PROCA=n
-            PROCA_GKI_10=n
-            PROCA_S_OS=n
-            PROCA_CERTIFICATES_XATTR=n
-            PROCA_CERT_ENG=n
-            PROCA_CERT_USER=n
-            GAF_V6=n
-            FIVE=n
-            FIVE_CERT_USER=n
-            FIVE_DEFAULT_HASH=n
-
-            # LTO_CLANG_THIN=y
-            # LTO_CLANG_FULL=n
-          '';
-        };
-
-        _android_kernel_samsung_lykanlte = {
-          build-toolchain = "clang-with-gcc";
-          anyKernelVariant = "osm0sis";
-          kernelSU = {
-            enable = false;
-            variant = "next";
-          };
-          enableGcc64 = true;
-          enableGcc32 = true;
-          enableLLVM = false;
-          # clangPrebuilt = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
-          clangPrebuilt = fetchGooglePrebuiltClang {
-            customGoogleClang = {
-              CLANG_VERSION = "r416183b1";
-              CLANG_BRANCH = "android12-release";
-              CLANG_SHA256 = "1zg1cm8zn8prawgz3h1qnapxrgkmj894pl10i1q11nfcv3ycic41";
+            src = pkgs.stdenv.mkDerivation {
+              inherit (sources.susfs-android15-6_6) pname version src;
+              # https://github.com/HanKuCha/oneplus13_a5p_sukisu/blob/1604ce2607a04c4d9b8f1ba426a601bedac6d989/.github/workflows/oneplus_ace5_pro.yml#L114-L115
+              patchPhase = ''
+                sed -i 's/-32,12 +32,38/-32,11 +32,37/g' kernel_patches/50_add_susfs_in_gki-android15-6.6.patch
+                sed -i '/#include <trace\/hooks\/fs.h>/d' kernel_patches/50_add_susfs_in_gki-android15-6.6.patch
+              '';
+              installPhase = ''
+                mkdir -p $out
+                cp -r * $out/
+              '';
             };
           };
-          kernelDefconfigs = [
-            # separated configs
-            #"vendor/kona-perf_defconfig"
-            #"vendor/ext_config/moto-kona.config"
-            #"vendor/ext_config/pstar-default.config"
-            #"vendor/debugfs.config"
-            # the one which need to be generated before build
-            #"lineageos_pstar_defconfig"
-            # the one which extract from a real device
-            "lykanlte_chn_open_defconfig"
-          ];
+          # https://github.com/HanKuCha/oneplus13_a5p_sukisu/blob/main/.github/workflows/oneplus_13.yml
+          kernelConfig = ''
+            CONFIG_CRYPTO_842=y
+            CONFIG_CRYPTO_LZ4HC=y
+            CONFIG_CRYPTO_LZ4K=y
+            CONFIG_CRYPTO_LZ4KD=y
+            CONFIG_TCP_CONG_ADVANCED=y
+            CONFIG_TCP_CONG_BBR=y
+            CONFIG_NET_SCH_FQ=y
+            CONFIG_TCP_CONG_BIC=n
+            CONFIG_TCP_CONG_CUBIC=n
+            CONFIG_TCP_CONG_WESTWOOD=n
+            CONFIG_TCP_CONG_HTCP=n
+            CONFIG_DEFAULT_TCP_CONG=bbr
+          '';
+          kernelDefconfigs = [ "gki_defconfig" ];
           kernelImageName = "Image";
           kernelMakeFlags = [
             "KCFLAGS=\"-w\""
             "KCPPFLAGS=\"-w\""
           ];
-          kernelSrc = sources.android_kernel_samsung_lykanlte.src;
-          kernelConfig = ''
-            CONFIG_MODULE_FORCE_LOAD=y
-            CONFIG_MODULE_SIG_FORCE=n
+          kernelPatches = [
+            "${sources.sukisu-patch.src}/69_hide_stuff.patch"
+          ];
+          kernelSrc = sources.linux-oneplus-13.src;
+
+          postPatch = ''
+            # https://github.com/HanKuCha/oneplus13_a5p_sukisu/blob/1604ce2607a04c4d9b8f1ba426a601bedac6d989/.github/workflows/oneplus_ace5_pro.yml#L122-L201
+            install -Dm644 ${./resources/oneplus-13-hmbird-patch.c} drivers/hmbird_patch.c
+            echo "obj-y += hmbird_patch.o" >> drivers/Makefile
+            # https://github.com/HanKuCha/oneplus13_a5p_sukisu/blob/1604ce2607a04c4d9b8f1ba426a601bedac6d989/.github/workflows/oneplus_13.yml#L105-L109
+            cp -r ${sources.sukisu-patch.src}/other/zram/lz4k/include/linux/* include/linux/
+            cp -r ${sources.sukisu-patch.src}/other/zram/lz4k/lib/* lib/
+            cp -r ${sources.sukisu-patch.src}/other/zram/lz4k/crypto/* crypto/
+            cp -r ${sources.sukisu-patch.src}/other/zram/lz4k_oplus lib/
+            patch -p1 -F3 < ${sources.sukisu-patch.src}/other/zram/zram_patch/6.6/lz4kd.patch
+            # https://github.com/HanKuCha/oneplus13_a5p_sukisu/blob/1604ce2607a04c4d9b8f1ba426a601bedac6d989/.github/workflows/oneplus_13.yml#L264-L271
+            cp -r ${sources.oneplus-13-sched-ext.src}/* kernel/sched/
+            chmod -R +w .
           '';
         };
 
-        ztc1997-android_gki_kernel_5-10_common = {
-          build-toolchain = "gki";
-          anyKernelVariant = "kernelsu";
-          clangVersion = "gki";
-          gkiVersion = "android12-5.10";
-          kernelDefconfigs = [ "gki_defconfig" ];
-          kernelImageName = "Image";
-          kernelSrc = sources.ztc1997-android_gki_kernel_5-10_common.src;
-          kernelConfig = ''
-            CONFIG_LTO_CLANG=y
-          '';
-        };
-
-        ztc1997-android_gki_kernel_5-15_common = {
-          build-toolchain = "gki";
-          anyKernelVariant = "kernelsu";
-          clangVersion = "gki";
-          gkiVersion = "android13-5.15";
-          kernelDefconfigs = [ "gki_defconfig" ];
-          kernelImageName = "Image";
-          kernelSrc = sources.ztc1997-android_gki_kernel_5-15_common.src;
-          kernelConfig = ''
-            CONFIG_LTO_CLANG=y
-          '';
-        };
-      } // LineageOS_pstar;
+      }
+      // LineageOS_pstar
+      // my_other_devices;
     };
 }

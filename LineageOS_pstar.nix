@@ -2,6 +2,8 @@
   lib,
   config,
   sources,
+  pkgs,
+  fetchGooglePrebuiltClang,
   ...
 }:
 let

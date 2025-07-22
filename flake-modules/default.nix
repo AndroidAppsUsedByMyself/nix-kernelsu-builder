@@ -80,14 +80,15 @@
                 default = true;
               };
               variant = lib.mkOption {
-                type = lib.types.either lib.types.str (
-                  lib.types.enum [
-                    "official"
-                    "rsuntk"
-                    "next"
-                    "custom"
-                  ]
-                );
+                type = lib.types.enum [
+                  "official"
+                  "rsuntk"
+                  "next"
+                  "sukisu"
+                  "sukisu-nongki"
+                  "sukisu-susfs"
+                  "custom"
+                ];
                 description = "Architecture of the kernel";
                 default = "official";
               };
@@ -225,13 +226,13 @@
                 default = null;
               };
               kernelPatch = lib.mkOption {
-                type = lib.types.either lib.types.str lib.types.path;
-                description = "Path to SusFS's kernel patch. Used for overriding patch to adapt to different kernel versions.";
+                type = lib.types.nullOr (lib.types.either lib.types.str lib.types.path);
+                description = "Path to SusFS's kernel patch. Used for overriding patch to adapt to different kernel versions. If set to null, will disable patching kernel.";
                 default = "${config.susfs.src}/kernel_patches/50_add_susfs*.patch";
               };
               kernelsuPatch = lib.mkOption {
-                type = lib.types.either lib.types.str lib.types.path;
-                description = "Path to SusFS's KernelSU patch. Used for overriding patch to adapt to different KernelSU versions.";
+                type = lib.types.nullOr (lib.types.either lib.types.str lib.types.path);
+                description = "Path to SusFS's KernelSU patch. Used for overriding patch to adapt to different KernelSU versions. If set to null, will disable patching KernelSU.";
                 default = "${config.susfs.src}/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch";
               };
             };
@@ -268,6 +269,17 @@
               type = lib.types.nullOr (lib.types.either lib.types.str lib.types.path);
               description = "Optional, a working boot image for your device, either from official OS or a third party OS (like LineageOS). If this is provided, a `boot.img` will be generated, which can be directly flashed onto your device.";
               default = null;
+            };
+
+            prePatch = lib.mkOption {
+              type = lib.types.lines;
+              default = "";
+              description = "Command to run before patching kernel source code";
+            };
+            postPatch = lib.mkOption {
+              type = lib.types.lines;
+              default = "";
+              description = "Command to run after patching kernel source code";
             };
             gkiVersion = lib.mkOption {
               type = lib.types.nullOr (lib.types.either lib.types.str lib.types.int);
@@ -324,6 +336,24 @@
               kernelSU.revision = lib.mkDefault sources.kernelsu-rksu-revision-code.version;
               kernelSU.subdirectory = lib.mkDefault "KernelSU";
               kernelSU.moduleSystemImpl = lib.mkDefault "magicmount";
+            })
+            (lib.mkIf (config.kernelSU.variant == "sukisu") {
+              kernelSU.src = sources.sukisu.src;
+              kernelSU.revision = sources.sukisu-revision-code.version;
+              kernelSU.subdirectory = "KernelSU";
+            })
+            (lib.mkIf (config.kernelSU.variant == "sukisu-nongki") {
+              kernelSU.src = sources.sukisu-nongki.src;
+              kernelSU.revision = sources.sukisu-revision-code.version;
+              kernelSU.subdirectory = "KernelSU";
+            })
+            (lib.mkIf (config.kernelSU.variant == "sukisu-susfs") {
+              kernelSU.src = sources.sukisu-susfs.src;
+              kernelSU.revision = sources.sukisu-revision-code.version;
+              kernelSU.subdirectory = "KernelSU";
+              # SukiSU already has SusFS patch
+              susfs.enable = true;
+              susfs.kernelsuPatch = null;
             })
           ];
         };
