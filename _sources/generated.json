@@ -225,11 +225,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-GdbU2HUFeQRbg/erlKzl1z243ASqCQktgLrYEZi5mUk=",
+            "sha256": "sha256-QqlH4wc42v1hV90Sp+6AZUaWDPTWZ3nIEJLe32OJyWc=",
             "type": "url",
-            "url": "https://mirrorbits.lineageos.org/full/pstar/20250602/boot.img"
+            "url": "https://mirrorbits.lineageos.org/full/pstar/20250721/boot.img"
         },
-        "version": "20250602"
+        "version": "20250721"
     },
     "linux-amazon-karnak": {
         "cargoLocks": null,
@@ -499,7 +499,7 @@
     },
     "susfs-android13-5_15": {
         "cargoLocks": null,
-        "date": "2025-04-24",
+        "date": "2025-07-21",
         "extract": null,
         "name": "susfs-android13-5_15",
         "passthru": null,
