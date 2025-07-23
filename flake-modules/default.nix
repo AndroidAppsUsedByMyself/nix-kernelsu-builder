@@ -317,7 +317,6 @@
               description = "Whether to use python2";
               default = false;
             };
-            };
           };
           config = lib.mkMerge [
             # do not set these value to null or they will be overridden
