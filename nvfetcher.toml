@@ -54,9 +54,47 @@ src.git = "https://github.com/engstk/op8.git"
 src.branch = "blu_spark-14-custom"
 fetch.github = "engstk/op8"
 
+[linux-oneplus-13]
+src.git = "https://github.com/OnePlusOSS/android_kernel_common_oneplus_sm8750.git"
+src.branch = "oneplus/sm8750_v_15.0.0_oneplus_13"
+fetch.github = "OnePlusOSS/android_kernel_common_oneplus_sm8750"
+
+[oneplus-13-sched-ext]
+src.git = "https://github.com/HanKuCha/sched_ext.git"
+fetch.github = "HanKuCha/sched_ext"
+
+[sukisu]
+src.git = "https://github.com/SukiSU-Ultra/SukiSU-Ultra.git"
+src.branch = "main"
+fetch.github = "SukiSU-Ultra/SukiSU-Ultra"
+
+[sukisu-nongki]
+src.git = "https://github.com/SukiSU-Ultra/SukiSU-Ultra.git"
+src.branch = "nongki"
+fetch.github = "SukiSU-Ultra/SukiSU-Ultra"
+
+[sukisu-patch]
+src.git = "https://github.com/SukiSU-Ultra/SukiSU_patch.git"
+fetch.github = "SukiSU-Ultra/SukiSU_patch"
+
+[sukisu-revision-code]
+src.webpage = "https://api.github.com/repos/SukiSU-Ultra/SukiSU-Ultra/releases?per_page=1"
+src.regex = "download\\/v[0-9\\._]+\\/SukiSU[^\"]*_([0-9]+)-release\\.apk"
+fetch.url = "https://example.com"
+
+[sukisu-susfs]
+src.git = "https://github.com/SukiSU-Ultra/SukiSU-Ultra.git"
+src.branch = "susfs-main"
+fetch.github = "SukiSU-Ultra/SukiSU-Ultra"
+
 [susfs-android13-5_15]
 src.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
 src.branch = "gki-android13-5.15"
+fetch.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
+
+[susfs-android15-6_6]
+src.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
+src.branch = "gki-android15-6.6"
 fetch.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
 
 [wildplus-kernel-patches]

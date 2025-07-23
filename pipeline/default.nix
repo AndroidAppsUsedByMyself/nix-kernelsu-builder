@@ -27,12 +27,19 @@
   kernelSrc,
   oemBootImg,
   susfs,
+  prePatch,
+  postPatch,
   ...
 }:
 let
   pipeline = rec {
     patchedKernelSrc = callPackage ./patch-kernel-src.nix {
-      inherit kernelSU susfs;
+      inherit
+        kernelSU
+        susfs
+        prePatch
+        postPatch
+        ;
       src = kernelSrc;
       patches = kernelPatches;
     };
