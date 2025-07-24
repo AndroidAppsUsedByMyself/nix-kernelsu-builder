@@ -108,6 +108,7 @@ _: {
 
         # DOESN'T BOOT FOR NOW
         oneplus-13 = {
+          build-toolchain = "clang-with-llvm";
           anyKernelVariant = "kernelsu";
           clangVersion = "latest";
           kernelSU.variant = "sukisu-susfs";
