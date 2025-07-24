@@ -80,15 +80,17 @@
                 default = true;
               };
               variant = lib.mkOption {
-                type = lib.types.enum [
-                  "official"
-                  "next"
-                  "sukisu"
-                  "sukisu-nongki"
-                  "sukisu-susfs"
-                  "custom"
-                  "rsuntk"
-                ];
+                type = lib.types.either lib.types.str (
+                  lib.types.enum [
+                    "official"
+                    "next"
+                    "sukisu"
+                    "sukisu-nongki"
+                    "sukisu-susfs"
+                    "custom"
+                    "rsuntk"
+                  ]
+                );
                 description = "Architecture of the kernel";
                 default = "official";
               };
