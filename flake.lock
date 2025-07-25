@@ -24,11 +24,11 @@
     "flake-compat": {
       "flake": false,
       "locked": {
-        "lastModified": 1733328505,
-        "narHash": "sha256-NeCCThCEP3eCl2l/+27kNNK7QrwZB1IJCrXfrbv5oqU=",
+        "lastModified": 1747046372,
+        "narHash": "sha256-CIVLLkVgvHYbgI2UpXvIIBJ12HWgX+fjA8Xf8PUmqCY=",
         "owner": "edolstra",
         "repo": "flake-compat",
-        "rev": "ff81ac966bb2cae68946d5ed5fc4994f96d0ffec",
+        "rev": "9100a0f413b0c601e0533d1d94ffd501ce2e7885",
         "type": "github"
       },
       "original": {
@@ -201,11 +201,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1753109326,
-        "narHash": "sha256-AiJkZdDFX5B2NBmOtNsOIplyctPl55uTm4IJ/dVu1uk=",
+        "lastModified": 1753394129,
+        "narHash": "sha256-d9GpIG7qaiS74GI7GEXdEWJEMyFZrU/zF61FQHNvvZw=",
         "owner": "cachix",
         "repo": "nixpkgs-python",
-        "rev": "803231040902381fda8d3a053cf0c8030623c4b9",
+        "rev": "3f7ab865676db0ef718485aff4ed012958635229",
         "type": "github"
       },
       "original": {
@@ -216,16 +216,16 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1743367904,
-        "narHash": "sha256-sOos1jZGKmT6xxPvxGQyPTApOunXvScV4lNjBCXd/CI=",
+        "lastModified": 1752866191,
+        "narHash": "sha256-NV4S2Lf2hYmZQ3Qf4t/YyyBaJNuxLPyjzvDma0zPp/M=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "7ffe0edc685f14b8c635e3d6591b0bbb97365e6c",
+        "rev": "f01fe91b0108a7aff99c99f2e9abbc45db0adc2a",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-24.11",
+        "ref": "nixos-25.05",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -248,11 +248,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1753265212,
-        "narHash": "sha256-vZ9KnCQJMbNzxcP4mA5jPpFf+3w6wjw7MmegLNI0qu8=",
+        "lastModified": 1753351624,
+        "narHash": "sha256-DIfDWOAQxQ/pCKghxKuvjNMBywQrljRd0y+xwUwaGR0=",
         "owner": "xddxdd",
         "repo": "nur-packages",
-        "rev": "df960ff97a76b651468f1bb7825db79da6dbe328",
+        "rev": "5748647ec3f6338b96442bc3d1443e7971ee173e",
         "type": "github"
       },
       "original": {

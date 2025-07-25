@@ -298,15 +298,15 @@
   };
   sukisu = {
     pname = "sukisu";
-    version = "5ba4f73eeb6882a83c2aa41f9fd76e64ed5feb82";
+    version = "115206bcc6c26e9733ca336019a693556857f2c1";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "5ba4f73eeb6882a83c2aa41f9fd76e64ed5feb82";
+      rev = "115206bcc6c26e9733ca336019a693556857f2c1";
       fetchSubmodules = false;
-      sha256 = "sha256-W3wrhbdiMNQywnYQDzApKUIcyk13ZxIqK4CCNIaUMZg=";
+      sha256 = "sha256-jMHX2EddbDJFmrsKLXBocGnN9tFkMa/ms5sylaS1Nds=";
     };
-    date = "2025-07-21";
+    date = "2025-07-24";
   };
   sukisu-nongki = {
     pname = "sukisu-nongki";
@@ -396,15 +396,15 @@
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
-    version = "56706aae8928408773bc2c1015b2cace5ab78bd1";
+    version = "0b14a31e9e44c2198ef6a971d7b8f8d213d3b367";
     src = fetchFromGitHub {
       owner = "WildPlusKernel";
       repo = "kernel_patches";
-      rev = "56706aae8928408773bc2c1015b2cace5ab78bd1";
+      rev = "0b14a31e9e44c2198ef6a971d7b8f8d213d3b367";
       fetchSubmodules = false;
-      sha256 = "sha256-WIWdafdcY/uBNqB0QEPh4hEZl9pPjs5RaTkbxMyS2kY=";
+      sha256 = "sha256-FWVWUic8+vR+o2hZcjjFY9Qk/OrjaRimWk5FgLi5bXE=";
     };
-    date = "2025-07-20";
+    date = "2025-07-24";
   };
   ztc1997-android_gki_kernel_5-10_common = {
     pname = "ztc1997-android_gki_kernel_5-10_common";
