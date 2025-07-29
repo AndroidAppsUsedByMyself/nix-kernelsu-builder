@@ -170,10 +170,10 @@
   };
   lineage-nightly-pstar_bootImg = {
     pname = "lineage-nightly-pstar_bootImg";
-    version = "20250721";
+    version = "20250728";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20250721/boot.img";
-      sha256 = "sha256-QqlH4wc42v1hV90Sp+6AZUaWDPTWZ3nIEJLe32OJyWc=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20250728/boot.img";
+      sha256 = "sha256-6T4mYQyxzaEn7wXVaXMD7X7bAjbiSCmQkcsRj8JMlTM=";
     };
   };
   linux-amazon-karnak = {
@@ -298,27 +298,27 @@
   };
   sukisu = {
     pname = "sukisu";
-    version = "6bb66e28190f2be9fff825f96e86a57d48c60071";
+    version = "b1ee07fee198612c174d5766ea8dafb581d277e3";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "6bb66e28190f2be9fff825f96e86a57d48c60071";
+      rev = "b1ee07fee198612c174d5766ea8dafb581d277e3";
       fetchSubmodules = false;
-      sha256 = "sha256-Kkp7LUnc+mPU+MgiMfT3W5Zipsap10PLX3vp5T0BwBA=";
+      sha256 = "sha256-J4zG5+7W1+y+BTMDMhvZiFdvoVn0hqBQ2YzU3K0WJLU=";
     };
-    date = "2025-07-28";
+    date = "2025-07-29";
   };
   sukisu-nongki = {
     pname = "sukisu-nongki";
-    version = "6632cb51676f79bef06cfd3934c849f600987adb";
+    version = "51c0ba02e1c034ce3d782c280580259f1c4036bc";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "6632cb51676f79bef06cfd3934c849f600987adb";
+      rev = "51c0ba02e1c034ce3d782c280580259f1c4036bc";
       fetchSubmodules = false;
-      sha256 = "sha256-5Wdw0ItXAeuR2nTq6NcR0XUeZiV5CuWpqr6N5HmwfUU=";
+      sha256 = "sha256-MNRgItAm85R2I98LPSKT7oCzfr2nzBjDA+3yu+VO6DU=";
     };
-    date = "2025-07-28";
+    date = "2025-07-29";
   };
   sukisu-patch = {
     pname = "sukisu-patch";
@@ -342,15 +342,15 @@
   };
   sukisu-susfs = {
     pname = "sukisu-susfs";
-    version = "f59e0ac974585499207649c64ef5d5849307ca92";
+    version = "323a8d4b39ec92ea82d10ffb740d0d9492c000d3";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "f59e0ac974585499207649c64ef5d5849307ca92";
+      rev = "323a8d4b39ec92ea82d10ffb740d0d9492c000d3";
       fetchSubmodules = false;
-      sha256 = "sha256-0N02JEa2EJFNxXjiDVqdc9Dr/1kvsfr4Pm7yB0xr2+U=";
+      sha256 = "sha256-+4dLJX3ma/92zCiz3u045ohRpEtVgDTL9Ipf7sAZWFw=";
     };
-    date = "2025-07-28";
+    date = "2025-07-29";
   };
   susfs-4_19 = {
     pname = "susfs-4_19";
