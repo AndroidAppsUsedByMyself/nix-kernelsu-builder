@@ -22,7 +22,7 @@ src.github = "rsuntk/KernelSU"
 [AAAAA_kernelsu-rksu-revision-code]
 fetch.url = "https://example.com"
 src.webpage = "https://api.github.com/repos/rsuntk/KernelSU/releases?per_page=1"
-src.regex = "KernelSU[^\"]*_([0-9]+)-release\\.apk"
+src.regex = "\\/KernelSU[^\"]*_([0-9]+)-release\\.apk"
 
 [AAAAA_kernelsu-rksu-susfs]
 fetch.github = "rsuntk/KernelSU"
@@ -32,7 +32,7 @@ src.branch = "susfs-rksu-master"
 [AAAAA_kernelsu-rksu-susfs-revision-code]
 fetch.url = "https://example.com"
 src.webpage = "https://api.github.com/repos/rsuntk/KernelSU/releases?per_page=1"
-src.regex = "KernelSU[^\"]*_([0-9]+)-release\\.apk"
+src.regex = "\\/KernelSU[^\"]*_([0-9]+)-release\\.apk"
 
 [AAAAA_lineage-nightly-pstar_bootImg]
 fetch.url = "https://mirrorbits.lineageos.org/full/pstar/$ver/boot.img"
