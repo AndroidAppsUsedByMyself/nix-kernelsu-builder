@@ -165,7 +165,7 @@ src.regex = "download\\/v[0-9\\._]+\\/SukiSU[^\"]*_([0-9]+)-release\\.apk"
 [sukisu-susfs]
 fetch.github = "SukiSU-Ultra/SukiSU-Ultra"
 src.git = "https://github.com/SukiSU-Ultra/SukiSU-Ultra.git"
-src.branch = "susfs-main"
+src.branch = "main"
 
 [susfs-android13-5_15]
 fetch.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
