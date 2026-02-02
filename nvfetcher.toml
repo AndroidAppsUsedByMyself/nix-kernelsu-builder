@@ -151,7 +151,7 @@ src.branch = "main"
 [sukisu-nongki]
 fetch.github = "SukiSU-Ultra/SukiSU-Ultra"
 src.git = "https://github.com/SukiSU-Ultra/SukiSU-Ultra.git"
-src.branch = "nongki"
+src.branch = "main"
 
 [sukisu-patch]
 fetch.github = "SukiSU-Ultra/SukiSU_patch"
