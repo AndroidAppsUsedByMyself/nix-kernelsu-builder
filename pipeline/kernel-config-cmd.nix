@@ -7,6 +7,7 @@
   additionalKernelConfig,
   kernelSU,
   susfs,
+  bbg,
   finalMakeFlags,
 }:
 ''
@@ -49,6 +50,9 @@
     CONFIG_KSU_SUSFS_HAS_MAGIC_MOUNT=y
   ''
 )
++ (lib.optionalString bbg.enable ''
+  CONFIG_BBG=y
+'')
 + ''
   ${additionalKernelConfig}
   EOF

@@ -13,10 +13,10 @@ let
     rsuntk = {
       enable = true;
       variant = "rsuntk";
-      inherit (sources.kernelsu-rksu) src;
-      revision = sources.kernelsu-rksu-revision-code.version;
+      inherit (sources.AAAAA_kernelsu-rksu) src;
+      revision = sources.AAAAA_kernelsu-rksu-revision-code.version;
       subdirectory = "KernelSU";
-      susfs_kernelsuPatch = "${sources.susfs-4_19.src}/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch";
+      susfs_kernelsuPatch = "${sources.AAAAA_susfs-4_19.src}/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch";
       integrateMethod = "manually_patch_cmd";
       moduleSystemImpl = "magicmount";
     };
@@ -26,15 +26,15 @@ let
       inherit (sources.kernelsu-next) src;
       revision = sources.kernelsu-next-revision-code.version;
       subdirectory = "KernelSU";
-      susfs_kernelsuPatch = "${sources.susfs-4_19.src}/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch";
+      susfs_kernelsuPatch = "${sources.AAAAA_susfs-4_19.src}/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch";
       integrateMethod = "manually_patch_cmd";
       moduleSystemImpl = "magicmount";
     };
     rsuntk-susfs = {
       enable = true;
       variant = "rsuntk-susfs";
-      inherit (sources.kernelsu-rksu-susfs) src;
-      revision = sources.kernelsu-rksu-susfs-revision-code.version;
+      inherit (sources.AAAAA_kernelsu-rksu-susfs) src;
+      revision = sources.AAAAA_kernelsu-rksu-susfs-revision-code.version;
       subdirectory = "KernelSU";
       susfs_kernelsuPatch = "${emptyFile}";
       integrateMethod = "manually_patch_cmd";
@@ -45,9 +45,9 @@ let
     {
       susfs ? {
         enable = false;
-        inherit (sources.susfs-4_19) src;
+        inherit (sources.AAAAA_susfs-4_19) src;
         kernelsuPatch = kernelSU.susfs_kernelsuPatch or "${emptyFile}";
-        kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
+        kernelPatch = "${sources.AAAAA_los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
       },
       kernelSU ? {
         inherit (kernelsuVariants.rsuntk)
@@ -78,14 +78,14 @@ let
         "KCPPFLAGS=\"-w\""
         "LOCALVERSION=-rk"
       ],
-      kernelSrc ? sources.linux-moto-pstar-lineageos-22_1.src,
-      oemBootImg ? sources.lineage-nightly-pstar_bootImg.src,
+      kernelSrc ? sources.AAAAA_linux-moto-pstar-lineageos-22_1.src,
+      oemBootImg ? sources.AAAAA_lineage-nightly-pstar_bootImg.src,
       kernelPatches ? [
-        "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/module.patch"
-        "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0001-BACKPORT-maccess-rename-strncpy_from_unsafe_user-to-.patch"
-        "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0001-Reapply-cred-switch-to-using-atomic_long_t.patch"
-        "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/0002-BACKPORT-cred-add-get_cred_rcu.patch"
-        "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/path_umount_backport.patch"
+        "${sources.AAAAA_los-pstar-kernel-patches.src}/patches/4.19.157/module.patch"
+        "${sources.AAAAA_los-pstar-kernel-patches.src}/patches/4.19.157/0001-BACKPORT-maccess-rename-strncpy_from_unsafe_user-to-.patch"
+        "${sources.AAAAA_los-pstar-kernel-patches.src}/patches/4.19.157/0001-Reapply-cred-switch-to-using-atomic_long_t.patch"
+        "${sources.AAAAA_los-pstar-kernel-patches.src}/patches/4.19.157/0002-BACKPORT-cred-add-get_cred_rcu.patch"
+        "${sources.AAAAA_los-pstar-kernel-patches.src}/patches/4.19.157/path_umount_backport.patch"
       ],
       # without this kernel modules will refuse to be inserted
       kernelConfig ? ''
@@ -134,9 +134,9 @@ in
     };
     susfs = {
       enable = false;
-      inherit (sources.susfs-4_19) src;
+      inherit (sources.AAAAA_susfs-4_19) src;
       kernelsuPatch = kernelsuVariants."${kernelSU.variant}".susfs_kernelsuPatch or "${emptyFile}";
-      kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
+      kernelPatch = "${sources.AAAAA_los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
     };
   });
 
@@ -154,9 +154,9 @@ in
     };
     susfs = {
       enable = false;
-      inherit (sources.susfs-4_19) src;
+      inherit (sources.AAAAA_susfs-4_19) src;
       kernelsuPatch = kernelsuVariants."${kernelSU.variant}".susfs_kernelsuPatch or "${emptyFile}";
-      kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
+      kernelPatch = "${sources.AAAAA_los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
     };
   });
 
@@ -174,9 +174,9 @@ in
     };
     susfs = {
       enable = true;
-      inherit (sources.susfs-4_19) src;
+      inherit (sources.AAAAA_susfs-4_19) src;
       kernelsuPatch = kernelsuVariants."${kernelSU.variant}".susfs_kernelsuPatch or "${emptyFile}";
-      kernelPatch = "${sources.los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
+      kernelPatch = "${sources.AAAAA_los-pstar-kernel-patches.src}/patches/4.19.157/50_add_susfs_in_kernel-4.19.157.patch";
     };
   });
 }

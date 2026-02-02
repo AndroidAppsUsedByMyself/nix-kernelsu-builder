@@ -39,6 +39,7 @@
   defconfigs,
   kernelSU,
   susfs,
+  bbg,
   makeFlags,
   additionalKernelConfig ? "",
   ...
@@ -68,6 +69,7 @@ let
       additionalKernelConfig
       kernelSU
       susfs
+      bbg
       finalMakeFlags
       ;
   };

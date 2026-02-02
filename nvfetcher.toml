@@ -1,178 +1,182 @@
+[AAAAA_android_kernel_samsung_lykanlte]
+fetch.github = "DataEraserC/android_kernel_samsung_lykanlte"
+git.fetchSubmodules = true
+src.git = "https://github.com/DataEraserC/android_kernel_samsung_lykanlte.git"
+src.branch = "main"
+
+[AAAAA_android_kernel_samsung_sm8250_TabS7]
+fetch.github = "DataEraserC/android_kernel_samsung_sm8250_TabS7"
+git.fetchSubmodules = true
+src.git = "https://github.com/DataEraserC/android_kernel_samsung_sm8250_TabS7.git"
+src.branch = "main"
+
+[AAAAA_android_prebuilts_clang_kernel_linux-x86_clang-r416183b]
+fetch.github = "LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b"
+src.git = "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
+src.branch = "lineage-20.0"
+
+[AAAAA_kernelsu-rksu]
+fetch.git = "https://github.com/rsuntk/KernelSU.git"
+src.github = "rsuntk/KernelSU"
+
+[AAAAA_kernelsu-rksu-revision-code]
+fetch.url = "https://example.com"
+src.webpage = "https://api.github.com/repos/rsuntk/KernelSU/releases?per_page=1"
+src.regex = "KernelSU[^\"]*_([0-9]+)-release\\.apk"
+
+[AAAAA_kernelsu-rksu-susfs]
+fetch.github = "rsuntk/KernelSU"
+src.git = "https://github.com/rsuntk/KernelSU.git"
+src.branch = "susfs-v1.5.5"
+
+[AAAAA_kernelsu-rksu-susfs-revision-code]
+fetch.url = "https://example.com"
+src.webpage = "https://api.github.com/repos/rsuntk/KernelSU/releases?per_page=1"
+src.regex = "KernelSU[^\"]*_([0-9]+)-release\\.apk"
+
+[AAAAA_lineage-nightly-pstar_bootImg]
+fetch.url = "https://mirrorbits.lineageos.org/full/pstar/$ver/boot.img"
+src.webpage = "https://download.lineageos.org/api/v2/devices/pstar/builds"
+src.regex = "https://mirrorbits.lineageos.org/full/pstar/([0-9]{8})/boot.img"
+
+[AAAAA_linux-moto-pstar-lineageos-22_1]
+fetch.github = "AndroidAppsUsedByMyself/android_kernel_motorola_sm8250"
+src.git = "https://github.com/AndroidAppsUsedByMyself/android_kernel_motorola_sm8250.git"
+src.branch = "lineage-22.1"
+
+[AAAAA_linux-xiaomi-gauguin-lineageos-22_1]
+fetch.github = "LineageOS/android_kernel_xiaomi_gauguin"
+src.git = "https://github.com/LineageOS/android_kernel_xiaomi_gauguin.git"
+src.branch = "lineage-22.1"
+
+[AAAAA_llvm-arm-toolchain-ship-10_0]
+fetch.github = "proprietary-stuff/llvm-arm-toolchain-ship-10.0"
+src.git = "https://github.com/proprietary-stuff/llvm-arm-toolchain-ship-10.0.git"
+src.branch = "master"
+
+[AAAAA_los-pstar-kernel-patches]
+fetch.github = "AndroidAppsUsedByMyself/kernel_patches"
+src.git = "https://github.com/AndroidAppsUsedByMyself/kernel_patches.git"
+src.branch = "main"
+
+[AAAAA_susfs-4_19]
+fetch.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
+src.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
+src.branch = "kernel-4.19"
+
+[AAAAA_ztc1997-android_gki_kernel_5-10_common]
+fetch.github = "ztc1997/android_gki_kernel_5.10_common"
+src.git = "https://github.com/ztc1997/android_gki_kernel_5.10_common.git"
+src.branch = "android12-5.10-2024-11"
+
+[AAAAA_ztc1997-android_gki_kernel_5-15_common]
+fetch.github = "ztc1997/android_gki_kernel_5.15_common"
+src.git = "https://github.com/ztc1997/android_gki_kernel_5.15_common.git"
+src.branch = "android13-5.15-2024-08"
+
 [anykernel-kernelsu]
-src.git = "https://github.com/Kernel-SU/AnyKernel3.git"
 fetch.github = "Kernel-SU/AnyKernel3"
+src.git = "https://github.com/Kernel-SU/AnyKernel3.git"
 
 [anykernel-osm0sis]
-src.git = "https://github.com/osm0sis/AnyKernel3.git"
 fetch.github = "osm0sis/AnyKernel3"
+src.git = "https://github.com/osm0sis/AnyKernel3.git"
+
+[baseband-guard]
+fetch.github = "vc-teahouse/Baseband-guard"
+src.git = "https://github.com/vc-teahouse/Baseband-guard.git"
 
 [gcc-aarch64-linux-android]
-src.git = "https://github.com/kindle4jerry/aarch64-linux-android-4.9-bakup.git"
 fetch.github = "kindle4jerry/aarch64-linux-android-4.9-bakup"
+src.git = "https://github.com/kindle4jerry/aarch64-linux-android-4.9-bakup.git"
 
 [gcc-arm-linux-androideabi]
-src.git = "https://github.com/KudProject/arm-linux-androideabi-4.9.git"
 fetch.github = "KudProject/arm-linux-androideabi-4.9"
+src.git = "https://github.com/KudProject/arm-linux-androideabi-4.9.git"
+
+[kernelsu-next]
+fetch.git = "https://github.com/rifsxd/KernelSU-Next.git"
+src.github = "rifsxd/KernelSU-Next"
+
+[kernelsu-next-revision-code]
+fetch.url = "https://example.com"
+src.webpage = "https://api.github.com/repos/rifsxd/KernelSU-Next/releases?per_page=1"
+src.regex = "download\\/v[0-9\\._]+\\/KernelSU[^\"]*_([0-9]+)-release\\.apk"
 
 [kernelsu-stable]
+fetch.git = "https://github.com/tiann/KernelSU.git"
 # src.github = "tiann/KernelSU"
 src.manual = "v0.9.5"
-fetch.git = "https://github.com/tiann/KernelSU.git"
 
 [kernelsu-stable-revision-code]
+fetch.url = "https://example.com"
 # src.webpage = "https://api.github.com/repos/tiann/KernelSU/releases?per_page=1"
 # src.regex = "download\\/v[0-9\\._]+\\/KernelSU[^\"]*_([0-9]+)-release\\.apk"
 src.manual = "11872"
-fetch.url = "https://example.com"
-
-[kernelsu-next]
-src.github = "rifsxd/KernelSU-Next"
-fetch.git = "https://github.com/rifsxd/KernelSU-Next.git"
-
-[kernelsu-next-revision-code]
-src.webpage = "https://api.github.com/repos/rifsxd/KernelSU-Next/releases?per_page=1"
-src.regex = "download\\/v[0-9\\._]+\\/KernelSU[^\"]*_([0-9]+)-release\\.apk"
-fetch.url = "https://example.com"
 
 [linux-amazon-karnak]
+fetch.github = "mt8163/android_kernel_amazon_karnak_4.9"
 src.git = "https://github.com/mt8163/android_kernel_amazon_karnak_4.9.git"
 src.branch = "lineage-20.0"
-fetch.github = "mt8163/android_kernel_amazon_karnak_4.9"
 
 [linux-moto-rtwo-lineageos-21]
+fetch.github = "LineageOS/android_kernel_motorola_sm8550"
 src.git = "https://github.com/LineageOS/android_kernel_motorola_sm8550.git"
 src.branch = "lineage-21"
-fetch.github = "LineageOS/android_kernel_motorola_sm8550"
 
 [linux-moto-rtwo-lineageos-22_1]
+fetch.github = "LineageOS/android_kernel_motorola_sm8550"
 src.git = "https://github.com/LineageOS/android_kernel_motorola_sm8550.git"
 src.branch = "lineage-22.1"
-fetch.github = "LineageOS/android_kernel_motorola_sm8550"
-
-[linux-oneplus-8t-blu-spark]
-src.git = "https://github.com/engstk/op8.git"
-src.branch = "blu_spark-14-custom"
-fetch.github = "engstk/op8"
 
 [linux-oneplus-13]
+fetch.github = "OnePlusOSS/android_kernel_common_oneplus_sm8750"
 src.git = "https://github.com/OnePlusOSS/android_kernel_common_oneplus_sm8750.git"
 src.branch = "oneplus/sm8750_v_15.0.0_oneplus_13"
-fetch.github = "OnePlusOSS/android_kernel_common_oneplus_sm8750"
+
+[linux-oneplus-8t-blu-spark]
+fetch.github = "engstk/op8"
+src.git = "https://github.com/engstk/op8.git"
+src.branch = "blu_spark-14-custom"
 
 [oneplus-13-sched-ext]
-src.git = "https://github.com/HanKuCha/sched_ext.git"
 fetch.github = "HanKuCha/sched_ext"
+src.git = "https://github.com/HanKuCha/sched_ext.git"
 
 [sukisu]
+fetch.github = "SukiSU-Ultra/SukiSU-Ultra"
 src.git = "https://github.com/SukiSU-Ultra/SukiSU-Ultra.git"
 src.branch = "main"
-fetch.github = "SukiSU-Ultra/SukiSU-Ultra"
 
 [sukisu-nongki]
+fetch.github = "SukiSU-Ultra/SukiSU-Ultra"
 src.git = "https://github.com/SukiSU-Ultra/SukiSU-Ultra.git"
 src.branch = "nongki"
-fetch.github = "SukiSU-Ultra/SukiSU-Ultra"
 
 [sukisu-patch]
-src.git = "https://github.com/SukiSU-Ultra/SukiSU_patch.git"
 fetch.github = "SukiSU-Ultra/SukiSU_patch"
+src.git = "https://github.com/SukiSU-Ultra/SukiSU_patch.git"
 
 [sukisu-revision-code]
+fetch.url = "https://example.com"
 src.webpage = "https://api.github.com/repos/SukiSU-Ultra/SukiSU-Ultra/releases?per_page=1"
 src.regex = "download\\/v[0-9\\._]+\\/SukiSU[^\"]*_([0-9]+)-release\\.apk"
-fetch.url = "https://example.com"
 
 [sukisu-susfs]
+fetch.github = "SukiSU-Ultra/SukiSU-Ultra"
 src.git = "https://github.com/SukiSU-Ultra/SukiSU-Ultra.git"
 src.branch = "susfs-main"
-fetch.github = "SukiSU-Ultra/SukiSU-Ultra"
 
 [susfs-android13-5_15]
+fetch.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
 src.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
 src.branch = "gki-android13-5.15"
-fetch.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
 
 [susfs-android15-6_6]
+fetch.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
 src.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
 src.branch = "gki-android15-6.6"
-fetch.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
 
 [wildplus-kernel-patches]
-src.git = "https://github.com/WildPlusKernel/kernel_patches.git"
 fetch.github = "WildPlusKernel/kernel_patches"
-
-[linux-moto-pstar-lineageos-22_1]
-src.git = "https://github.com/AndroidAppsUsedByMyself/android_kernel_motorola_sm8250.git"
-src.branch = "lineage-22.1"
-fetch.github = "AndroidAppsUsedByMyself/android_kernel_motorola_sm8250"
-
-[linux-xiaomi-gauguin-lineageos-22_1]
-src.git = "https://github.com/LineageOS/android_kernel_xiaomi_gauguin.git"
-src.branch = "lineage-22.1"
-fetch.github = "LineageOS/android_kernel_xiaomi_gauguin"
-
-[android_prebuilts_clang_kernel_linux-x86_clang-r416183b]
-src.git = "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b.git"
-src.branch = "lineage-20.0"
-fetch.github = "LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b"
-
-[lineage-nightly-pstar_bootImg]
-src.webpage = "https://download.lineageos.org/api/v2/devices/pstar/builds"
-src.regex = "https://mirrorbits.lineageos.org/full/pstar/([0-9]{8})/boot.img"
-fetch.url = "https://mirrorbits.lineageos.org/full/pstar/$ver/boot.img"
-
-[los-pstar-kernel-patches]
-src.git = "https://github.com/AndroidAppsUsedByMyself/kernel_patches.git"
-src.branch = "main"
-fetch.github = "AndroidAppsUsedByMyself/kernel_patches"
-
-[ztc1997-android_gki_kernel_5-10_common]
-src.git = "https://github.com/ztc1997/android_gki_kernel_5.10_common.git"
-src.branch = "android12-5.10-2024-11"
-fetch.github = "ztc1997/android_gki_kernel_5.10_common"
-
-[ztc1997-android_gki_kernel_5-15_common]
-src.git = "https://github.com/ztc1997/android_gki_kernel_5.15_common.git"
-src.branch = "android13-5.15-2024-08"
-fetch.github = "ztc1997/android_gki_kernel_5.15_common"
-
-[android_kernel_samsung_sm8250_TabS7]
-src.git = "https://github.com/DataEraserC/android_kernel_samsung_sm8250_TabS7.git"
-src.branch = "main"
-git.fetchSubmodules = true
-fetch.github = "DataEraserC/android_kernel_samsung_sm8250_TabS7"
-
-[android_kernel_samsung_lykanlte]
-src.git = "https://github.com/DataEraserC/android_kernel_samsung_lykanlte.git"
-src.branch = "main"
-git.fetchSubmodules = true
-fetch.github = "DataEraserC/android_kernel_samsung_lykanlte"
-
-[llvm-arm-toolchain-ship-10_0]
-src.git = "https://github.com/proprietary-stuff/llvm-arm-toolchain-ship-10.0.git"
-src.branch = "master"
-fetch.github = "proprietary-stuff/llvm-arm-toolchain-ship-10.0"
-
-[kernelsu-rksu]
-src.github = "rsuntk/KernelSU"
-fetch.git = "https://github.com/rsuntk/KernelSU.git"
-
-[kernelsu-rksu-revision-code]
-src.webpage = "https://api.github.com/repos/rsuntk/KernelSU/releases?per_page=1"
-src.regex = "KernelSU[^\"]*_([0-9]+)-release\\.apk"
-fetch.url = "https://example.com"
-
-[kernelsu-rksu-susfs]
-src.git = "https://github.com/rsuntk/KernelSU.git"
-src.branch = "susfs-v1.5.5"
-fetch.github = "rsuntk/KernelSU"
-
-[kernelsu-rksu-susfs-revision-code]
-src.webpage = "https://api.github.com/repos/rsuntk/KernelSU/releases?per_page=1"
-src.regex = "KernelSU[^\"]*_([0-9]+)-release\\.apk"
-fetch.url = "https://example.com"
-
-[susfs-4_19]
-src.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
-src.branch = "kernel-4.19"
-fetch.git = "https://gitlab.com/simonpunk/susfs4ksu.git"
+src.git = "https://github.com/WildPlusKernel/kernel_patches.git"
