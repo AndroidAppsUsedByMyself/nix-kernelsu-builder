@@ -1,9 +1,9 @@
 {
-    "android_kernel_samsung_lykanlte": {
-        "cargoLocks": null,
+    "AAAAA_android_kernel_samsung_lykanlte": {
+        "cargoLock": null,
         "date": "2025-03-17",
         "extract": null,
-        "name": "android_kernel_samsung_lykanlte",
+        "name": "AAAAA_android_kernel_samsung_lykanlte",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -20,11 +20,11 @@
         },
         "version": "c7e14de69d0124bf1827325aba013ec7b25e5bcb"
     },
-    "android_kernel_samsung_sm8250_TabS7": {
-        "cargoLocks": null,
+    "AAAAA_android_kernel_samsung_sm8250_TabS7": {
+        "cargoLock": null,
         "date": "2025-03-15",
         "extract": null,
-        "name": "android_kernel_samsung_sm8250_TabS7",
+        "name": "AAAAA_android_kernel_samsung_sm8250_TabS7",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -41,11 +41,11 @@
         },
         "version": "a06a3c6904d3a7c7fd4d09769d18a44053fcca7e"
     },
-    "android_prebuilts_clang_kernel_linux-x86_clang-r416183b": {
-        "cargoLocks": null,
+    "AAAAA_android_prebuilts_clang_kernel_linux-x86_clang-r416183b": {
+        "cargoLock": null,
         "date": "2022-11-01",
         "extract": null,
-        "name": "android_prebuilts_clang_kernel_linux-x86_clang-r416183b",
+        "name": "AAAAA_android_prebuilts_clang_kernel_linux-x86_clang-r416183b",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -61,6 +61,208 @@
             "type": "github"
         },
         "version": "54220fd601050b350b2af7adc913089ebf0e7aed"
+    },
+    "AAAAA_kernelsu-rksu": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "AAAAA_kernelsu-rksu",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "v3.0.0-30-legacy",
+            "sha256": "sha256-+w7uaEBq4KACxSyOZ3AFEGMMx71t6EF1gRtXJJLNBqU=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/rsuntk/KernelSU.git"
+        },
+        "version": "v3.0.0-30-legacy"
+    },
+    "AAAAA_kernelsu-rksu-susfs": {
+        "cargoLock": null,
+        "date": "2025-12-20",
+        "extract": null,
+        "name": "AAAAA_kernelsu-rksu-susfs",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rsuntk",
+            "repo": "KernelSU",
+            "rev": "9b28326af4145974560122644e87fc9a021a2cce",
+            "sha256": "sha256-3F1gtCBNq0cLOJeyUugku6vAbRczS3VyEhDEWcfi9l8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "9b28326af4145974560122644e87fc9a021a2cce"
+    },
+    "AAAAA_lineage-nightly-pstar_bootImg": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "AAAAA_lineage-nightly-pstar_bootImg",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-YooVXALvyAwDIj4u9ggNFQTefc25HacrNtzr233D9uU=",
+            "type": "url",
+            "url": "https://mirrorbits.lineageos.org/full/pstar/20260202/boot.img"
+        },
+        "version": "20260202"
+    },
+    "AAAAA_linux-moto-pstar-lineageos-22_1": {
+        "cargoLock": null,
+        "date": "2025-03-15",
+        "extract": null,
+        "name": "AAAAA_linux-moto-pstar-lineageos-22_1",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "AndroidAppsUsedByMyself",
+            "repo": "android_kernel_motorola_sm8250",
+            "rev": "8a06559e98bb6685033d8771865bac00e9618cce",
+            "sha256": "sha256-yrjP65l1U5DwEdhyuu1AsJdfa78qXaqHqt53gBOvWEQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "8a06559e98bb6685033d8771865bac00e9618cce"
+    },
+    "AAAAA_linux-xiaomi-gauguin-lineageos-22_1": {
+        "cargoLock": null,
+        "date": "2025-04-02",
+        "extract": null,
+        "name": "AAAAA_linux-xiaomi-gauguin-lineageos-22_1",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "LineageOS",
+            "repo": "android_kernel_xiaomi_gauguin",
+            "rev": "8d52ff9a898e05001383345eb882a488be38f59a",
+            "sha256": "sha256-/6K3MBk7R/YCgKq7aW0vxxcn0pDMETZOjHx20XvA/ig=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "8d52ff9a898e05001383345eb882a488be38f59a"
+    },
+    "AAAAA_llvm-arm-toolchain-ship-10_0": {
+        "cargoLock": null,
+        "date": "2020-09-27",
+        "extract": null,
+        "name": "AAAAA_llvm-arm-toolchain-ship-10_0",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "proprietary-stuff",
+            "repo": "llvm-arm-toolchain-ship-10.0",
+            "rev": "c6aaf7026bd49a06e12ec0551285ffded148d186",
+            "sha256": "sha256-PwJj4yZv/FotEncyw5nZmw5upUz7gx35TdDCVkb0+xU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "c6aaf7026bd49a06e12ec0551285ffded148d186"
+    },
+    "AAAAA_los-pstar-kernel-patches": {
+        "cargoLock": null,
+        "date": "2025-04-11",
+        "extract": null,
+        "name": "AAAAA_los-pstar-kernel-patches",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "AndroidAppsUsedByMyself",
+            "repo": "kernel_patches",
+            "rev": "9ae66533892ed7bb8262cf4a49fa986e14c3e0f8",
+            "sha256": "sha256-lDor+o7BKpYeWI16oX+I0Etwgi0bv0n2HuPWiGjChQA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "9ae66533892ed7bb8262cf4a49fa986e14c3e0f8"
+    },
+    "AAAAA_susfs-4_19": {
+        "cargoLock": null,
+        "date": "2025-02-23",
+        "extract": null,
+        "name": "AAAAA_susfs-4_19",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "001e69919c6271f690fd00b17e4c721c9e599152",
+            "sha256": "sha256-j4OIvgOE64nm67NyGsEnSRNygVVZaF5uhMx8ju+p6fQ=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
+        },
+        "version": "001e69919c6271f690fd00b17e4c721c9e599152"
+    },
+    "AAAAA_ztc1997-android_gki_kernel_5-10_common": {
+        "cargoLock": null,
+        "date": "2025-01-21",
+        "extract": null,
+        "name": "AAAAA_ztc1997-android_gki_kernel_5-10_common",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ztc1997",
+            "repo": "android_gki_kernel_5.10_common",
+            "rev": "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce",
+            "sha256": "sha256-tZWaP+q8p7gCHBbZdcdzqIGT051eoTnR3gPWzGlp7+c=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce"
+    },
+    "AAAAA_ztc1997-android_gki_kernel_5-15_common": {
+        "cargoLock": null,
+        "date": "2024-09-03",
+        "extract": null,
+        "name": "AAAAA_ztc1997-android_gki_kernel_5-15_common",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ztc1997",
+            "repo": "android_gki_kernel_5.15_common",
+            "rev": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117",
+            "sha256": "sha256-uJNVK/kJgWCBUxHurKAedokKz2WtYaZ17Ib0yp7N9WI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117"
     },
     "anykernel-kernelsu": {
         "cargoLock": null,
@@ -85,7 +287,7 @@
     },
     "anykernel-osm0sis": {
         "cargoLock": null,
-        "date": "2025-05-18",
+        "date": "2026-01-30",
         "extract": null,
         "name": "anykernel-osm0sis",
         "passthru": null,
@@ -97,16 +299,16 @@
             "name": null,
             "owner": "osm0sis",
             "repo": "AnyKernel3",
-            "rev": "6f88dff82b786e879b255a8e1523547c4f62d031",
-            "sha256": "sha256-0BRHE7O3rcgLa6wg8GVPu9R0MDsA87D6jGbA7bHZ7N0=",
+            "rev": "71e5f4486984d52965c51b17b9ed2cc4ed16cab0",
+            "sha256": "sha256-CxCjeyckxSBNHhCZhqgg6EF9DvhYK6XlsevVG5V2P/A=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "6f88dff82b786e879b255a8e1523547c4f62d031"
+        "version": "71e5f4486984d52965c51b17b9ed2cc4ed16cab0"
     },
     "baseband-guard": {
         "cargoLock": null,
-        "date": "2026-01-01",
+        "date": "2026-01-11",
         "extract": null,
         "name": "baseband-guard",
         "passthru": null,
@@ -118,12 +320,12 @@
             "name": null,
             "owner": "vc-teahouse",
             "repo": "Baseband-guard",
-            "rev": "2f60136960effdf82cf71640ba019999fa14e655",
-            "sha256": "sha256-2hWoYghRcaJFbfYTWas09XcIQVYtklrRgpq6Yd9CB8U=",
+            "rev": "8874cc86ab19291410e2f3492d80eb39849be4de",
+            "sha256": "sha256-ANqhodb/kSkOb+KPvRElHJeUir//v9zeqCBr9P+GyRs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2f60136960effdf82cf71640ba019999fa14e655"
+        "version": "8874cc86ab19291410e2f3492d80eb39849be4de"
     },
     "gcc-aarch64-linux-android": {
         "cargoLock": null,
@@ -179,99 +381,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "v1.1.1",
-            "sha256": "sha256-h99YriWugjS4AuAJzMFm2AN+1Dt1BigooKUYMzVCXL4=",
+            "rev": "v3.0.1",
+            "sha256": "sha256-1XS7auSOiIT8O3Aa+tGW8eQoCyAoaLgSCIxutuXKBgs=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/rifsxd/KernelSU-Next.git"
         },
-        "version": "v1.1.1"
-    },
-    "kernelsu-next-revision-code": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "kernelsu-next-revision-code",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-b1Y1A182rVALT8S7eBa7cu9VlOG8rkT6B0xemI/EwP4=",
-            "type": "url",
-            "url": "https://example.com"
-        },
-        "version": "12851"
-    },
-    "kernelsu-rksu": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "kernelsu-rksu",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "v1.0.5-10-legacy",
-            "sha256": "sha256-O9mwIIxRo0P2ijxOfC68gVT1zNpLzJyBOC+E6G8jnLg=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/rsuntk/KernelSU.git"
-        },
-        "version": "v1.0.5-10-legacy"
-    },
-    "kernelsu-rksu-revision-code": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "kernelsu-rksu-revision-code",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=",
-            "type": "url",
-            "url": "https://example.com"
-        },
-        "version": "12164"
-    },
-    "kernelsu-rksu-susfs": {
-        "cargoLocks": null,
-        "date": "2025-03-15",
-        "extract": null,
-        "name": "kernelsu-rksu-susfs",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "rsuntk",
-            "repo": "KernelSU",
-            "rev": "e96aca34ffca2c78c2fdf8537d9c466887f358b0",
-            "sha256": "sha256-WcLiF57fiQGUg/nEL79J7YTK6LdGrmlxIJ3O9pQcJ38=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "e96aca34ffca2c78c2fdf8537d9c466887f358b0"
-    },
-    "kernelsu-rksu-susfs-revision-code": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "kernelsu-rksu-susfs-revision-code",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=",
-            "type": "url",
-            "url": "https://example.com"
-        },
-        "version": "12164"
+        "version": "v3.0.1"
     },
     "kernelsu-stable": {
         "cargoLock": null,
@@ -293,36 +409,6 @@
         },
         "version": "v0.9.5"
     },
-    "kernelsu-stable-revision-code": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "kernelsu-stable-revision-code",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-b1Y1A182rVALT8S7eBa7cu9VlOG8rkT6B0xemI/EwP4=",
-            "type": "url",
-            "url": "https://example.com"
-        },
-        "version": "11872"
-    },
-    "lineage-nightly-pstar_bootImg": {
-        "cargoLocks": null,
-        "date": null,
-        "extract": null,
-        "name": "lineage-nightly-pstar_bootImg",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-6T4mYQyxzaEn7wXVaXMD7X7bAjbiSCmQkcsRj8JMlTM=",
-            "type": "url",
-            "url": "https://mirrorbits.lineageos.org/full/pstar/20250728/boot.img"
-        },
-        "version": "20250728"
-    },
     "linux-amazon-karnak": {
         "cargoLock": null,
         "date": "2023-10-09",
@@ -343,27 +429,6 @@
             "type": "github"
         },
         "version": "e22c713c7c4f0c8d08267f6bba98b8c4cde8310f"
-    },
-    "linux-moto-pstar-lineageos-22_1": {
-        "cargoLocks": null,
-        "date": "2025-03-15",
-        "extract": null,
-        "name": "linux-moto-pstar-lineageos-22_1",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "AndroidAppsUsedByMyself",
-            "repo": "android_kernel_motorola_sm8250",
-            "rev": "8a06559e98bb6685033d8771865bac00e9618cce",
-            "sha256": "sha256-yrjP65l1U5DwEdhyuu1AsJdfa78qXaqHqt53gBOvWEQ=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "8a06559e98bb6685033d8771865bac00e9618cce"
     },
     "linux-moto-rtwo-lineageos-21": {
         "cargoLock": null,
@@ -449,69 +514,6 @@
         },
         "version": "64c109e3f3ba97fa7aed730ab7b4238b91df028b"
     },
-    "linux-xiaomi-gauguin-lineageos-22_1": {
-        "cargoLocks": null,
-        "date": "2025-04-02",
-        "extract": null,
-        "name": "linux-xiaomi-gauguin-lineageos-22_1",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "LineageOS",
-            "repo": "android_kernel_xiaomi_gauguin",
-            "rev": "8d52ff9a898e05001383345eb882a488be38f59a",
-            "sha256": "sha256-/6K3MBk7R/YCgKq7aW0vxxcn0pDMETZOjHx20XvA/ig=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "8d52ff9a898e05001383345eb882a488be38f59a"
-    },
-    "llvm-arm-toolchain-ship-10_0": {
-        "cargoLocks": null,
-        "date": "2020-09-27",
-        "extract": null,
-        "name": "llvm-arm-toolchain-ship-10_0",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "proprietary-stuff",
-            "repo": "llvm-arm-toolchain-ship-10.0",
-            "rev": "c6aaf7026bd49a06e12ec0551285ffded148d186",
-            "sha256": "sha256-PwJj4yZv/FotEncyw5nZmw5upUz7gx35TdDCVkb0+xU=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "c6aaf7026bd49a06e12ec0551285ffded148d186"
-    },
-    "los-pstar-kernel-patches": {
-        "cargoLocks": null,
-        "date": "2025-04-11",
-        "extract": null,
-        "name": "los-pstar-kernel-patches",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "AndroidAppsUsedByMyself",
-            "repo": "kernel_patches",
-            "rev": "9ae66533892ed7bb8262cf4a49fa986e14c3e0f8",
-            "sha256": "sha256-lDor+o7BKpYeWI16oX+I0Etwgi0bv0n2HuPWiGjChQA=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "9ae66533892ed7bb8262cf4a49fa986e14c3e0f8"
-    },
     "oneplus-13-sched-ext": {
         "cargoLock": null,
         "date": "2025-06-14",
@@ -534,8 +536,8 @@
         "version": "7ab1d04d5cb622d6c32c932add617803074ec5a7"
     },
     "sukisu": {
-        "cargoLocks": null,
-        "date": "2025-07-31",
+        "cargoLock": null,
+        "date": "2026-01-31",
         "extract": null,
         "name": "sukisu",
         "passthru": null,
@@ -547,16 +549,16 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "7c4d8da7d1144cb9072ba7a1d4779b099998f39c",
-            "sha256": "sha256-nfnzY7x8O7NGh3QcFWEXe55X/N2LaypOEbbvSQ1govE=",
+            "rev": "a61b5b9657a561732d79e6339408bc1bd585c50d",
+            "sha256": "sha256-yQgJGUTIWz0cHhC9Et2l2jIWz8sKfc0+15ibbkurIY8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "7c4d8da7d1144cb9072ba7a1d4779b099998f39c"
+        "version": "a61b5b9657a561732d79e6339408bc1bd585c50d"
     },
     "sukisu-nongki": {
-        "cargoLocks": null,
-        "date": "2025-07-29",
+        "cargoLock": null,
+        "date": "2026-01-31",
         "extract": null,
         "name": "sukisu-nongki",
         "passthru": null,
@@ -568,16 +570,16 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "51c0ba02e1c034ce3d782c280580259f1c4036bc",
-            "sha256": "sha256-MNRgItAm85R2I98LPSKT7oCzfr2nzBjDA+3yu+VO6DU=",
+            "rev": "a61b5b9657a561732d79e6339408bc1bd585c50d",
+            "sha256": "sha256-yQgJGUTIWz0cHhC9Et2l2jIWz8sKfc0+15ibbkurIY8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "51c0ba02e1c034ce3d782c280580259f1c4036bc"
+        "version": "a61b5b9657a561732d79e6339408bc1bd585c50d"
     },
     "sukisu-patch": {
         "cargoLock": null,
-        "date": "2025-11-12",
+        "date": "2026-01-30",
         "extract": null,
         "name": "sukisu-patch",
         "passthru": null,
@@ -589,31 +591,16 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU_patch",
-            "rev": "83aa64b7548890bb1f2eff6c990c03a1802df27b",
-            "sha256": "sha256-/mE7xcYzmeUu6FIcnLeJ6rPzxVlTd+9DZZkL5gQC1q4=",
+            "rev": "4e61456f26da6ffdab6d2bc68baa4ad66e242695",
+            "sha256": "sha256-ArRH2JkS/RGA5bMPWtfeczOATTGp/R4+Rs3du3dpf0o=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "83aa64b7548890bb1f2eff6c990c03a1802df27b"
-    },
-    "sukisu-revision-code": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "sukisu-revision-code",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-b1Y1A182rVALT8S7eBa7cu9VlOG8rkT6B0xemI/EwP4=",
-            "type": "url",
-            "url": "https://example.com"
-        },
-        "version": "40119"
+        "version": "4e61456f26da6ffdab6d2bc68baa4ad66e242695"
     },
     "sukisu-susfs": {
-        "cargoLocks": null,
-        "date": "2025-07-29",
+        "cargoLock": null,
+        "date": "2026-01-31",
         "extract": null,
         "name": "sukisu-susfs",
         "passthru": null,
@@ -625,36 +612,16 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "323a8d4b39ec92ea82d10ffb740d0d9492c000d3",
-            "sha256": "sha256-+4dLJX3ma/92zCiz3u045ohRpEtVgDTL9Ipf7sAZWFw=",
+            "rev": "a61b5b9657a561732d79e6339408bc1bd585c50d",
+            "sha256": "sha256-yQgJGUTIWz0cHhC9Et2l2jIWz8sKfc0+15ibbkurIY8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "323a8d4b39ec92ea82d10ffb740d0d9492c000d3"
-    },
-    "susfs-4_19": {
-        "cargoLocks": null,
-        "date": "2025-02-23",
-        "extract": null,
-        "name": "susfs-4_19",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "001e69919c6271f690fd00b17e4c721c9e599152",
-            "sha256": "sha256-j4OIvgOE64nm67NyGsEnSRNygVVZaF5uhMx8ju+p6fQ=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
-        },
-        "version": "001e69919c6271f690fd00b17e4c721c9e599152"
+        "version": "a61b5b9657a561732d79e6339408bc1bd585c50d"
     },
     "susfs-android13-5_15": {
-        "cargoLocks": null,
-        "date": "2025-07-26",
+        "cargoLock": null,
+        "date": "2026-02-02",
         "extract": null,
         "name": "susfs-android13-5_15",
         "passthru": null,
@@ -664,17 +631,17 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "b7d8da20160bf6ad550226b40e2aad6bb48f415c",
-            "sha256": "sha256-t9pneRj+T8ndqvnhOimR5FhKr4xrBNZcs76XDx4a6p4=",
+            "rev": "340406d8d50f3404b008b004d0854b3ebba77fe7",
+            "sha256": "sha256-7lwqrognMr7ue2ECdKb9YmKtbwvg9gzSD2m1GB0rZrw=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
         },
-        "version": "b7d8da20160bf6ad550226b40e2aad6bb48f415c"
+        "version": "340406d8d50f3404b008b004d0854b3ebba77fe7"
     },
     "susfs-android15-6_6": {
-        "cargoLocks": null,
-        "date": "2025-07-26",
+        "cargoLock": null,
+        "date": "2026-02-02",
         "extract": null,
         "name": "susfs-android15-6_6",
         "passthru": null,
@@ -684,17 +651,17 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "1969c6e4a8982bf405df452b187992950680779c",
-            "sha256": "sha256-APjI95KaahNxoSBnruQewHRLBgAG/K5kD+5OK+RoBb8=",
+            "rev": "f55d86eb9780844bc5ab2d6314b2d3654a07ca74",
+            "sha256": "sha256-snhNlOaQ38nTO2wa+OhXhS16PglxMlFQrKaYjgJhNGQ=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
         },
-        "version": "1969c6e4a8982bf405df452b187992950680779c"
+        "version": "f55d86eb9780844bc5ab2d6314b2d3654a07ca74"
     },
     "wildplus-kernel-patches": {
-        "cargoLocks": null,
-        "date": "2025-07-28",
+        "cargoLock": null,
+        "date": "2026-01-30",
         "extract": null,
         "name": "wildplus-kernel-patches",
         "passthru": null,
@@ -706,53 +673,11 @@
             "name": null,
             "owner": "WildPlusKernel",
             "repo": "kernel_patches",
-            "rev": "6ebdb68e9343f2d111b79991853c5e36336f653c",
-            "sha256": "sha256-zCTg4pBQYgJfKgZaV81QBuQHwTEPDtJ0GiP+mqFQugw=",
+            "rev": "bb7d634f18e488f0bdda0619c95a54d6611027c0",
+            "sha256": "sha256-yUD+DfuFHSeDBkUL2d0UHPKSE04P9DgKQ9mpKyBG1bk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "6ebdb68e9343f2d111b79991853c5e36336f653c"
-    },
-    "ztc1997-android_gki_kernel_5-10_common": {
-        "cargoLocks": null,
-        "date": "2025-01-21",
-        "extract": null,
-        "name": "ztc1997-android_gki_kernel_5-10_common",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "ztc1997",
-            "repo": "android_gki_kernel_5.10_common",
-            "rev": "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce",
-            "sha256": "sha256-tZWaP+q8p7gCHBbZdcdzqIGT051eoTnR3gPWzGlp7+c=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce"
-    },
-    "ztc1997-android_gki_kernel_5-15_common": {
-        "cargoLocks": null,
-        "date": "2024-09-03",
-        "extract": null,
-        "name": "ztc1997-android_gki_kernel_5-15_common",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "ztc1997",
-            "repo": "android_gki_kernel_5.15_common",
-            "rev": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117",
-            "sha256": "sha256-uJNVK/kJgWCBUxHurKAedokKz2WtYaZ17Ib0yp7N9WI=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117"
+        "version": "bb7d634f18e488f0bdda0619c95a54d6611027c0"
     }
 }

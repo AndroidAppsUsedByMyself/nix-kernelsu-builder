@@ -6,8 +6,8 @@
   dockerTools,
 }:
 {
-  android_kernel_samsung_lykanlte = {
-    pname = "android_kernel_samsung_lykanlte";
+  AAAAA_android_kernel_samsung_lykanlte = {
+    pname = "AAAAA_android_kernel_samsung_lykanlte";
     version = "c7e14de69d0124bf1827325aba013ec7b25e5bcb";
     src = fetchFromGitHub {
       owner = "DataEraserC";
@@ -18,8 +18,8 @@
     };
     date = "2025-03-17";
   };
-  android_kernel_samsung_sm8250_TabS7 = {
-    pname = "android_kernel_samsung_sm8250_TabS7";
+  AAAAA_android_kernel_samsung_sm8250_TabS7 = {
+    pname = "AAAAA_android_kernel_samsung_sm8250_TabS7";
     version = "a06a3c6904d3a7c7fd4d09769d18a44053fcca7e";
     src = fetchFromGitHub {
       owner = "DataEraserC";
@@ -30,8 +30,8 @@
     };
     date = "2025-03-15";
   };
-  android_prebuilts_clang_kernel_linux-x86_clang-r416183b = {
-    pname = "android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
+  AAAAA_android_prebuilts_clang_kernel_linux-x86_clang-r416183b = {
+    pname = "AAAAA_android_prebuilts_clang_kernel_linux-x86_clang-r416183b";
     version = "54220fd601050b350b2af7adc913089ebf0e7aed";
     src = fetchFromGitHub {
       owner = "LineageOS";
@@ -41,6 +41,125 @@
       sha256 = "sha256-o9e5VRR6s2T9NDwDY8XuG2GYUKbZQF1s687gPlE0+RY=";
     };
     date = "2022-11-01";
+  };
+  AAAAA_kernelsu-rksu = {
+    pname = "AAAAA_kernelsu-rksu";
+    version = "v3.0.0-30-legacy";
+    src = fetchgit {
+      url = "https://github.com/rsuntk/KernelSU.git";
+      rev = "v3.0.0-30-legacy";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-+w7uaEBq4KACxSyOZ3AFEGMMx71t6EF1gRtXJJLNBqU=";
+    };
+  };
+  AAAAA_kernelsu-rksu-susfs = {
+    pname = "AAAAA_kernelsu-rksu-susfs";
+    version = "9b28326af4145974560122644e87fc9a021a2cce";
+    src = fetchFromGitHub {
+      owner = "rsuntk";
+      repo = "KernelSU";
+      rev = "9b28326af4145974560122644e87fc9a021a2cce";
+      fetchSubmodules = false;
+      sha256 = "sha256-3F1gtCBNq0cLOJeyUugku6vAbRczS3VyEhDEWcfi9l8=";
+    };
+    date = "2025-12-20";
+  };
+  AAAAA_lineage-nightly-pstar_bootImg = {
+    pname = "AAAAA_lineage-nightly-pstar_bootImg";
+    version = "20260202";
+    src = fetchurl {
+      url = "https://mirrorbits.lineageos.org/full/pstar/20260202/boot.img";
+      sha256 = "sha256-YooVXALvyAwDIj4u9ggNFQTefc25HacrNtzr233D9uU=";
+    };
+  };
+  AAAAA_linux-moto-pstar-lineageos-22_1 = {
+    pname = "AAAAA_linux-moto-pstar-lineageos-22_1";
+    version = "8a06559e98bb6685033d8771865bac00e9618cce";
+    src = fetchFromGitHub {
+      owner = "AndroidAppsUsedByMyself";
+      repo = "android_kernel_motorola_sm8250";
+      rev = "8a06559e98bb6685033d8771865bac00e9618cce";
+      fetchSubmodules = false;
+      sha256 = "sha256-yrjP65l1U5DwEdhyuu1AsJdfa78qXaqHqt53gBOvWEQ=";
+    };
+    date = "2025-03-15";
+  };
+  AAAAA_linux-xiaomi-gauguin-lineageos-22_1 = {
+    pname = "AAAAA_linux-xiaomi-gauguin-lineageos-22_1";
+    version = "8d52ff9a898e05001383345eb882a488be38f59a";
+    src = fetchFromGitHub {
+      owner = "LineageOS";
+      repo = "android_kernel_xiaomi_gauguin";
+      rev = "8d52ff9a898e05001383345eb882a488be38f59a";
+      fetchSubmodules = false;
+      sha256 = "sha256-/6K3MBk7R/YCgKq7aW0vxxcn0pDMETZOjHx20XvA/ig=";
+    };
+    date = "2025-04-02";
+  };
+  AAAAA_llvm-arm-toolchain-ship-10_0 = {
+    pname = "AAAAA_llvm-arm-toolchain-ship-10_0";
+    version = "c6aaf7026bd49a06e12ec0551285ffded148d186";
+    src = fetchFromGitHub {
+      owner = "proprietary-stuff";
+      repo = "llvm-arm-toolchain-ship-10.0";
+      rev = "c6aaf7026bd49a06e12ec0551285ffded148d186";
+      fetchSubmodules = false;
+      sha256 = "sha256-PwJj4yZv/FotEncyw5nZmw5upUz7gx35TdDCVkb0+xU=";
+    };
+    date = "2020-09-27";
+  };
+  AAAAA_los-pstar-kernel-patches = {
+    pname = "AAAAA_los-pstar-kernel-patches";
+    version = "9ae66533892ed7bb8262cf4a49fa986e14c3e0f8";
+    src = fetchFromGitHub {
+      owner = "AndroidAppsUsedByMyself";
+      repo = "kernel_patches";
+      rev = "9ae66533892ed7bb8262cf4a49fa986e14c3e0f8";
+      fetchSubmodules = false;
+      sha256 = "sha256-lDor+o7BKpYeWI16oX+I0Etwgi0bv0n2HuPWiGjChQA=";
+    };
+    date = "2025-04-11";
+  };
+  AAAAA_susfs-4_19 = {
+    pname = "AAAAA_susfs-4_19";
+    version = "001e69919c6271f690fd00b17e4c721c9e599152";
+    src = fetchgit {
+      url = "https://gitlab.com/simonpunk/susfs4ksu.git";
+      rev = "001e69919c6271f690fd00b17e4c721c9e599152";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-j4OIvgOE64nm67NyGsEnSRNygVVZaF5uhMx8ju+p6fQ=";
+    };
+    date = "2025-02-23";
+  };
+  AAAAA_ztc1997-android_gki_kernel_5-10_common = {
+    pname = "AAAAA_ztc1997-android_gki_kernel_5-10_common";
+    version = "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce";
+    src = fetchFromGitHub {
+      owner = "ztc1997";
+      repo = "android_gki_kernel_5.10_common";
+      rev = "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce";
+      fetchSubmodules = false;
+      sha256 = "sha256-tZWaP+q8p7gCHBbZdcdzqIGT051eoTnR3gPWzGlp7+c=";
+    };
+    date = "2025-01-21";
+  };
+  AAAAA_ztc1997-android_gki_kernel_5-15_common = {
+    pname = "AAAAA_ztc1997-android_gki_kernel_5-15_common";
+    version = "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117";
+    src = fetchFromGitHub {
+      owner = "ztc1997";
+      repo = "android_gki_kernel_5.15_common";
+      rev = "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117";
+      fetchSubmodules = false;
+      sha256 = "sha256-uJNVK/kJgWCBUxHurKAedokKz2WtYaZ17Ib0yp7N9WI=";
+    };
+    date = "2024-09-03";
   };
   anykernel-kernelsu = {
     pname = "anykernel-kernelsu";
@@ -56,27 +175,27 @@
   };
   anykernel-osm0sis = {
     pname = "anykernel-osm0sis";
-    version = "6f88dff82b786e879b255a8e1523547c4f62d031";
+    version = "71e5f4486984d52965c51b17b9ed2cc4ed16cab0";
     src = fetchFromGitHub {
       owner = "osm0sis";
       repo = "AnyKernel3";
-      rev = "6f88dff82b786e879b255a8e1523547c4f62d031";
+      rev = "71e5f4486984d52965c51b17b9ed2cc4ed16cab0";
       fetchSubmodules = false;
-      sha256 = "sha256-0BRHE7O3rcgLa6wg8GVPu9R0MDsA87D6jGbA7bHZ7N0=";
+      sha256 = "sha256-CxCjeyckxSBNHhCZhqgg6EF9DvhYK6XlsevVG5V2P/A=";
     };
-    date = "2025-05-18";
+    date = "2026-01-30";
   };
   baseband-guard = {
     pname = "baseband-guard";
-    version = "2f60136960effdf82cf71640ba019999fa14e655";
+    version = "8874cc86ab19291410e2f3492d80eb39849be4de";
     src = fetchFromGitHub {
       owner = "vc-teahouse";
       repo = "Baseband-guard";
-      rev = "2f60136960effdf82cf71640ba019999fa14e655";
+      rev = "8874cc86ab19291410e2f3492d80eb39849be4de";
       fetchSubmodules = false;
-      sha256 = "sha256-2hWoYghRcaJFbfYTWas09XcIQVYtklrRgpq6Yd9CB8U=";
+      sha256 = "sha256-ANqhodb/kSkOb+KPvRElHJeUir//v9zeqCBr9P+GyRs=";
     };
-    date = "2026-01-01";
+    date = "2026-01-11";
   };
   gcc-aarch64-linux-android = {
     pname = "gcc-aarch64-linux-android";
@@ -104,64 +223,15 @@
   };
   kernelsu-next = {
     pname = "kernelsu-next";
-    version = "v1.1.1";
+    version = "v3.0.1";
     src = fetchgit {
       url = "https://github.com/rifsxd/KernelSU-Next.git";
-      rev = "v1.1.1";
+      rev = "v3.0.1";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-h99YriWugjS4AuAJzMFm2AN+1Dt1BigooKUYMzVCXL4=";
-    };
-  };
-  kernelsu-next-revision-code = {
-    pname = "kernelsu-next-revision-code";
-    version = "12851";
-    src = fetchurl {
-      url = "https://example.com";
-      sha256 = "sha256-b1Y1A182rVALT8S7eBa7cu9VlOG8rkT6B0xemI/EwP4=";
-    };
-  };
-  kernelsu-rksu = {
-    pname = "kernelsu-rksu";
-    version = "v1.0.5-10-legacy";
-    src = fetchgit {
-      url = "https://github.com/rsuntk/KernelSU.git";
-      rev = "v1.0.5-10-legacy";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-O9mwIIxRo0P2ijxOfC68gVT1zNpLzJyBOC+E6G8jnLg=";
-    };
-  };
-  kernelsu-rksu-revision-code = {
-    pname = "kernelsu-rksu-revision-code";
-    version = "12164";
-    src = fetchurl {
-      url = "https://example.com";
-      sha256 = "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=";
-    };
-  };
-  kernelsu-rksu-susfs = {
-    pname = "kernelsu-rksu-susfs";
-    version = "e96aca34ffca2c78c2fdf8537d9c466887f358b0";
-    src = fetchFromGitHub {
-      owner = "rsuntk";
-      repo = "KernelSU";
-      rev = "e96aca34ffca2c78c2fdf8537d9c466887f358b0";
-      fetchSubmodules = false;
-      sha256 = "sha256-WcLiF57fiQGUg/nEL79J7YTK6LdGrmlxIJ3O9pQcJ38=";
-    };
-    date = "2025-03-15";
-  };
-  kernelsu-rksu-susfs-revision-code = {
-    pname = "kernelsu-rksu-susfs-revision-code";
-    version = "12164";
-    src = fetchurl {
-      url = "https://example.com";
-      sha256 = "sha256-6o+sfGX7WJsNU1YPUlH3T56bJDR43Laz6nm142RJyNk=";
+      sha256 = "sha256-1XS7auSOiIT8O3Aa+tGW8eQoCyAoaLgSCIxutuXKBgs=";
     };
   };
   kernelsu-stable = {
@@ -177,22 +247,6 @@
       sha256 = "sha256-pvaL6KEB7X3s8zyLQSPhBhoXaNdVDthH7HnAZRE9JYk=";
     };
   };
-  kernelsu-stable-revision-code = {
-    pname = "kernelsu-stable-revision-code";
-    version = "11872";
-    src = fetchurl {
-      url = "https://example.com";
-      sha256 = "sha256-b1Y1A182rVALT8S7eBa7cu9VlOG8rkT6B0xemI/EwP4=";
-    };
-  };
-  lineage-nightly-pstar_bootImg = {
-    pname = "lineage-nightly-pstar_bootImg";
-    version = "20250728";
-    src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20250728/boot.img";
-      sha256 = "sha256-6T4mYQyxzaEn7wXVaXMD7X7bAjbiSCmQkcsRj8JMlTM=";
-    };
-  };
   linux-amazon-karnak = {
     pname = "linux-amazon-karnak";
     version = "e22c713c7c4f0c8d08267f6bba98b8c4cde8310f";
@@ -204,18 +258,6 @@
       sha256 = "sha256-viqlQBPd2SuiAphFKiwjtckC3gDTGkbLv2dgZKMP3Oc=";
     };
     date = "2023-10-09";
-  };
-  linux-moto-pstar-lineageos-22_1 = {
-    pname = "linux-moto-pstar-lineageos-22_1";
-    version = "8a06559e98bb6685033d8771865bac00e9618cce";
-    src = fetchFromGitHub {
-      owner = "AndroidAppsUsedByMyself";
-      repo = "android_kernel_motorola_sm8250";
-      rev = "8a06559e98bb6685033d8771865bac00e9618cce";
-      fetchSubmodules = false;
-      sha256 = "sha256-yrjP65l1U5DwEdhyuu1AsJdfa78qXaqHqt53gBOvWEQ=";
-    };
-    date = "2025-03-15";
   };
   linux-moto-rtwo-lineageos-21 = {
     pname = "linux-moto-rtwo-lineageos-21";
@@ -265,42 +307,6 @@
     };
     date = "2024-12-26";
   };
-  linux-xiaomi-gauguin-lineageos-22_1 = {
-    pname = "linux-xiaomi-gauguin-lineageos-22_1";
-    version = "8d52ff9a898e05001383345eb882a488be38f59a";
-    src = fetchFromGitHub {
-      owner = "LineageOS";
-      repo = "android_kernel_xiaomi_gauguin";
-      rev = "8d52ff9a898e05001383345eb882a488be38f59a";
-      fetchSubmodules = false;
-      sha256 = "sha256-/6K3MBk7R/YCgKq7aW0vxxcn0pDMETZOjHx20XvA/ig=";
-    };
-    date = "2025-04-02";
-  };
-  llvm-arm-toolchain-ship-10_0 = {
-    pname = "llvm-arm-toolchain-ship-10_0";
-    version = "c6aaf7026bd49a06e12ec0551285ffded148d186";
-    src = fetchFromGitHub {
-      owner = "proprietary-stuff";
-      repo = "llvm-arm-toolchain-ship-10.0";
-      rev = "c6aaf7026bd49a06e12ec0551285ffded148d186";
-      fetchSubmodules = false;
-      sha256 = "sha256-PwJj4yZv/FotEncyw5nZmw5upUz7gx35TdDCVkb0+xU=";
-    };
-    date = "2020-09-27";
-  };
-  los-pstar-kernel-patches = {
-    pname = "los-pstar-kernel-patches";
-    version = "9ae66533892ed7bb8262cf4a49fa986e14c3e0f8";
-    src = fetchFromGitHub {
-      owner = "AndroidAppsUsedByMyself";
-      repo = "kernel_patches";
-      rev = "9ae66533892ed7bb8262cf4a49fa986e14c3e0f8";
-      fetchSubmodules = false;
-      sha256 = "sha256-lDor+o7BKpYeWI16oX+I0Etwgi0bv0n2HuPWiGjChQA=";
-    };
-    date = "2025-04-11";
-  };
   oneplus-13-sched-ext = {
     pname = "oneplus-13-sched-ext";
     version = "7ab1d04d5cb622d6c32c932add617803074ec5a7";
@@ -315,136 +321,90 @@
   };
   sukisu = {
     pname = "sukisu";
-    version = "7c4d8da7d1144cb9072ba7a1d4779b099998f39c";
+    version = "a61b5b9657a561732d79e6339408bc1bd585c50d";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "7c4d8da7d1144cb9072ba7a1d4779b099998f39c";
+      rev = "a61b5b9657a561732d79e6339408bc1bd585c50d";
       fetchSubmodules = false;
-      sha256 = "sha256-nfnzY7x8O7NGh3QcFWEXe55X/N2LaypOEbbvSQ1govE=";
+      sha256 = "sha256-yQgJGUTIWz0cHhC9Et2l2jIWz8sKfc0+15ibbkurIY8=";
     };
-    date = "2025-07-31";
+    date = "2026-01-31";
   };
   sukisu-nongki = {
     pname = "sukisu-nongki";
-    version = "51c0ba02e1c034ce3d782c280580259f1c4036bc";
+    version = "a61b5b9657a561732d79e6339408bc1bd585c50d";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "51c0ba02e1c034ce3d782c280580259f1c4036bc";
+      rev = "a61b5b9657a561732d79e6339408bc1bd585c50d";
       fetchSubmodules = false;
-      sha256 = "sha256-MNRgItAm85R2I98LPSKT7oCzfr2nzBjDA+3yu+VO6DU=";
+      sha256 = "sha256-yQgJGUTIWz0cHhC9Et2l2jIWz8sKfc0+15ibbkurIY8=";
     };
-    date = "2025-07-29";
+    date = "2026-01-31";
   };
   sukisu-patch = {
     pname = "sukisu-patch";
-    version = "83aa64b7548890bb1f2eff6c990c03a1802df27b";
+    version = "4e61456f26da6ffdab6d2bc68baa4ad66e242695";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU_patch";
-      rev = "83aa64b7548890bb1f2eff6c990c03a1802df27b";
+      rev = "4e61456f26da6ffdab6d2bc68baa4ad66e242695";
       fetchSubmodules = false;
-      sha256 = "sha256-/mE7xcYzmeUu6FIcnLeJ6rPzxVlTd+9DZZkL5gQC1q4=";
+      sha256 = "sha256-ArRH2JkS/RGA5bMPWtfeczOATTGp/R4+Rs3du3dpf0o=";
     };
-    date = "2025-11-12";
-  };
-  sukisu-revision-code = {
-    pname = "sukisu-revision-code";
-    version = "40119";
-    src = fetchurl {
-      url = "https://example.com";
-      sha256 = "sha256-b1Y1A182rVALT8S7eBa7cu9VlOG8rkT6B0xemI/EwP4=";
-    };
+    date = "2026-01-30";
   };
   sukisu-susfs = {
     pname = "sukisu-susfs";
-    version = "323a8d4b39ec92ea82d10ffb740d0d9492c000d3";
+    version = "a61b5b9657a561732d79e6339408bc1bd585c50d";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "323a8d4b39ec92ea82d10ffb740d0d9492c000d3";
+      rev = "a61b5b9657a561732d79e6339408bc1bd585c50d";
       fetchSubmodules = false;
-      sha256 = "sha256-+4dLJX3ma/92zCiz3u045ohRpEtVgDTL9Ipf7sAZWFw=";
+      sha256 = "sha256-yQgJGUTIWz0cHhC9Et2l2jIWz8sKfc0+15ibbkurIY8=";
     };
-    date = "2025-07-29";
-  };
-  susfs-4_19 = {
-    pname = "susfs-4_19";
-    version = "001e69919c6271f690fd00b17e4c721c9e599152";
-    src = fetchgit {
-      url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "001e69919c6271f690fd00b17e4c721c9e599152";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-j4OIvgOE64nm67NyGsEnSRNygVVZaF5uhMx8ju+p6fQ=";
-    };
-    date = "2025-02-23";
+    date = "2026-01-31";
   };
   susfs-android13-5_15 = {
     pname = "susfs-android13-5_15";
-    version = "b7d8da20160bf6ad550226b40e2aad6bb48f415c";
+    version = "340406d8d50f3404b008b004d0854b3ebba77fe7";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "b7d8da20160bf6ad550226b40e2aad6bb48f415c";
+      rev = "340406d8d50f3404b008b004d0854b3ebba77fe7";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-t9pneRj+T8ndqvnhOimR5FhKr4xrBNZcs76XDx4a6p4=";
+      sha256 = "sha256-7lwqrognMr7ue2ECdKb9YmKtbwvg9gzSD2m1GB0rZrw=";
     };
-    date = "2025-07-26";
+    date = "2026-02-02";
   };
   susfs-android15-6_6 = {
     pname = "susfs-android15-6_6";
-    version = "1969c6e4a8982bf405df452b187992950680779c";
+    version = "f55d86eb9780844bc5ab2d6314b2d3654a07ca74";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "1969c6e4a8982bf405df452b187992950680779c";
+      rev = "f55d86eb9780844bc5ab2d6314b2d3654a07ca74";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-APjI95KaahNxoSBnruQewHRLBgAG/K5kD+5OK+RoBb8=";
+      sha256 = "sha256-snhNlOaQ38nTO2wa+OhXhS16PglxMlFQrKaYjgJhNGQ=";
     };
-    date = "2025-07-26";
+    date = "2026-02-02";
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
-    version = "6ebdb68e9343f2d111b79991853c5e36336f653c";
+    version = "bb7d634f18e488f0bdda0619c95a54d6611027c0";
     src = fetchFromGitHub {
       owner = "WildPlusKernel";
       repo = "kernel_patches";
-      rev = "6ebdb68e9343f2d111b79991853c5e36336f653c";
+      rev = "bb7d634f18e488f0bdda0619c95a54d6611027c0";
       fetchSubmodules = false;
-      sha256 = "sha256-zCTg4pBQYgJfKgZaV81QBuQHwTEPDtJ0GiP+mqFQugw=";
+      sha256 = "sha256-yUD+DfuFHSeDBkUL2d0UHPKSE04P9DgKQ9mpKyBG1bk=";
     };
-    date = "2025-07-28";
-  };
-  ztc1997-android_gki_kernel_5-10_common = {
-    pname = "ztc1997-android_gki_kernel_5-10_common";
-    version = "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce";
-    src = fetchFromGitHub {
-      owner = "ztc1997";
-      repo = "android_gki_kernel_5.10_common";
-      rev = "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce";
-      fetchSubmodules = false;
-      sha256 = "sha256-tZWaP+q8p7gCHBbZdcdzqIGT051eoTnR3gPWzGlp7+c=";
-    };
-    date = "2025-01-21";
-  };
-  ztc1997-android_gki_kernel_5-15_common = {
-    pname = "ztc1997-android_gki_kernel_5-15_common";
-    version = "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117";
-    src = fetchFromGitHub {
-      owner = "ztc1997";
-      repo = "android_gki_kernel_5.15_common";
-      rev = "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117";
-      fetchSubmodules = false;
-      sha256 = "sha256-uJNVK/kJgWCBUxHurKAedokKz2WtYaZ17Ib0yp7N9WI=";
-    };
-    date = "2024-09-03";
+    date = "2026-01-30";
   };
 }
