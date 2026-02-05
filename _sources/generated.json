@@ -148,6 +148,48 @@
         },
         "version": "20260202"
     },
+    "AAAAA_linux-moto-pstar-lineageos-22_1": {
+        "cargoLock": null,
+        "date": "2025-03-15",
+        "extract": null,
+        "name": "AAAAA_linux-moto-pstar-lineageos-22_1",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "AndroidAppsUsedByMyself",
+            "repo": "android_kernel_motorola_sm8250",
+            "rev": "8a06559e98bb6685033d8771865bac00e9618cce",
+            "sha256": "sha256-yrjP65l1U5DwEdhyuu1AsJdfa78qXaqHqt53gBOvWEQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "8a06559e98bb6685033d8771865bac00e9618cce"
+    },
+    "AAAAA_linux-xiaomi-gauguin-lineageos-22_1": {
+        "cargoLock": null,
+        "date": "2025-04-02",
+        "extract": null,
+        "name": "AAAAA_linux-xiaomi-gauguin-lineageos-22_1",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "LineageOS",
+            "repo": "android_kernel_xiaomi_gauguin",
+            "rev": "8d52ff9a898e05001383345eb882a488be38f59a",
+            "sha256": "sha256-/6K3MBk7R/YCgKq7aW0vxxcn0pDMETZOjHx20XvA/ig=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "8d52ff9a898e05001383345eb882a488be38f59a"
+    },
     "AAAAA_los-pstar-kernel-patches": {
         "cargoLock": null,
         "date": "2025-04-11",
@@ -188,6 +230,48 @@
             "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
         },
         "version": "001e69919c6271f690fd00b17e4c721c9e599152"
+    },
+    "AAAAA_ztc1997-android_gki_kernel_5-10_common": {
+        "cargoLock": null,
+        "date": "2025-01-21",
+        "extract": null,
+        "name": "AAAAA_ztc1997-android_gki_kernel_5-10_common",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ztc1997",
+            "repo": "android_gki_kernel_5.10_common",
+            "rev": "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce",
+            "sha256": "sha256-tZWaP+q8p7gCHBbZdcdzqIGT051eoTnR3gPWzGlp7+c=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce"
+    },
+    "AAAAA_ztc1997-android_gki_kernel_5-15_common": {
+        "cargoLock": null,
+        "date": "2024-09-03",
+        "extract": null,
+        "name": "AAAAA_ztc1997-android_gki_kernel_5-15_common",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ztc1997",
+            "repo": "android_gki_kernel_5.15_common",
+            "rev": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117",
+            "sha256": "sha256-uJNVK/kJgWCBUxHurKAedokKz2WtYaZ17Ib0yp7N9WI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117"
     },
     "anykernel-kernelsu": {
         "cargoLock": null,
@@ -364,6 +448,27 @@
         },
         "version": "11872"
     },
+    "linux-amazon-karnak": {
+        "cargoLock": null,
+        "date": "2023-10-09",
+        "extract": null,
+        "name": "linux-amazon-karnak",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mt8163",
+            "repo": "android_kernel_amazon_karnak_4.9",
+            "rev": "e22c713c7c4f0c8d08267f6bba98b8c4cde8310f",
+            "sha256": "sha256-viqlQBPd2SuiAphFKiwjtckC3gDTGkbLv2dgZKMP3Oc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "e22c713c7c4f0c8d08267f6bba98b8c4cde8310f"
+    },
     "linux-moto-rtwo-lineageos-21": {
         "cargoLock": null,
         "date": "2024-12-21",
@@ -384,6 +489,48 @@
             "type": "github"
         },
         "version": "1bdeb4f5c8d2b98ef5f2bedaa5d704032dffd676"
+    },
+    "linux-moto-rtwo-lineageos-22_1": {
+        "cargoLock": null,
+        "date": "2025-03-28",
+        "extract": null,
+        "name": "linux-moto-rtwo-lineageos-22_1",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "LineageOS",
+            "repo": "android_kernel_motorola_sm8550",
+            "rev": "e12cc3a36c10596aced0e84a0e08072161c45f63",
+            "sha256": "sha256-KZSIus0Ws7FM4O9zyxmdPvGcYsXv/rubwnOuwgo7yHw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "e12cc3a36c10596aced0e84a0e08072161c45f63"
+    },
+    "linux-oneplus-13": {
+        "cargoLock": null,
+        "date": "2025-08-30",
+        "extract": null,
+        "name": "linux-oneplus-13",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "OnePlusOSS",
+            "repo": "android_kernel_common_oneplus_sm8750",
+            "rev": "9920459dfb0080dd8a81c41d95701483857f804a",
+            "sha256": "sha256-EDX16/0QWSdC70sAyuNFTdQ9sNreXdvJRAmZvBLsXq8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "9920459dfb0080dd8a81c41d95701483857f804a"
     },
     "oneplus-13-sched-ext": {
         "cargoLock": null,

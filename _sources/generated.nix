@@ -91,6 +91,30 @@
       sha256 = "sha256-YooVXALvyAwDIj4u9ggNFQTefc25HacrNtzr233D9uU=";
     };
   };
+  AAAAA_linux-moto-pstar-lineageos-22_1 = {
+    pname = "AAAAA_linux-moto-pstar-lineageos-22_1";
+    version = "8a06559e98bb6685033d8771865bac00e9618cce";
+    src = fetchFromGitHub {
+      owner = "AndroidAppsUsedByMyself";
+      repo = "android_kernel_motorola_sm8250";
+      rev = "8a06559e98bb6685033d8771865bac00e9618cce";
+      fetchSubmodules = false;
+      sha256 = "sha256-yrjP65l1U5DwEdhyuu1AsJdfa78qXaqHqt53gBOvWEQ=";
+    };
+    date = "2025-03-15";
+  };
+  AAAAA_linux-xiaomi-gauguin-lineageos-22_1 = {
+    pname = "AAAAA_linux-xiaomi-gauguin-lineageos-22_1";
+    version = "8d52ff9a898e05001383345eb882a488be38f59a";
+    src = fetchFromGitHub {
+      owner = "LineageOS";
+      repo = "android_kernel_xiaomi_gauguin";
+      rev = "8d52ff9a898e05001383345eb882a488be38f59a";
+      fetchSubmodules = false;
+      sha256 = "sha256-/6K3MBk7R/YCgKq7aW0vxxcn0pDMETZOjHx20XvA/ig=";
+    };
+    date = "2025-04-02";
+  };
   AAAAA_los-pstar-kernel-patches = {
     pname = "AAAAA_los-pstar-kernel-patches";
     version = "9ae66533892ed7bb8262cf4a49fa986e14c3e0f8";
@@ -116,6 +140,30 @@
       sha256 = "sha256-j4OIvgOE64nm67NyGsEnSRNygVVZaF5uhMx8ju+p6fQ=";
     };
     date = "2025-02-23";
+  };
+  AAAAA_ztc1997-android_gki_kernel_5-10_common = {
+    pname = "AAAAA_ztc1997-android_gki_kernel_5-10_common";
+    version = "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce";
+    src = fetchFromGitHub {
+      owner = "ztc1997";
+      repo = "android_gki_kernel_5.10_common";
+      rev = "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce";
+      fetchSubmodules = false;
+      sha256 = "sha256-tZWaP+q8p7gCHBbZdcdzqIGT051eoTnR3gPWzGlp7+c=";
+    };
+    date = "2025-01-21";
+  };
+  AAAAA_ztc1997-android_gki_kernel_5-15_common = {
+    pname = "AAAAA_ztc1997-android_gki_kernel_5-15_common";
+    version = "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117";
+    src = fetchFromGitHub {
+      owner = "ztc1997";
+      repo = "android_gki_kernel_5.15_common";
+      rev = "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117";
+      fetchSubmodules = false;
+      sha256 = "sha256-uJNVK/kJgWCBUxHurKAedokKz2WtYaZ17Ib0yp7N9WI=";
+    };
+    date = "2024-09-03";
   };
   anykernel-kernelsu = {
     pname = "anykernel-kernelsu";
@@ -219,6 +267,18 @@
       sha256 = "sha256-b1Y1A182rVALT8S7eBa7cu9VlOG8rkT6B0xemI/EwP4=";
     };
   };
+  linux-amazon-karnak = {
+    pname = "linux-amazon-karnak";
+    version = "e22c713c7c4f0c8d08267f6bba98b8c4cde8310f";
+    src = fetchFromGitHub {
+      owner = "mt8163";
+      repo = "android_kernel_amazon_karnak_4.9";
+      rev = "e22c713c7c4f0c8d08267f6bba98b8c4cde8310f";
+      fetchSubmodules = false;
+      sha256 = "sha256-viqlQBPd2SuiAphFKiwjtckC3gDTGkbLv2dgZKMP3Oc=";
+    };
+    date = "2023-10-09";
+  };
   linux-moto-rtwo-lineageos-21 = {
     pname = "linux-moto-rtwo-lineageos-21";
     version = "1bdeb4f5c8d2b98ef5f2bedaa5d704032dffd676";
@@ -230,6 +290,30 @@
       sha256 = "sha256-ZK/DH5N5LdkLe48cANESjw1x74aXoZLFoMAwEDvzEk4=";
     };
     date = "2024-12-21";
+  };
+  linux-moto-rtwo-lineageos-22_1 = {
+    pname = "linux-moto-rtwo-lineageos-22_1";
+    version = "e12cc3a36c10596aced0e84a0e08072161c45f63";
+    src = fetchFromGitHub {
+      owner = "LineageOS";
+      repo = "android_kernel_motorola_sm8550";
+      rev = "e12cc3a36c10596aced0e84a0e08072161c45f63";
+      fetchSubmodules = false;
+      sha256 = "sha256-KZSIus0Ws7FM4O9zyxmdPvGcYsXv/rubwnOuwgo7yHw=";
+    };
+    date = "2025-03-28";
+  };
+  linux-oneplus-13 = {
+    pname = "linux-oneplus-13";
+    version = "9920459dfb0080dd8a81c41d95701483857f804a";
+    src = fetchFromGitHub {
+      owner = "OnePlusOSS";
+      repo = "android_kernel_common_oneplus_sm8750";
+      rev = "9920459dfb0080dd8a81c41d95701483857f804a";
+      fetchSubmodules = false;
+      sha256 = "sha256-EDX16/0QWSdC70sAyuNFTdQ9sNreXdvJRAmZvBLsXq8=";
+    };
+    date = "2025-08-30";
   };
   oneplus-13-sched-ext = {
     pname = "oneplus-13-sched-ext";
