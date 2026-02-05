@@ -39,10 +39,6 @@ stdenv.mkDerivation {
     cp -r ${kernelSU.src} ${kernelSU.subdirectory}
     chmod -R +w ${kernelSU.subdirectory}
   '')
-  + (lib.optionalString (susfs.enable && susfs.kernelPatch != null) ''
-    echo "applying patch ${susfs.kernelPatch}"
-    patch -p1 < ${susfs.kernelPatch}
-  '')
   + (lib.optionalString (kernelSU.enable && susfs.enable) ''
     cp -r ${susfs.src}/kernel_patches/fs/* fs/
     cp -r ${susfs.src}/kernel_patches/include/linux/* include/linux/
