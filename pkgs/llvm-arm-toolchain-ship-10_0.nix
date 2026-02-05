@@ -14,7 +14,7 @@ let
   sources = callPackage ../_sources/generated.nix { };
 in
 stdenv.mkDerivation {
-  inherit (sources.llvm-arm-toolchain-ship-10_0) pname version src;
+  inherit (sources.AAAAA_llvm-arm-toolchain-ship-10_0) pname version src;
 
   nativeBuildInputs = [ autoPatchelfHook ];
   autoPatchelfIgnoreMissingDeps = [
