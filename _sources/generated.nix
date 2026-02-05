@@ -55,6 +55,14 @@
       sha256 = "sha256-+w7uaEBq4KACxSyOZ3AFEGMMx71t6EF1gRtXJJLNBqU=";
     };
   };
+  AAAAA_kernelsu-rksu-revision-code = {
+    pname = "AAAAA_kernelsu-rksu-revision-code";
+    version = "32334";
+    src = fetchurl {
+      url = "https://example.com";
+      sha256 = "sha256-b1Y1A182rVALT8S7eBa7cu9VlOG8rkT6B0xemI/EwP4=";
+    };
+  };
   AAAAA_kernelsu-rksu-susfs = {
     pname = "AAAAA_kernelsu-rksu-susfs";
     version = "9b28326af4145974560122644e87fc9a021a2cce";
@@ -67,6 +75,14 @@
     };
     date = "2025-12-20";
   };
+  AAAAA_kernelsu-rksu-susfs-revision-code = {
+    pname = "AAAAA_kernelsu-rksu-susfs-revision-code";
+    version = "32334";
+    src = fetchurl {
+      url = "https://example.com";
+      sha256 = "sha256-b1Y1A182rVALT8S7eBa7cu9VlOG8rkT6B0xemI/EwP4=";
+    };
+  };
   AAAAA_lineage-nightly-pstar_bootImg = {
     pname = "AAAAA_lineage-nightly-pstar_bootImg";
     version = "20260202";
@@ -74,42 +90,6 @@
       url = "https://mirrorbits.lineageos.org/full/pstar/20260202/boot.img";
       sha256 = "sha256-YooVXALvyAwDIj4u9ggNFQTefc25HacrNtzr233D9uU=";
     };
-  };
-  AAAAA_linux-moto-pstar-lineageos-22_1 = {
-    pname = "AAAAA_linux-moto-pstar-lineageos-22_1";
-    version = "8a06559e98bb6685033d8771865bac00e9618cce";
-    src = fetchFromGitHub {
-      owner = "AndroidAppsUsedByMyself";
-      repo = "android_kernel_motorola_sm8250";
-      rev = "8a06559e98bb6685033d8771865bac00e9618cce";
-      fetchSubmodules = false;
-      sha256 = "sha256-yrjP65l1U5DwEdhyuu1AsJdfa78qXaqHqt53gBOvWEQ=";
-    };
-    date = "2025-03-15";
-  };
-  AAAAA_linux-xiaomi-gauguin-lineageos-22_1 = {
-    pname = "AAAAA_linux-xiaomi-gauguin-lineageos-22_1";
-    version = "8d52ff9a898e05001383345eb882a488be38f59a";
-    src = fetchFromGitHub {
-      owner = "LineageOS";
-      repo = "android_kernel_xiaomi_gauguin";
-      rev = "8d52ff9a898e05001383345eb882a488be38f59a";
-      fetchSubmodules = false;
-      sha256 = "sha256-/6K3MBk7R/YCgKq7aW0vxxcn0pDMETZOjHx20XvA/ig=";
-    };
-    date = "2025-04-02";
-  };
-  AAAAA_llvm-arm-toolchain-ship-10_0 = {
-    pname = "AAAAA_llvm-arm-toolchain-ship-10_0";
-    version = "c6aaf7026bd49a06e12ec0551285ffded148d186";
-    src = fetchFromGitHub {
-      owner = "proprietary-stuff";
-      repo = "llvm-arm-toolchain-ship-10.0";
-      rev = "c6aaf7026bd49a06e12ec0551285ffded148d186";
-      fetchSubmodules = false;
-      sha256 = "sha256-PwJj4yZv/FotEncyw5nZmw5upUz7gx35TdDCVkb0+xU=";
-    };
-    date = "2020-09-27";
   };
   AAAAA_los-pstar-kernel-patches = {
     pname = "AAAAA_los-pstar-kernel-patches";
@@ -136,30 +116,6 @@
       sha256 = "sha256-j4OIvgOE64nm67NyGsEnSRNygVVZaF5uhMx8ju+p6fQ=";
     };
     date = "2025-02-23";
-  };
-  AAAAA_ztc1997-android_gki_kernel_5-10_common = {
-    pname = "AAAAA_ztc1997-android_gki_kernel_5-10_common";
-    version = "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce";
-    src = fetchFromGitHub {
-      owner = "ztc1997";
-      repo = "android_gki_kernel_5.10_common";
-      rev = "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce";
-      fetchSubmodules = false;
-      sha256 = "sha256-tZWaP+q8p7gCHBbZdcdzqIGT051eoTnR3gPWzGlp7+c=";
-    };
-    date = "2025-01-21";
-  };
-  AAAAA_ztc1997-android_gki_kernel_5-15_common = {
-    pname = "AAAAA_ztc1997-android_gki_kernel_5-15_common";
-    version = "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117";
-    src = fetchFromGitHub {
-      owner = "ztc1997";
-      repo = "android_gki_kernel_5.15_common";
-      rev = "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117";
-      fetchSubmodules = false;
-      sha256 = "sha256-uJNVK/kJgWCBUxHurKAedokKz2WtYaZ17Ib0yp7N9WI=";
-    };
-    date = "2024-09-03";
   };
   anykernel-kernelsu = {
     pname = "anykernel-kernelsu";
@@ -234,6 +190,14 @@
       sha256 = "sha256-1XS7auSOiIT8O3Aa+tGW8eQoCyAoaLgSCIxutuXKBgs=";
     };
   };
+  kernelsu-next-revision-code = {
+    pname = "kernelsu-next-revision-code";
+    version = "32967";
+    src = fetchurl {
+      url = "https://example.com";
+      sha256 = "sha256-b1Y1A182rVALT8S7eBa7cu9VlOG8rkT6B0xemI/EwP4=";
+    };
+  };
   kernelsu-stable = {
     pname = "kernelsu-stable";
     version = "v0.9.5";
@@ -247,17 +211,13 @@
       sha256 = "sha256-pvaL6KEB7X3s8zyLQSPhBhoXaNdVDthH7HnAZRE9JYk=";
     };
   };
-  linux-amazon-karnak = {
-    pname = "linux-amazon-karnak";
-    version = "e22c713c7c4f0c8d08267f6bba98b8c4cde8310f";
-    src = fetchFromGitHub {
-      owner = "mt8163";
-      repo = "android_kernel_amazon_karnak_4.9";
-      rev = "e22c713c7c4f0c8d08267f6bba98b8c4cde8310f";
-      fetchSubmodules = false;
-      sha256 = "sha256-viqlQBPd2SuiAphFKiwjtckC3gDTGkbLv2dgZKMP3Oc=";
+  kernelsu-stable-revision-code = {
+    pname = "kernelsu-stable-revision-code";
+    version = "11872";
+    src = fetchurl {
+      url = "https://example.com";
+      sha256 = "sha256-b1Y1A182rVALT8S7eBa7cu9VlOG8rkT6B0xemI/EwP4=";
     };
-    date = "2023-10-09";
   };
   linux-moto-rtwo-lineageos-21 = {
     pname = "linux-moto-rtwo-lineageos-21";
@@ -270,42 +230,6 @@
       sha256 = "sha256-ZK/DH5N5LdkLe48cANESjw1x74aXoZLFoMAwEDvzEk4=";
     };
     date = "2024-12-21";
-  };
-  linux-moto-rtwo-lineageos-22_1 = {
-    pname = "linux-moto-rtwo-lineageos-22_1";
-    version = "e12cc3a36c10596aced0e84a0e08072161c45f63";
-    src = fetchFromGitHub {
-      owner = "LineageOS";
-      repo = "android_kernel_motorola_sm8550";
-      rev = "e12cc3a36c10596aced0e84a0e08072161c45f63";
-      fetchSubmodules = false;
-      sha256 = "sha256-KZSIus0Ws7FM4O9zyxmdPvGcYsXv/rubwnOuwgo7yHw=";
-    };
-    date = "2025-03-28";
-  };
-  linux-oneplus-13 = {
-    pname = "linux-oneplus-13";
-    version = "9920459dfb0080dd8a81c41d95701483857f804a";
-    src = fetchFromGitHub {
-      owner = "OnePlusOSS";
-      repo = "android_kernel_common_oneplus_sm8750";
-      rev = "9920459dfb0080dd8a81c41d95701483857f804a";
-      fetchSubmodules = false;
-      sha256 = "sha256-EDX16/0QWSdC70sAyuNFTdQ9sNreXdvJRAmZvBLsXq8=";
-    };
-    date = "2025-08-30";
-  };
-  linux-oneplus-8t-blu-spark = {
-    pname = "linux-oneplus-8t-blu-spark";
-    version = "64c109e3f3ba97fa7aed730ab7b4238b91df028b";
-    src = fetchFromGitHub {
-      owner = "engstk";
-      repo = "op8";
-      rev = "64c109e3f3ba97fa7aed730ab7b4238b91df028b";
-      fetchSubmodules = false;
-      sha256 = "sha256-KWLtY7KWhHmk6LVYpvIz6XT93+yjteex/250crk9Lxw=";
-    };
-    date = "2024-12-26";
   };
   oneplus-13-sched-ext = {
     pname = "oneplus-13-sched-ext";
@@ -355,6 +279,14 @@
     };
     date = "2026-01-30";
   };
+  sukisu-revision-code = {
+    pname = "sukisu-revision-code";
+    version = "40496";
+    src = fetchurl {
+      url = "https://example.com";
+      sha256 = "sha256-b1Y1A182rVALT8S7eBa7cu9VlOG8rkT6B0xemI/EwP4=";
+    };
+  };
   sukisu-susfs = {
     pname = "sukisu-susfs";
     version = "6468d1e6adc339b99e40e5bf9685b5318750556a";
@@ -369,31 +301,31 @@
   };
   susfs-android13-5_15 = {
     pname = "susfs-android13-5_15";
-    version = "72e077827650497e1f3564d0bc92f2aa2b0adecf";
+    version = "a527c6914902e364b335c33a4fe3b1d832f58724";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "72e077827650497e1f3564d0bc92f2aa2b0adecf";
+      rev = "a527c6914902e364b335c33a4fe3b1d832f58724";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-3gZMoYH3hFcvGd2Cvb8rZTOSFBKigg6u5zoGpaNjy7k=";
+      sha256 = "sha256-hrXn+feZPNKvO78DAXU7k1eUx5+wphxwUIsxy5fV7a8=";
     };
-    date = "2026-02-04";
+    date = "2026-02-05";
   };
   susfs-android15-6_6 = {
     pname = "susfs-android15-6_6";
-    version = "500be297c4f8c31a236de268811407d4471b3e63";
+    version = "60d404af9d5a1d009a6b8fe8224d612609f31d46";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "500be297c4f8c31a236de268811407d4471b3e63";
+      rev = "60d404af9d5a1d009a6b8fe8224d612609f31d46";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-VRHlYVYjfkKUQu7GRuD32qbUzZR1fXQhu1MiqcpwGvA=";
+      sha256 = "sha256-4QgQEDwGve0PbeZtGUi9WP4eFx/HBVkivaj/Qt5AwLw=";
     };
-    date = "2026-02-04";
+    date = "2026-02-05";
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
