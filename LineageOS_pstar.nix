@@ -89,6 +89,7 @@ let
       ],
       # without this kernel modules will refuse to be inserted
       kernelConfig ? ''
+        CONFIG_KSU_MANUAL_HOOK=y
         CONFIG_MODULE_FORCE_LOAD=y
         CONFIG_MODULE_SIG_FORCE=n
       '',
@@ -140,7 +141,7 @@ in
     };
   });
 
-  moto-pstar-lineageos-22_1-kernelsu-next = baseKernel.override (_: rec {
+  _moto-pstar-lineageos-22_1-kernelsu-next = baseKernel.override (_: rec {
     kernelSU = {
       inherit (kernelsuVariants.next)
         enable
