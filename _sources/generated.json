@@ -243,6 +243,27 @@
         },
         "version": "e13b3ac615cf019c36fa0d1f0b1f2e14ba3885ce"
     },
+    "AAAAA_ztc1997-android_gki_kernel_5-15_common": {
+        "cargoLock": null,
+        "date": "2024-09-03",
+        "extract": null,
+        "name": "AAAAA_ztc1997-android_gki_kernel_5-15_common",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ztc1997",
+            "repo": "android_gki_kernel_5.15_common",
+            "rev": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117",
+            "sha256": "sha256-uJNVK/kJgWCBUxHurKAedokKz2WtYaZ17Ib0yp7N9WI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117"
+    },
     "anykernel-kernelsu": {
         "cargoLock": null,
         "date": "2025-11-07",
@@ -408,6 +429,27 @@
             "type": "github"
         },
         "version": "e22c713c7c4f0c8d08267f6bba98b8c4cde8310f"
+    },
+    "linux-moto-rtwo-lineageos-21": {
+        "cargoLock": null,
+        "date": "2024-12-21",
+        "extract": null,
+        "name": "linux-moto-rtwo-lineageos-21",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "LineageOS",
+            "repo": "android_kernel_motorola_sm8550",
+            "rev": "1bdeb4f5c8d2b98ef5f2bedaa5d704032dffd676",
+            "sha256": "sha256-ZK/DH5N5LdkLe48cANESjw1x74aXoZLFoMAwEDvzEk4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "1bdeb4f5c8d2b98ef5f2bedaa5d704032dffd676"
     },
     "linux-moto-rtwo-lineageos-22_1": {
         "cargoLock": null,
@@ -579,7 +621,7 @@
     },
     "susfs-android13-5_15": {
         "cargoLock": null,
-        "date": "2026-02-05",
+        "date": "2026-02-14",
         "extract": null,
         "name": "susfs-android13-5_15",
         "passthru": null,
@@ -589,13 +631,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "a527c6914902e364b335c33a4fe3b1d832f58724",
-            "sha256": "sha256-hrXn+feZPNKvO78DAXU7k1eUx5+wphxwUIsxy5fV7a8=",
+            "rev": "f3b016179ce1542826b931a560bd9ac5d411f94f",
+            "sha256": "sha256-hF4naCABdWT4TKx+r1OZkDE8Bv0y+gFAo+EUP478Jj8=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
         },
-        "version": "a527c6914902e364b335c33a4fe3b1d832f58724"
+        "version": "f3b016179ce1542826b931a560bd9ac5d411f94f"
     },
     "susfs-android15-6_6": {
         "cargoLock": null,

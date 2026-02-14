@@ -149,6 +149,18 @@
     };
     date = "2025-01-21";
   };
+  AAAAA_ztc1997-android_gki_kernel_5-15_common = {
+    pname = "AAAAA_ztc1997-android_gki_kernel_5-15_common";
+    version = "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117";
+    src = fetchFromGitHub {
+      owner = "ztc1997";
+      repo = "android_gki_kernel_5.15_common";
+      rev = "0615c0e0cab9d7b1f5c24c7687f23c9d5bac0117";
+      fetchSubmodules = false;
+      sha256 = "sha256-uJNVK/kJgWCBUxHurKAedokKz2WtYaZ17Ib0yp7N9WI=";
+    };
+    date = "2024-09-03";
+  };
   anykernel-kernelsu = {
     pname = "anykernel-kernelsu";
     version = "80e0cc9e736572ad16c7dc539ba9b6e40749f8e7";
@@ -246,6 +258,18 @@
       sha256 = "sha256-viqlQBPd2SuiAphFKiwjtckC3gDTGkbLv2dgZKMP3Oc=";
     };
     date = "2023-10-09";
+  };
+  linux-moto-rtwo-lineageos-21 = {
+    pname = "linux-moto-rtwo-lineageos-21";
+    version = "1bdeb4f5c8d2b98ef5f2bedaa5d704032dffd676";
+    src = fetchFromGitHub {
+      owner = "LineageOS";
+      repo = "android_kernel_motorola_sm8550";
+      rev = "1bdeb4f5c8d2b98ef5f2bedaa5d704032dffd676";
+      fetchSubmodules = false;
+      sha256 = "sha256-ZK/DH5N5LdkLe48cANESjw1x74aXoZLFoMAwEDvzEk4=";
+    };
+    date = "2024-12-21";
   };
   linux-moto-rtwo-lineageos-22_1 = {
     pname = "linux-moto-rtwo-lineageos-22_1";
@@ -345,17 +369,17 @@
   };
   susfs-android13-5_15 = {
     pname = "susfs-android13-5_15";
-    version = "a527c6914902e364b335c33a4fe3b1d832f58724";
+    version = "f3b016179ce1542826b931a560bd9ac5d411f94f";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "a527c6914902e364b335c33a4fe3b1d832f58724";
+      rev = "f3b016179ce1542826b931a560bd9ac5d411f94f";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-hrXn+feZPNKvO78DAXU7k1eUx5+wphxwUIsxy5fV7a8=";
+      sha256 = "sha256-hF4naCABdWT4TKx+r1OZkDE8Bv0y+gFAo+EUP478Jj8=";
     };
-    date = "2026-02-05";
+    date = "2026-02-14";
   };
   susfs-android15-6_6 = {
     pname = "susfs-android15-6_6";
