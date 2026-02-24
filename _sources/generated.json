@@ -112,11 +112,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-qzAw/w2pSWa7k5b4Qp3T0EHKHSSoXZI4OHVOJlTQvG8=",
+            "sha256": "sha256-nAO5/GnXiVJADxe/g4EWDQLkTNB/7SOTC+C/2nIUu70=",
             "type": "url",
-            "url": "https://mirrorbits.lineageos.org/full/pstar/20260216/boot.img"
+            "url": "https://mirrorbits.lineageos.org/full/pstar/20260223/boot.img"
         },
-        "version": "20260216"
+        "version": "20260223"
     },
     "AAAAA_linux-moto-pstar-lineageos-22_1": {
         "cargoLock": null,
@@ -641,7 +641,7 @@
     },
     "susfs-android15-6_6": {
         "cargoLock": null,
-        "date": "2026-02-22",
+        "date": "2026-02-24",
         "extract": null,
         "name": "susfs-android15-6_6",
         "passthru": null,
@@ -651,13 +651,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "910d8171b2e740257eb1340b767cbe66a6722e53",
-            "sha256": "sha256-tWRaFSnIgHjXPPUbKo4zxIQZwUo1mNwoBeGmSjCDkSE=",
+            "rev": "50dd10074780bea2f2e719d2624d0719fba81063",
+            "sha256": "sha256-e22GTdysDXpiGw5W6zBD2ZAdOgQLkal5maC6RbHMZfE=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
         },
-        "version": "910d8171b2e740257eb1340b767cbe66a6722e53"
+        "version": "50dd10074780bea2f2e719d2624d0719fba81063"
     },
     "wildplus-kernel-patches": {
         "cargoLock": null,

@@ -69,10 +69,10 @@
   };
   AAAAA_lineage-nightly-pstar_bootImg = {
     pname = "AAAAA_lineage-nightly-pstar_bootImg";
-    version = "20260216";
+    version = "20260223";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20260216/boot.img";
-      sha256 = "sha256-qzAw/w2pSWa7k5b4Qp3T0EHKHSSoXZI4OHVOJlTQvG8=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20260223/boot.img";
+      sha256 = "sha256-nAO5/GnXiVJADxe/g4EWDQLkTNB/7SOTC+C/2nIUu70=";
     };
   };
   AAAAA_linux-moto-pstar-lineageos-22_1 = {
@@ -383,17 +383,17 @@
   };
   susfs-android15-6_6 = {
     pname = "susfs-android15-6_6";
-    version = "910d8171b2e740257eb1340b767cbe66a6722e53";
+    version = "50dd10074780bea2f2e719d2624d0719fba81063";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "910d8171b2e740257eb1340b767cbe66a6722e53";
+      rev = "50dd10074780bea2f2e719d2624d0719fba81063";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-tWRaFSnIgHjXPPUbKo4zxIQZwUo1mNwoBeGmSjCDkSE=";
+      sha256 = "sha256-e22GTdysDXpiGw5W6zBD2ZAdOgQLkal5maC6RbHMZfE=";
     };
-    date = "2026-02-22";
+    date = "2026-02-24";
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
