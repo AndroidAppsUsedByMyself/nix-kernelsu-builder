@@ -287,7 +287,7 @@
     },
     "anykernel-osm0sis": {
         "cargoLock": null,
-        "date": "2026-02-08",
+        "date": "2026-02-25",
         "extract": null,
         "name": "anykernel-osm0sis",
         "passthru": null,
@@ -299,12 +299,12 @@
             "name": null,
             "owner": "osm0sis",
             "repo": "AnyKernel3",
-            "rev": "63c886e3b379d74c4fc0412b78896132b0702881",
-            "sha256": "sha256-NLZG2beOls6qNE2+tbrpZ6pF4JYATP2U+0xfpMhOhhI=",
+            "rev": "dca9dc370838d919d56c1f59ec78b27a14a72c68",
+            "sha256": "sha256-J/8RR7xh1fCZDiOSscm1cDWPBU5yFkXLjOHwZxG47Ow=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "63c886e3b379d74c4fc0412b78896132b0702881"
+        "version": "dca9dc370838d919d56c1f59ec78b27a14a72c68"
     },
     "baseband-guard": {
         "cargoLock": null,
@@ -381,13 +381,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "v3.0.1",
-            "sha256": "sha256-1XS7auSOiIT8O3Aa+tGW8eQoCyAoaLgSCIxutuXKBgs=",
+            "rev": "v3.1.0",
+            "sha256": "sha256-QtQQcYFZViLG9m84PHgVhJ2I+HV+GSBH93Y5h7GzFYg=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/rifsxd/KernelSU-Next.git"
         },
-        "version": "v3.0.1"
+        "version": "v3.1.0"
     },
     "kernelsu-stable": {
         "cargoLock": null,
@@ -537,7 +537,7 @@
     },
     "sukisu": {
         "cargoLock": null,
-        "date": "2026-02-18",
+        "date": "2026-02-26",
         "extract": null,
         "name": "sukisu",
         "passthru": null,
@@ -549,16 +549,16 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "bb2f2ea0c11ea154b25521fa65d62b174f7ac11e",
-            "sha256": "sha256-p8ucEDhaTaZSrJxJU5ySVbspOud60gs1C/eUc3S/INc=",
+            "rev": "f9477fc3869feddca1c12170689f40bc39c3ca52",
+            "sha256": "sha256-31oKldYK9RWBK8tpHM9BnDN/cOpYXetoI6Wa80dpaHQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "bb2f2ea0c11ea154b25521fa65d62b174f7ac11e"
+        "version": "f9477fc3869feddca1c12170689f40bc39c3ca52"
     },
     "sukisu-nongki": {
         "cargoLock": null,
-        "date": "2026-02-18",
+        "date": "2026-02-26",
         "extract": null,
         "name": "sukisu-nongki",
         "passthru": null,
@@ -570,12 +570,12 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "bb2f2ea0c11ea154b25521fa65d62b174f7ac11e",
-            "sha256": "sha256-p8ucEDhaTaZSrJxJU5ySVbspOud60gs1C/eUc3S/INc=",
+            "rev": "f9477fc3869feddca1c12170689f40bc39c3ca52",
+            "sha256": "sha256-31oKldYK9RWBK8tpHM9BnDN/cOpYXetoI6Wa80dpaHQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "bb2f2ea0c11ea154b25521fa65d62b174f7ac11e"
+        "version": "f9477fc3869feddca1c12170689f40bc39c3ca52"
     },
     "sukisu-patch": {
         "cargoLock": null,
@@ -600,7 +600,7 @@
     },
     "sukisu-susfs": {
         "cargoLock": null,
-        "date": "2026-02-18",
+        "date": "2026-02-26",
         "extract": null,
         "name": "sukisu-susfs",
         "passthru": null,
@@ -612,12 +612,12 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "bb2f2ea0c11ea154b25521fa65d62b174f7ac11e",
-            "sha256": "sha256-p8ucEDhaTaZSrJxJU5ySVbspOud60gs1C/eUc3S/INc=",
+            "rev": "f9477fc3869feddca1c12170689f40bc39c3ca52",
+            "sha256": "sha256-31oKldYK9RWBK8tpHM9BnDN/cOpYXetoI6Wa80dpaHQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "bb2f2ea0c11ea154b25521fa65d62b174f7ac11e"
+        "version": "f9477fc3869feddca1c12170689f40bc39c3ca52"
     },
     "susfs-android13-5_15": {
         "cargoLock": null,
