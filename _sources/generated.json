@@ -631,13 +631,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "19278931a9618ffbe6859ece400a334f174bd4df",
-            "sha256": "sha256-jkiFejrNgOBOWgtvAa730eYKr8mKo1I4XG1J/baXm3w=",
+            "rev": "20303f6d3eb043fa04a7590b0e9f1c70a7d008e9",
+            "sha256": "sha256-Bk8w6CZLOjhgyZpmx6hJoWZbO/vtS9amcOpgoKcs+xA=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
         },
-        "version": "19278931a9618ffbe6859ece400a334f174bd4df"
+        "version": "20303f6d3eb043fa04a7590b0e9f1c70a7d008e9"
     },
     "susfs-android15-6_6": {
         "cargoLock": null,
@@ -651,13 +651,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "fdb1e8bd8d58789e4a292409927e932ca923dfcd",
-            "sha256": "sha256-BOrnbZT+3dF0Zd0ISgYwnLvJgQPwcEfk0QvvR+D9gZU=",
+            "rev": "2e3f3907dfbebbb96e2fe737a856d58829e3db25",
+            "sha256": "sha256-T7mWnQh2iksxT+yhZf2k3T42WbQYHyCkqCXydt2vBpg=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://gitlab.com/simonpunk/susfs4ksu.git"
         },
-        "version": "fdb1e8bd8d58789e4a292409927e932ca923dfcd"
+        "version": "2e3f3907dfbebbb96e2fe737a856d58829e3db25"
     },
     "wildplus-kernel-patches": {
         "cargoLock": null,
@@ -673,11 +673,11 @@
             "name": null,
             "owner": "WildPlusKernel",
             "repo": "kernel_patches",
-            "rev": "039b1f97fd08d9b20c855e6d861d00fa8c6fb2ef",
-            "sha256": "sha256-zb787+qlKl5k4EXLrgnY4fDXuit4dNoja460vAT40ck=",
+            "rev": "e2647600959bbb5cf723e59ccbbfbe5a41aca5e4",
+            "sha256": "sha256-X9P77YQe3uGacshKNp1yW378sDl1TCn9h+P4TP+YcdA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "039b1f97fd08d9b20c855e6d861d00fa8c6fb2ef"
+        "version": "e2647600959bbb5cf723e59ccbbfbe5a41aca5e4"
     }
 }
