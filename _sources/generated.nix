@@ -187,15 +187,15 @@
   };
   baseband-guard = {
     pname = "baseband-guard";
-    version = "a531519779e844e21e9da74f3047a59041401d7b";
+    version = "be030b2952d1b8e430b3d405ee2890688698f665";
     src = fetchFromGitHub {
       owner = "vc-teahouse";
       repo = "Baseband-guard";
-      rev = "a531519779e844e21e9da74f3047a59041401d7b";
+      rev = "be030b2952d1b8e430b3d405ee2890688698f665";
       fetchSubmodules = false;
-      sha256 = "sha256-L7Hrs3Lrq16Afz2uwUdQEMP6svvy5NTcM3NB17AY2SY=";
+      sha256 = "sha256-uByJtp7xa3OEnisRu7DI32qpLWPr4P3xS+Mki7MKS44=";
     };
-    date = "2026-03-19";
+    date = "2026-03-27";
   };
   gcc-aarch64-linux-android = {
     pname = "gcc-aarch64-linux-android";
@@ -369,42 +369,42 @@
   };
   susfs-android13-5_15 = {
     pname = "susfs-android13-5_15";
-    version = "92b9a4977672181b7a9c462b5ee4c31e78a9aad1";
+    version = "ec09bd0633f07c564e1ba17318ed029ceb643f4a";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "92b9a4977672181b7a9c462b5ee4c31e78a9aad1";
+      rev = "ec09bd0633f07c564e1ba17318ed029ceb643f4a";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-LvKvOPIkkYQGtQjv1nhp/lnquw+HZQEjrLfmdDIzYHg=";
+      sha256 = "sha256-oCu2aX0m6WpiWZzfrR2FVmcizDP4ZJ+WMojRGl1Qv0A=";
     };
-    date = "2026-03-24";
+    date = "2026-03-27";
   };
   susfs-android15-6_6 = {
     pname = "susfs-android15-6_6";
-    version = "f2cc10c131760fd6d2cfeeef1b1135f02afb24b9";
+    version = "746821f0c0a07de5790742d1740f7d4191a47298";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "f2cc10c131760fd6d2cfeeef1b1135f02afb24b9";
+      rev = "746821f0c0a07de5790742d1740f7d4191a47298";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-M9uoFF9yT5vc0qKOc18CeK4f3I4+X0MIkQiGxqIVvCU=";
+      sha256 = "sha256-glpVyavtOjoFTk7ETxr/PBUJzhd/LkiMn2VEh/kLwGk=";
     };
-    date = "2026-03-24";
+    date = "2026-03-27";
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
-    version = "51928052102f68a1d550e70095b23712dd274718";
+    version = "83434fb4e0a8acda444495b8973f70993069e4ed";
     src = fetchFromGitHub {
       owner = "WildPlusKernel";
       repo = "kernel_patches";
-      rev = "51928052102f68a1d550e70095b23712dd274718";
+      rev = "83434fb4e0a8acda444495b8973f70993069e4ed";
       fetchSubmodules = false;
-      sha256 = "sha256-t95M3yY157JDVrjN9rYJV04AkdJLCmYMFtUHqJHkllc=";
+      sha256 = "sha256-kbHKZFHu5AWbQl2f/8BMJjZE05oTU3ETOXdwxlQevIQ=";
     };
-    date = "2026-03-22";
+    date = "2026-03-26";
   };
 }
