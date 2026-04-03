@@ -74,13 +74,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "v3.0.0-30-legacy",
-            "sha256": "sha256-+w7uaEBq4KACxSyOZ3AFEGMMx71t6EF1gRtXJJLNBqU=",
+            "rev": "v3.2.2-10-legacy",
+            "sha256": "sha256-znb3j0ZjHEoeukyiOUSaGXHu2dt6uTEhy4uQ1FubXjc=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/rsuntk/KernelSU.git"
         },
-        "version": "v3.0.0-30-legacy"
+        "version": "v3.2.2-10-legacy"
     },
     "AAAAA_kernelsu-rksu-susfs": {
         "cargoLock": null,
@@ -537,7 +537,7 @@
     },
     "sukisu": {
         "cargoLock": null,
-        "date": "2026-04-02",
+        "date": "2026-04-03",
         "extract": null,
         "name": "sukisu",
         "passthru": null,
@@ -549,16 +549,16 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "fcff8cb533c63a281e0634e4298f40a1ad8ac8dc",
-            "sha256": "sha256-xqLkEauGBtsngDAkXhCLj6LiZXmKD6rmIdM9Rn/zy8U=",
+            "rev": "e87f6194a67b6bd301ffa4b74e9691ea45909f2a",
+            "sha256": "sha256-xMI9saRrllPcoclxTtj846fsWfd/jq5gt2tuwRvvuS4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "fcff8cb533c63a281e0634e4298f40a1ad8ac8dc"
+        "version": "e87f6194a67b6bd301ffa4b74e9691ea45909f2a"
     },
     "sukisu-nongki": {
         "cargoLock": null,
-        "date": "2026-04-02",
+        "date": "2026-04-03",
         "extract": null,
         "name": "sukisu-nongki",
         "passthru": null,
@@ -570,12 +570,12 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "fcff8cb533c63a281e0634e4298f40a1ad8ac8dc",
-            "sha256": "sha256-xqLkEauGBtsngDAkXhCLj6LiZXmKD6rmIdM9Rn/zy8U=",
+            "rev": "e87f6194a67b6bd301ffa4b74e9691ea45909f2a",
+            "sha256": "sha256-xMI9saRrllPcoclxTtj846fsWfd/jq5gt2tuwRvvuS4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "fcff8cb533c63a281e0634e4298f40a1ad8ac8dc"
+        "version": "e87f6194a67b6bd301ffa4b74e9691ea45909f2a"
     },
     "sukisu-patch": {
         "cargoLock": null,
@@ -600,7 +600,7 @@
     },
     "sukisu-susfs": {
         "cargoLock": null,
-        "date": "2026-04-02",
+        "date": "2026-04-03",
         "extract": null,
         "name": "sukisu-susfs",
         "passthru": null,
@@ -612,12 +612,12 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "fcff8cb533c63a281e0634e4298f40a1ad8ac8dc",
-            "sha256": "sha256-xqLkEauGBtsngDAkXhCLj6LiZXmKD6rmIdM9Rn/zy8U=",
+            "rev": "e87f6194a67b6bd301ffa4b74e9691ea45909f2a",
+            "sha256": "sha256-xMI9saRrllPcoclxTtj846fsWfd/jq5gt2tuwRvvuS4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "fcff8cb533c63a281e0634e4298f40a1ad8ac8dc"
+        "version": "e87f6194a67b6bd301ffa4b74e9691ea45909f2a"
     },
     "susfs-android13-5_15": {
         "cargoLock": null,
@@ -661,7 +661,7 @@
     },
     "wildplus-kernel-patches": {
         "cargoLock": null,
-        "date": "2026-04-01",
+        "date": "2026-04-02",
         "extract": null,
         "name": "wildplus-kernel-patches",
         "passthru": null,
@@ -673,11 +673,11 @@
             "name": null,
             "owner": "WildPlusKernel",
             "repo": "kernel_patches",
-            "rev": "f342b079d59bff945c18c54902bbdc7dd09cb23b",
-            "sha256": "sha256-iLQqBv8OGDNLzViKHuyotgSC98kNCcvBwQpO+BXMjD8=",
+            "rev": "ac878e86dbee58c5cfc02bb667b85c107a77e38b",
+            "sha256": "sha256-54eiZhzILtrjH8IgIOZSl12qhybdusumkjePVH2Ufig=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f342b079d59bff945c18c54902bbdc7dd09cb23b"
+        "version": "ac878e86dbee58c5cfc02bb667b85c107a77e38b"
     }
 }
