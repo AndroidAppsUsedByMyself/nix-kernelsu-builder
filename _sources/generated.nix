@@ -69,10 +69,10 @@
   };
   AAAAA_lineage-nightly-pstar_bootImg = {
     pname = "AAAAA_lineage-nightly-pstar_bootImg";
-    version = "20260330";
+    version = "20260406";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20260330/boot.img";
-      sha256 = "sha256-aTwJEQns+CzKoj6WBenEhV4Q0li727HWBaGwuV3xG+c=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20260406/boot.img";
+      sha256 = "sha256-V2hMie1HvGdFVHJ4JPet/z0k4/meBevXhVz+GIDWB1o=";
     };
   };
   AAAAA_linux-moto-pstar-lineageos-22_1 = {
@@ -321,27 +321,27 @@
   };
   sukisu = {
     pname = "sukisu";
-    version = "65b7909364529a8290ce896f6e13da1cef3033bf";
+    version = "02164de7a1bbd8b98b019b35e6985568a8658385";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "65b7909364529a8290ce896f6e13da1cef3033bf";
+      rev = "02164de7a1bbd8b98b019b35e6985568a8658385";
       fetchSubmodules = false;
-      sha256 = "sha256-iQRAHOTE1ZAewM55ofUzNg32onLoBhDEFHhHjV2KPJI=";
+      sha256 = "sha256-g4uysZyavbmMESWjVIwm0W0Bla2bFD13mpSGEdRzz3U=";
     };
-    date = "2026-04-05";
+    date = "2026-04-07";
   };
   sukisu-nongki = {
     pname = "sukisu-nongki";
-    version = "65b7909364529a8290ce896f6e13da1cef3033bf";
+    version = "02164de7a1bbd8b98b019b35e6985568a8658385";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "65b7909364529a8290ce896f6e13da1cef3033bf";
+      rev = "02164de7a1bbd8b98b019b35e6985568a8658385";
       fetchSubmodules = false;
-      sha256 = "sha256-iQRAHOTE1ZAewM55ofUzNg32onLoBhDEFHhHjV2KPJI=";
+      sha256 = "sha256-g4uysZyavbmMESWjVIwm0W0Bla2bFD13mpSGEdRzz3U=";
     };
-    date = "2026-04-05";
+    date = "2026-04-07";
   };
   sukisu-patch = {
     pname = "sukisu-patch";
@@ -357,43 +357,43 @@
   };
   sukisu-susfs = {
     pname = "sukisu-susfs";
-    version = "65b7909364529a8290ce896f6e13da1cef3033bf";
+    version = "02164de7a1bbd8b98b019b35e6985568a8658385";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "65b7909364529a8290ce896f6e13da1cef3033bf";
+      rev = "02164de7a1bbd8b98b019b35e6985568a8658385";
       fetchSubmodules = false;
-      sha256 = "sha256-iQRAHOTE1ZAewM55ofUzNg32onLoBhDEFHhHjV2KPJI=";
+      sha256 = "sha256-g4uysZyavbmMESWjVIwm0W0Bla2bFD13mpSGEdRzz3U=";
     };
-    date = "2026-04-05";
+    date = "2026-04-07";
   };
   susfs-android13-5_15 = {
     pname = "susfs-android13-5_15";
-    version = "3b8eaeafc80d87d41d3e49a82415ffb8a4d1811c";
+    version = "2a03052df4cba5244652623dde06f9709d24e9f7";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "3b8eaeafc80d87d41d3e49a82415ffb8a4d1811c";
+      rev = "2a03052df4cba5244652623dde06f9709d24e9f7";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-nq+be20tfWEw4tA7vTxyQh2gme2H6gpighw9yCqoG7E=";
+      sha256 = "sha256-cQAd7a7DwqrmDLB/8pXCMGJES+7K9OLiugPe+UIlLEI=";
     };
-    date = "2026-04-05";
+    date = "2026-04-07";
   };
   susfs-android15-6_6 = {
     pname = "susfs-android15-6_6";
-    version = "250cb079bf51bbb76cd72883ed0e09f0df414be9";
+    version = "709129bc30aadb6a2a16b813cd49f675c30127dd";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "250cb079bf51bbb76cd72883ed0e09f0df414be9";
+      rev = "709129bc30aadb6a2a16b813cd49f675c30127dd";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-rsmwy0RrGbCVn2NKDD/B/xUMfhnwOFIBI4rYROsh0Z4=";
+      sha256 = "sha256-h4P2mCa8SM43+iQw8D5gMHe/dA8CXWchaCT6OCPjV00=";
     };
-    date = "2026-04-05";
+    date = "2026-04-07";
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
