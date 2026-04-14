@@ -112,11 +112,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-V2hMie1HvGdFVHJ4JPet/z0k4/meBevXhVz+GIDWB1o=",
+            "sha256": "sha256-uE/0F8DAFFouxTbOdQ4DX2R87vDSY5atwaSCCPY26as=",
             "type": "url",
-            "url": "https://mirrorbits.lineageos.org/full/pstar/20260406/boot.img"
+            "url": "https://mirrorbits.lineageos.org/full/pstar/20260413/boot.img"
         },
-        "version": "20260406"
+        "version": "20260413"
     },
     "AAAAA_linux-moto-pstar-lineageos-22_1": {
         "cargoLock": null,
@@ -661,7 +661,7 @@
     },
     "wildplus-kernel-patches": {
         "cargoLock": null,
-        "date": "2026-04-12",
+        "date": "2026-04-14",
         "extract": null,
         "name": "wildplus-kernel-patches",
         "passthru": null,
@@ -673,11 +673,11 @@
             "name": null,
             "owner": "WildPlusKernel",
             "repo": "kernel_patches",
-            "rev": "ec123280073a41169060be4a5330222bfe57b59a",
-            "sha256": "sha256-uunOJyOzsqVif2UCf15uuLs69wGxAJnp6LWz7pmqoz8=",
+            "rev": "8478de457586842710673b317a0924f777f96e10",
+            "sha256": "sha256-hEYixmq9WDsrwt8Jo3Cyr4BNkxMBnZl6oBWQd9eRzXw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "ec123280073a41169060be4a5330222bfe57b59a"
+        "version": "8478de457586842710673b317a0924f777f96e10"
     }
 }
