@@ -69,10 +69,10 @@
   };
   AAAAA_lineage-nightly-pstar_bootImg = {
     pname = "AAAAA_lineage-nightly-pstar_bootImg";
-    version = "20260420";
+    version = "20260427";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20260420/boot.img";
-      sha256 = "sha256-vPNCyPKxtezA00vPwvA4T9apo4tYckliitbOoYe4frU=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20260427/boot.img";
+      sha256 = "sha256-J+stEyJ6Xxc8MEbaViaTCGMdSzu4g73bfhUP54fgKo4=";
     };
   };
   AAAAA_linux-moto-pstar-lineageos-22_1 = {
@@ -369,42 +369,42 @@
   };
   susfs-android13-5_15 = {
     pname = "susfs-android13-5_15";
-    version = "72b016037d959568b81bf049cd50b03ef6d44d2c";
+    version = "8682dd6bda00771d6482070d450ca4020ab71a3d";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "72b016037d959568b81bf049cd50b03ef6d44d2c";
+      rev = "8682dd6bda00771d6482070d450ca4020ab71a3d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-5UrR4b6lroWDNPxQ/5RcCjPtMObt6tzMXpyDuLt/AtY=";
+      sha256 = "sha256-ix/NVuf2zgpZa7Nld6nY+VrBMlIGgzNcDbnThTnswHo=";
     };
     date = "2026-04-26";
   };
   susfs-android15-6_6 = {
     pname = "susfs-android15-6_6";
-    version = "4f8add8a786a7b46a47ba111c540a62d496ca32f";
+    version = "72b781373b04694018ee60e2863a5cca65e9dc2e";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "4f8add8a786a7b46a47ba111c540a62d496ca32f";
+      rev = "72b781373b04694018ee60e2863a5cca65e9dc2e";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-BhfGOpjJIOGMcOVSh1sjXZrVlm80DvRUFKoNcfSU/0k=";
+      sha256 = "sha256-4TFRYF3zC+M6E4BkeIAA017WuhECVSJW9crr+Ge/Za8=";
     };
     date = "2026-04-26";
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
-    version = "9222108ea87bc7677441267dfddabb7a9ceb4f3c";
+    version = "d47bb06267c4515127bdd60d8bcce08c2f50796a";
     src = fetchFromGitHub {
       owner = "WildPlusKernel";
       repo = "kernel_patches";
-      rev = "9222108ea87bc7677441267dfddabb7a9ceb4f3c";
+      rev = "d47bb06267c4515127bdd60d8bcce08c2f50796a";
       fetchSubmodules = false;
-      sha256 = "sha256-hUkYSYVcLOu++wmrJcDSdCq95TuY0zo+3zMndToFz5E=";
+      sha256 = "sha256-hHN+ES+AkG1tuwTnX+i7vxTxMp37y7B1fx3I45fmG38=";
     };
-    date = "2026-04-24";
+    date = "2026-04-27";
   };
 }
