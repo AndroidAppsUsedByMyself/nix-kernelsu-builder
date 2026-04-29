@@ -308,7 +308,7 @@
     },
     "baseband-guard": {
         "cargoLock": null,
-        "date": "2026-03-29",
+        "date": "2026-04-28",
         "extract": null,
         "name": "baseband-guard",
         "passthru": null,
@@ -320,12 +320,12 @@
             "name": null,
             "owner": "vc-teahouse",
             "repo": "Baseband-guard",
-            "rev": "8cb6b7f4c21d02478e83fb286c5e9f941c82ffbb",
-            "sha256": "sha256-3ggcSyzNEuFdEu1LZPgnCN9y5TIwqaeGUCGVLV8CtS8=",
+            "rev": "cef0daaef94d46022e1f8883ba7a30dfab849dbe",
+            "sha256": "sha256-DUhv+YhX6vF0Zoa5x2AQ0grLy/yR43mwi/VB738JDBM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "8cb6b7f4c21d02478e83fb286c5e9f941c82ffbb"
+        "version": "cef0daaef94d46022e1f8883ba7a30dfab849dbe"
     },
     "gcc-aarch64-linux-android": {
         "cargoLock": null,
@@ -673,11 +673,11 @@
             "name": null,
             "owner": "WildPlusKernel",
             "repo": "kernel_patches",
-            "rev": "2df6df4d97139d3df473969baec27f7d0c37525c",
-            "sha256": "sha256-ju8A7MNtubB7JSEJgdG4SJZ3wn97mqiuBnALZjwoVPg=",
+            "rev": "f74e2bf2d7c3b31542c15d5f20320efc392128f9",
+            "sha256": "sha256-owjaEk/atq9x0QBMHcfmmjzRBRIRs4HPVF5HbVf7RYo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2df6df4d97139d3df473969baec27f7d0c37525c"
+        "version": "f74e2bf2d7c3b31542c15d5f20320efc392128f9"
     }
 }
