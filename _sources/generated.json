@@ -112,11 +112,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-J+stEyJ6Xxc8MEbaViaTCGMdSzu4g73bfhUP54fgKo4=",
+            "sha256": "sha256-5xSQBagodyfwwZJ1g/ZKCGf1J8TdrSzE31EkqilkoBA=",
             "type": "url",
-            "url": "https://mirrorbits.lineageos.org/full/pstar/20260427/boot.img"
+            "url": "https://mirrorbits.lineageos.org/full/pstar/20260504/boot.img"
         },
-        "version": "20260427"
+        "version": "20260504"
     },
     "AAAAA_linux-moto-pstar-lineageos-22_1": {
         "cargoLock": null,
