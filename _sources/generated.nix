@@ -69,10 +69,10 @@
   };
   AAAAA_lineage-nightly-pstar_bootImg = {
     pname = "AAAAA_lineage-nightly-pstar_bootImg";
-    version = "20260511";
+    version = "20260518";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20260511/boot.img";
-      sha256 = "sha256-uMea3CCsexnUWpp6C6gTvVElKij8lgKCdpZHADV/l5g=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20260518/boot.img";
+      sha256 = "sha256-7jMZ3KeworLhunMeDblaR29maKJ7/WbEaEurO+rqHFs=";
     };
   };
   AAAAA_linux-moto-pstar-lineageos-22_1 = {
@@ -321,25 +321,25 @@
   };
   sukisu = {
     pname = "sukisu";
-    version = "cf85c18c7ea5d3f15c1f832323e69f560cadaecc";
+    version = "c543f744567bec39cbe23935d536034403e1676e";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "cf85c18c7ea5d3f15c1f832323e69f560cadaecc";
+      rev = "c543f744567bec39cbe23935d536034403e1676e";
       fetchSubmodules = false;
-      sha256 = "sha256-TdEg9pmqRoEO6oFzPG0HNCEhUQMxJPkaexz6SwqMZy0=";
+      sha256 = "sha256-pBHqK1a3E0kxY150DtCM+EY9dkNwTTU7dYWubkDxfcQ=";
     };
     date = "2026-05-17";
   };
   sukisu-nongki = {
     pname = "sukisu-nongki";
-    version = "cf85c18c7ea5d3f15c1f832323e69f560cadaecc";
+    version = "c543f744567bec39cbe23935d536034403e1676e";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "cf85c18c7ea5d3f15c1f832323e69f560cadaecc";
+      rev = "c543f744567bec39cbe23935d536034403e1676e";
       fetchSubmodules = false;
-      sha256 = "sha256-TdEg9pmqRoEO6oFzPG0HNCEhUQMxJPkaexz6SwqMZy0=";
+      sha256 = "sha256-pBHqK1a3E0kxY150DtCM+EY9dkNwTTU7dYWubkDxfcQ=";
     };
     date = "2026-05-17";
   };
@@ -357,54 +357,54 @@
   };
   sukisu-susfs = {
     pname = "sukisu-susfs";
-    version = "cf85c18c7ea5d3f15c1f832323e69f560cadaecc";
+    version = "c543f744567bec39cbe23935d536034403e1676e";
     src = fetchFromGitHub {
       owner = "SukiSU-Ultra";
       repo = "SukiSU-Ultra";
-      rev = "cf85c18c7ea5d3f15c1f832323e69f560cadaecc";
+      rev = "c543f744567bec39cbe23935d536034403e1676e";
       fetchSubmodules = false;
-      sha256 = "sha256-TdEg9pmqRoEO6oFzPG0HNCEhUQMxJPkaexz6SwqMZy0=";
+      sha256 = "sha256-pBHqK1a3E0kxY150DtCM+EY9dkNwTTU7dYWubkDxfcQ=";
     };
     date = "2026-05-17";
   };
   susfs-android13-5_15 = {
     pname = "susfs-android13-5_15";
-    version = "3f38203f1e0227a34f0311f8b764211a46ca89fe";
+    version = "e4bd49f708108cc829fe7ca079312ea8fefa89f8";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "3f38203f1e0227a34f0311f8b764211a46ca89fe";
+      rev = "e4bd49f708108cc829fe7ca079312ea8fefa89f8";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-ESX1PpLUOyf0iJtCgny1d5raXfYn2eUG9SsoLL3q058=";
+      sha256 = "sha256-lRRZNOapkgA8pokk0jpY2bRym1OByldDr3Y6qg2I17A=";
     };
-    date = "2026-05-16";
+    date = "2026-05-17";
   };
   susfs-android15-6_6 = {
     pname = "susfs-android15-6_6";
-    version = "bafe3fb0745e406f92549c4570d5ea008454c99d";
+    version = "2df41de789026a6422521606402576507c687435";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "bafe3fb0745e406f92549c4570d5ea008454c99d";
+      rev = "2df41de789026a6422521606402576507c687435";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-4NzyzJylq4zvC3AqenFxAEp5Y2NTGru9D6WGbOGLOkE=";
+      sha256 = "sha256-eG6P+ZgXsGwqWrkatfnMg/EMq2OZZUAqNVY38WYsX2U=";
     };
-    date = "2026-05-16";
+    date = "2026-05-17";
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
-    version = "c298f1d065f147b87f1fb821aabbb3752bf6f0ab";
+    version = "c8954263e6f7f7b977ddae59339d96b18cbc4c89";
     src = fetchFromGitHub {
       owner = "WildPlusKernel";
       repo = "kernel_patches";
-      rev = "c298f1d065f147b87f1fb821aabbb3752bf6f0ab";
+      rev = "c8954263e6f7f7b977ddae59339d96b18cbc4c89";
       fetchSubmodules = false;
-      sha256 = "sha256-m44L4G4QBrAqnxO/VNHRPJs366E6rkGG9VYleAcqmV0=";
+      sha256 = "sha256-BhrrzkPXnpiXVvbLjfjiDq1Kgc50QxQEQGGywRqJXs0=";
     };
-    date = "2026-05-11";
+    date = "2026-05-18";
   };
 }
