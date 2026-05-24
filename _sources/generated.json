@@ -549,12 +549,12 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "aac170bcb86ce45516b3e2c0e2b32b57004b8f73",
-            "sha256": "sha256-utI4+WBgI2SnG1up/JCBPrNBFeBz/hrqUMU0fU2ezxU=",
+            "rev": "c3701683733ff608f3284762cc5a864d3c162d9b",
+            "sha256": "sha256-FIZxOUiPidmKCLk4IPNvm9bgu3OpMsTNwWpn9khCeLg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "aac170bcb86ce45516b3e2c0e2b32b57004b8f73"
+        "version": "c3701683733ff608f3284762cc5a864d3c162d9b"
     },
     "sukisu-nongki": {
         "cargoLock": null,
@@ -570,12 +570,12 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "aac170bcb86ce45516b3e2c0e2b32b57004b8f73",
-            "sha256": "sha256-utI4+WBgI2SnG1up/JCBPrNBFeBz/hrqUMU0fU2ezxU=",
+            "rev": "c3701683733ff608f3284762cc5a864d3c162d9b",
+            "sha256": "sha256-FIZxOUiPidmKCLk4IPNvm9bgu3OpMsTNwWpn9khCeLg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "aac170bcb86ce45516b3e2c0e2b32b57004b8f73"
+        "version": "c3701683733ff608f3284762cc5a864d3c162d9b"
     },
     "sukisu-patch": {
         "cargoLock": null,
@@ -612,12 +612,12 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "aac170bcb86ce45516b3e2c0e2b32b57004b8f73",
-            "sha256": "sha256-utI4+WBgI2SnG1up/JCBPrNBFeBz/hrqUMU0fU2ezxU=",
+            "rev": "c3701683733ff608f3284762cc5a864d3c162d9b",
+            "sha256": "sha256-FIZxOUiPidmKCLk4IPNvm9bgu3OpMsTNwWpn9khCeLg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "aac170bcb86ce45516b3e2c0e2b32b57004b8f73"
+        "version": "c3701683733ff608f3284762cc5a864d3c162d9b"
     },
     "susfs-android13-5_15": {
         "cargoLock": null,
