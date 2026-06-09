@@ -103,21 +103,6 @@
         },
         "version": "9b28326af4145974560122644e87fc9a021a2cce"
     },
-    "AAAAA_lineage-nightly-pstar_bootImg": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "AAAAA_lineage-nightly-pstar_bootImg",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-8wrHap4S7lm896TDMZVlablZXb+4oLOMUn3V0MJWhFw=",
-            "type": "url",
-            "url": "https://mirrorbits.lineageos.org/full/pstar/20260608/boot.img"
-        },
-        "version": "20260608"
-    },
     "AAAAA_linux-moto-pstar-lineageos-22_1": {
         "cargoLock": null,
         "date": "2025-03-15",
