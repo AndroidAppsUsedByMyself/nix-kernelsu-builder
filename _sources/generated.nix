@@ -69,10 +69,10 @@
   };
   AAAAA_lineage-nightly-pstar_bootImg = {
     pname = "AAAAA_lineage-nightly-pstar_bootImg";
-    version = "20260622";
+    version = "20260629";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20260622/boot.img";
-      sha256 = "sha256-pCJXqqXOiZ3exuF3ksLaGYqlIF8DffSEDTR/I295KV0=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20260629/boot.img";
+      sha256 = "sha256-dUJ2w1Q8Z3jxd12RoHw88rgPxQNM6DuHJ1KskUfFWgE=";
     };
   };
   AAAAA_linux-moto-pstar-lineageos-22_1 = {
@@ -175,13 +175,13 @@
   };
   anykernel-osm0sis = {
     pname = "anykernel-osm0sis";
-    version = "b0cdfb8abe0f1574e14802fc77cb39514b102e47";
+    version = "cea8f976cd17c3b2c625989c9ca7a8956db4c7a4";
     src = fetchFromGitHub {
       owner = "osm0sis";
       repo = "AnyKernel3";
-      rev = "b0cdfb8abe0f1574e14802fc77cb39514b102e47";
+      rev = "cea8f976cd17c3b2c625989c9ca7a8956db4c7a4";
       fetchSubmodules = false;
-      sha256 = "sha256-jwWQXRa4v+FsEsTfH0pklEw1bVCh1d+hqzvdwwOnu94=";
+      sha256 = "sha256-G4KKU8SFtumcZLkeCSRyJXBkaqTMtgl1bA0jYzq9Gr8=";
     };
     date = "2026-06-28";
   };
@@ -397,13 +397,13 @@
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
-    version = "53fc447f02ab597398dd4f3c7eba689a585ec055";
+    version = "ee08d182458f79724974dd8d4de4f8e8d15dd140";
     src = fetchFromGitHub {
       owner = "WildPlusKernel";
       repo = "kernel_patches";
-      rev = "53fc447f02ab597398dd4f3c7eba689a585ec055";
+      rev = "ee08d182458f79724974dd8d4de4f8e8d15dd140";
       fetchSubmodules = false;
-      sha256 = "sha256-t42jHYFZ4zPbbFZS+T4L95pv/CUTQlnjjGJUvBzNHD0=";
+      sha256 = "sha256-kDJUMBh67m30NTlAghC0w9j0/W2aH7DejZMlBAkKugQ=";
     };
     date = "2026-06-28";
   };
