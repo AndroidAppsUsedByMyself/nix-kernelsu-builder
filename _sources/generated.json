@@ -673,11 +673,11 @@
             "name": null,
             "owner": "WildPlusKernel",
             "repo": "kernel_patches",
-            "rev": "f39a0fc5cd53f18e754cae0e7e6969147a7abda4",
-            "sha256": "sha256-MLtk4G271krHrpCXvJknJltwCSMw76ViwfQbhtZM/7I=",
+            "rev": "3922ea6989426de03c5f786f266ff005cb68ea19",
+            "sha256": "sha256-+J8smxb9h/peVTkH6w9dTb/KjNrJpzQKdqFKqcSo4Do=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f39a0fc5cd53f18e754cae0e7e6969147a7abda4"
+        "version": "3922ea6989426de03c5f786f266ff005cb68ea19"
     }
 }
