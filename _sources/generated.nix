@@ -223,15 +223,15 @@
   };
   kernelsu-next = {
     pname = "kernelsu-next";
-    version = "v3.2.0";
+    version = "v3.3.0";
     src = fetchgit {
       url = "https://github.com/rifsxd/KernelSU-Next.git";
-      rev = "v3.2.0";
+      rev = "v3.3.0";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-9ffRhyCM8KirXsvYDrhcH8SS+Zjsk59t7o6Nol7AYK0=";
+      sha256 = "sha256-/7IuX9dIH39CZ6t0jJRTwEQs95U0Vx9xsxdiiDYi5jM=";
     };
   };
   kernelsu-stable = {
