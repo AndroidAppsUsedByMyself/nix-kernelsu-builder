@@ -549,12 +549,12 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "8dbc1a9ccdb3d3d3dd9d4ebefc53402ddda0320d",
-            "sha256": "sha256-qqzbFMPmN5EE3uCfLda0yvBdvQAc9FamtQ9M3eWVZh4=",
+            "rev": "278d822a4ebd214bcfd774b7910cb11cdc560bb9",
+            "sha256": "sha256-Yd1FEJOc2N1nbcnskbb6l+AkZb+SWvey91g6uxntK1k=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "8dbc1a9ccdb3d3d3dd9d4ebefc53402ddda0320d"
+        "version": "278d822a4ebd214bcfd774b7910cb11cdc560bb9"
     },
     "sukisu-nongki": {
         "cargoLock": null,
@@ -570,12 +570,12 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "8dbc1a9ccdb3d3d3dd9d4ebefc53402ddda0320d",
-            "sha256": "sha256-qqzbFMPmN5EE3uCfLda0yvBdvQAc9FamtQ9M3eWVZh4=",
+            "rev": "278d822a4ebd214bcfd774b7910cb11cdc560bb9",
+            "sha256": "sha256-Yd1FEJOc2N1nbcnskbb6l+AkZb+SWvey91g6uxntK1k=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "8dbc1a9ccdb3d3d3dd9d4ebefc53402ddda0320d"
+        "version": "278d822a4ebd214bcfd774b7910cb11cdc560bb9"
     },
     "sukisu-patch": {
         "cargoLock": null,
@@ -612,12 +612,12 @@
             "name": null,
             "owner": "SukiSU-Ultra",
             "repo": "SukiSU-Ultra",
-            "rev": "8dbc1a9ccdb3d3d3dd9d4ebefc53402ddda0320d",
-            "sha256": "sha256-qqzbFMPmN5EE3uCfLda0yvBdvQAc9FamtQ9M3eWVZh4=",
+            "rev": "278d822a4ebd214bcfd774b7910cb11cdc560bb9",
+            "sha256": "sha256-Yd1FEJOc2N1nbcnskbb6l+AkZb+SWvey91g6uxntK1k=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "8dbc1a9ccdb3d3d3dd9d4ebefc53402ddda0320d"
+        "version": "278d822a4ebd214bcfd774b7910cb11cdc560bb9"
     },
     "susfs-android13-5_15": {
         "cargoLock": null,
@@ -673,11 +673,11 @@
             "name": null,
             "owner": "WildPlusKernel",
             "repo": "kernel_patches",
-            "rev": "cf05f73f7c82e85c00b4665c3ae4ac913d991eb1",
-            "sha256": "sha256-edB5fHD4oprE/kxNAy9J7OPyKh0Ti1RdBKsnPyTvAFU=",
+            "rev": "6e92514f445e69a4fcad5637ddedc3736ea5df2b",
+            "sha256": "sha256-NYQyEIkukVZIMu+aE9pEWdaaxQNFacbCCJQqclFRrwg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "cf05f73f7c82e85c00b4665c3ae4ac913d991eb1"
+        "version": "6e92514f445e69a4fcad5637ddedc3736ea5df2b"
     }
 }
