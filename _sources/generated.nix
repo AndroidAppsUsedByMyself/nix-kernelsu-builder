@@ -369,42 +369,42 @@
   };
   susfs-android13-5_15 = {
     pname = "susfs-android13-5_15";
-    version = "e29e344398995898a3b2f2a00f8979e2a599ba96";
+    version = "4a216116ff1d7c36145e3e054e65b54947c0083d";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "e29e344398995898a3b2f2a00f8979e2a599ba96";
+      rev = "4a216116ff1d7c36145e3e054e65b54947c0083d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-EaOqlsnShikJWLpz2qQqn7/hA7Q4PsCWDbe/eMHpeoo=";
+      sha256 = "sha256-zOh1VayTtfcBHT5W4+inl3ZuKTSsBbcuWvr6G9YBFO8=";
     };
-    date = "2026-07-20";
+    date = "2026-07-23";
   };
   susfs-android15-6_6 = {
     pname = "susfs-android15-6_6";
-    version = "d4f50f6d7cfa21fef497c48cdeffa3b50952bf56";
+    version = "069baca65e58557019dbf906e802f518428c5a84";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "d4f50f6d7cfa21fef497c48cdeffa3b50952bf56";
+      rev = "069baca65e58557019dbf906e802f518428c5a84";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-YriNlw4J/0tMzdDWtbUrPtbSURKgFm46Nn3mGRqRn/M=";
+      sha256 = "sha256-G6M5coYT+9JrmXRGdy5/4gH0zxPV1kL6QVzSDnmNHUE=";
     };
-    date = "2026-07-20";
+    date = "2026-07-23";
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
-    version = "6584b915899d0c32cfbe316869c1326efafc80ae";
+    version = "24865a0bc50dfb65b04153cc9ad2879a9c26cc7e";
     src = fetchFromGitHub {
       owner = "WildPlusKernel";
       repo = "kernel_patches";
-      rev = "6584b915899d0c32cfbe316869c1326efafc80ae";
+      rev = "24865a0bc50dfb65b04153cc9ad2879a9c26cc7e";
       fetchSubmodules = false;
-      sha256 = "sha256-WYXisdoIb+vQvzbhuQ8Bieupr251kFWneGmKJkAdj6A=";
+      sha256 = "sha256-gynGGBMT10zseef0GyvJ3psZZjI66hsd3PB6UXrta+s=";
     };
-    date = "2026-07-21";
+    date = "2026-07-23";
   };
 }
