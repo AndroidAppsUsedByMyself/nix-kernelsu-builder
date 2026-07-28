@@ -69,10 +69,10 @@
   };
   AAAAA_lineage-nightly-pstar_bootImg = {
     pname = "AAAAA_lineage-nightly-pstar_bootImg";
-    version = "20260720";
+    version = "20260727";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20260720/boot.img";
-      sha256 = "sha256-2b9+rECd+VK54WTTKzA4HqlqQlw6IRs8UqIuXOwT5rQ=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20260727/boot.img";
+      sha256 = "sha256-DfPwqBWkUY91kwibdU7/7RPjKBB0YMIvBTNJlS2yorQ=";
     };
   };
   AAAAA_linux-moto-pstar-lineageos-22_1 = {
@@ -369,31 +369,31 @@
   };
   susfs-android13-5_15 = {
     pname = "susfs-android13-5_15";
-    version = "4a216116ff1d7c36145e3e054e65b54947c0083d";
+    version = "fbb7462dd4cca04c7d99a56500fe55fe51c3d6a3";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "4a216116ff1d7c36145e3e054e65b54947c0083d";
+      rev = "fbb7462dd4cca04c7d99a56500fe55fe51c3d6a3";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-zOh1VayTtfcBHT5W4+inl3ZuKTSsBbcuWvr6G9YBFO8=";
+      sha256 = "sha256-SLyV1Y0KCmLx8Eesb+uEPSpiTgCVZoFE4uGe2RC4Pgw=";
     };
-    date = "2026-07-23";
+    date = "2026-07-27";
   };
   susfs-android15-6_6 = {
     pname = "susfs-android15-6_6";
-    version = "069baca65e58557019dbf906e802f518428c5a84";
+    version = "00676ab3d58b969ea290af1e20750e4829fbd182";
     src = fetchgit {
       url = "https://gitlab.com/simonpunk/susfs4ksu.git";
-      rev = "069baca65e58557019dbf906e802f518428c5a84";
+      rev = "00676ab3d58b969ea290af1e20750e4829fbd182";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-G6M5coYT+9JrmXRGdy5/4gH0zxPV1kL6QVzSDnmNHUE=";
+      sha256 = "sha256-vAgOCseAd1HUDJ0EZ6Xb1zyofGTE4S94Hpk2dGeLXdU=";
     };
-    date = "2026-07-23";
+    date = "2026-07-27";
   };
   wildplus-kernel-patches = {
     pname = "wildplus-kernel-patches";
