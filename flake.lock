@@ -1,26 +1,5 @@
 {
   "nodes": {
-    "chinese-fonts-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "nur-xddxdd",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1783394282,
-        "narHash": "sha256-aHKHSvTLProiVzyMKOo+nbRff9Ts3dTX9PpxlYcc084=",
-        "owner": "brsvh",
-        "repo": "chinese-fonts-overlay",
-        "rev": "da90d47fa1a6f8fbfcc5795bc9351c98142f37ea",
-        "type": "github"
-      },
-      "original": {
-        "owner": "brsvh",
-        "repo": "chinese-fonts-overlay",
-        "type": "github"
-      }
-    },
     "devshell": {
       "inputs": {
         "nixpkgs": [
@@ -174,11 +153,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785650611,
-        "narHash": "sha256-q4kR7g+pCcz6NASvoVPYu+CWWUurX03wogtBqGmR4h0=",
+        "lastModified": 1786249295,
+        "narHash": "sha256-Y2mSr+HLKYoOsjiackgilxkHXe8gkJ3z4hFFekjQX3I=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "dbc756c9d7287de19b3e0e38c928c47510d42c3e",
+        "rev": "14d55b8069119e3b88da7aa2f6c97f86a2cd3cd6",
         "type": "github"
       },
       "original": {
@@ -296,7 +275,6 @@
     },
     "nur-xddxdd": {
       "inputs": {
-        "chinese-fonts-overlay": "chinese-fonts-overlay",
         "devshell": "devshell",
         "flake-parts": [
           "flake-parts"
@@ -311,11 +289,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1786223063,
-        "narHash": "sha256-H3uh/59wIUcrHnjGcfGad+zZHcm36v6PURjdCFmJRR8=",
+        "lastModified": 1786347873,
+        "narHash": "sha256-Dps5y08V8xXFtNa/DEZcABeSaBgFHFwodq0ITx/+N3g=",
         "owner": "xddxdd",
         "repo": "nur-packages",
-        "rev": "5ecbd8236dd675c6e37ad271ce58b059af16cfde",
+        "rev": "611f1cfcd8bad3124e11225c779270dfd1a3abd3",
         "type": "github"
       },
       "original": {
