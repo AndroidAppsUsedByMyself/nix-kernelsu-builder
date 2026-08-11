@@ -69,10 +69,10 @@
   };
   AAAAA_lineage-nightly-pstar_bootImg = {
     pname = "AAAAA_lineage-nightly-pstar_bootImg";
-    version = "20260803";
+    version = "20260810";
     src = fetchurl {
-      url = "https://mirrorbits.lineageos.org/full/pstar/20260803/boot.img";
-      sha256 = "sha256-scJEu2VtfXChJH9D9jCNN3op51QDWiQMK4smxhPudHg=";
+      url = "https://mirrorbits.lineageos.org/full/pstar/20260810/boot.img";
+      sha256 = "sha256-RtPPmh0qAMk8ZbxMe8DDNd0zNMKpJVJGbj486mVdpn8=";
     };
   };
   AAAAA_linux-moto-pstar-lineageos-22_1 = {
