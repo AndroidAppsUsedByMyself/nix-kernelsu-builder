@@ -175,15 +175,15 @@
   };
   anykernel-osm0sis = {
     pname = "anykernel-osm0sis";
-    version = "e4b1bb25ca2aabcfd57f694a5998d87130701b71";
+    version = "af770f7b16cf8f8eb7c68614b2a693b3b361c90c";
     src = fetchFromGitHub {
       owner = "osm0sis";
       repo = "AnyKernel3";
-      rev = "e4b1bb25ca2aabcfd57f694a5998d87130701b71";
+      rev = "af770f7b16cf8f8eb7c68614b2a693b3b361c90c";
       fetchSubmodules = false;
-      sha256 = "sha256-wJhniOS3Obg6/eU42p4nVhv1SSGitPsSia7OWUWcsEQ=";
+      sha256 = "sha256-VODQtTNIeWTEbYhKiQUZOk6XG+CM76U2RJnEjQ4M8P4=";
     };
-    date = "2026-08-09";
+    date = "2026-08-21";
   };
   baseband-guard = {
     pname = "baseband-guard";
